@@ -19,6 +19,9 @@
 /*
  * lseek --  Since a serial port is non-seekable, we return an error.
  */
+
+#ifndef REENTRANT_SYSCALLS_PROVIDED
+
 off_t
 _DEFUN (lseek, (fd,  offset, whence),
        int fd _AND
@@ -28,4 +31,21 @@ _DEFUN (lseek, (fd,  offset, whence),
   errno = ESPIPE;
   return ((off_t)-1);
 }
+
+#else /* REENTRANT_SYSCALLS_PROVIDED */
+
+#include <sys/reent.h>
+
+off_t
+_DEFUN (_lseek_r, (ptr, fd, offset, whence),
+	struct _reent *ptr _AND
+	int fd _AND
+	off_t offset _AND
+	int whence)
+{
+  ptr->_errno = ESPIPE;
+  return (off_t) -1;
+}
+
+#endif /* REENTRANT_SYSCALLS_PROVIDED */
 

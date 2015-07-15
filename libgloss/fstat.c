@@ -18,6 +18,9 @@
 /*
  * fstat -- Since we have no file system, we just return an error.
  */
+
+#ifndef REENTRANT_SYSCALLS_PROVIDED
+
 int
 _DEFUN (fstat, (fd, buf),
        int fd _AND
@@ -28,3 +31,20 @@ _DEFUN (fstat, (fd, buf),
 
   return (0);
 }
+#else /* REENTRANT_SYSCALLS_PROVIDED */
+
+#include <sys/reent.h>
+
+int
+_DEFUN (_fstat_r, (ptr, fd, buf),
+	struct _reent *ptr _AND
+	int fd _AND
+	struct stat *buf)
+{
+  buf->st_mode = S_IFCHR;	/* Always pretend to be a tty */
+  buf->st_blksize = 0;
+
+  return 0;
+}
+
+#endif /* REENTRANT_SYSCALLS_PROVIDED */

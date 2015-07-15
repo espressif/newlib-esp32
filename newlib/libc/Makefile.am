@@ -123,6 +123,29 @@ crt0.o: sys/crt0.o
 
 sys/crt0.o: ; @true
 
+# TENSILICA: add new dependencies for Tensilica-specific files
+EXTRA_TEXI_FILES = \
+	tensilica-version.texi \
+	tensilica-address.texi \
+	tensilica-legal-info.texi \
+	tensilica-legal-tex.texi
+
+XTENSA_SRC_DIR = $(srcdir)/../../../..
+XTENSA_DOC_DIR = $(XTENSA_SRC_DIR)/Software-doc
+
+XTENSA_MINORVERSION = ".2"
+
+tensilica-version.texi: $(XTENSA_DOC_DIR)/issue-date $(XTENSA_SRC_DIR)/version
+	majorversion=`sed -e 's/\(.*\)\..*/\1/' < $(XTENSA_SRC_DIR)/version`; \
+	echo "@set XTENSAVERSION $$majorversion$(XTENSA_MINORVERSION)" > $@
+	issuedate=`cat $(XTENSA_DOC_DIR)/issue-date`; \
+	echo "@set ISSUEDATE $$issuedate" >> $@
+
+tensilica-address.texi tensilica-legal-info.texi tensilica-legal-tex.texi: \
+	% : $(XTENSA_DOC_DIR)/%
+	rm -f $@
+	cp $< $@
+
 # This is a list of the stmp-def files in each subdirectory which
 # builds .def files.  We don't list subdirectories which don't build
 # .def files; if the list of subdirectories changes, we must change
@@ -143,10 +166,12 @@ SUBDEFS = \
 	misc/stmp-def
 
 libc.info: sigset.texi extra.texi stdio64.texi posix.texi iconvset.texi \
-	targetdep.tex $(SUBDEFS)
+	targetdep.tex $(SUBDEFS) $(EXTRA_TEXI_FILES)
+
 
 libc.dvi: sigset.texi extra.texi stdio64.texi posix.texi iconvset.texi \
-	targetdep.tex $(SUBDEFS)
+	targetdep.tex $(SUBDEFS) $(EXTRA_TEXI_FILES)
+
 
 stmp-sigset: config.status
 	if test -n "$(LIBC_SIGNAL_LIB)"; then \
@@ -221,7 +246,8 @@ $(SUBDEFS): stmp-targetdep ; @true
 
 info_TEXINFOS = libc.texinfo
 libc_TEXINFOS = sigset.texi extra.texi posix.texi stdio64.texi iconvset.texi \
-	targetdep.tex $(SUBDEFS)
+	targetdep.tex $(SUBDEFS) $(EXTRA_TEXI_FILES)
+
 
 .PHONY: force
 force:
@@ -230,7 +256,7 @@ CLEANFILES = $(CRT0) \
 	sigset.texi stmp-sigset extra.texi stmp-extra \
 	stdio64.texi stmp-stdio64 targetdep.tex stmp-targetdep \
 	tmp-sigset.texi tmp-iconvset.texi tmp-extra.texi \
-	tmp-stdio64.texi tmp-posix.texi tmp-targetdep.texi
+	tmp-stdio64.texi tmp-posix.texi tmp-targetdep.texi $(EXTRA_TEXI_FILES)
 
 ACLOCAL_AMFLAGS = -I .. -I ../..
 CONFIG_STATUS_DEPENDENCIES = $(newlib_basedir)/configure.host

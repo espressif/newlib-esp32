@@ -19,6 +19,9 @@
  * unlink -- since we have no file system, 
  *           we just return an error.
  */
+
+#ifndef REENTRANT_SYSCALLS_PROVIDED
+
 int
 _DEFUN (unlink, (path),
         char * path)
@@ -26,3 +29,18 @@ _DEFUN (unlink, (path),
   errno = EIO;
   return (-1);
 }
+
+#else /* REENTRANT_SYSCALLS_PROVIDED */
+
+#include <sys/reent.h>
+
+int
+_DEFUN (_unlink_r, (ptr, path),
+	struct _reent *ptr _AND
+        char * path)
+{
+  ptr->_errno = EIO;
+  return -1;
+}
+
+#endif /* REENTRANT_SYSCALLS_PROVIDED */

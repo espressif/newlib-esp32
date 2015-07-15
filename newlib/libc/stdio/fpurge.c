@@ -51,7 +51,7 @@ No supporting OS subroutines are required.
 
 #include <_ansi.h>
 #include <stdio.h>
-#ifndef __rtems__
+#if !defined(__rtems__) && !defined(__xtensa__)
 #include <stdio_ext.h>
 #endif
 #include <errno.h>
@@ -99,7 +99,7 @@ _DEFUN(fpurge, (fp),
   return _fpurge_r (_REENT, fp);
 }
 
-#ifndef __rtems__
+#if !defined(__rtems__) && !defined(__xtensa__)
 
 void
 _DEFUN(__fpurge, (fp),

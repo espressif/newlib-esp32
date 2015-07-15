@@ -218,6 +218,7 @@ _DEFUN(__sinit, (s),
 
   /* make sure we clean up on exit */
   s->__cleanup = _cleanup_r;	/* conservative */
+  s->__sdidinit = 1;
 
   s->__sglue._next = NULL;
 #ifndef _REENT_SMALL
@@ -250,9 +251,13 @@ _DEFUN(__sinit, (s),
   std (s->_stdout, __SWR | __SLBF, 1, s);
 #endif
 
+#ifdef __XTENSA__
+  std (s->_stderr, __SWR | __SNBF, 2, s);
+#else
   /* POSIX requires stderr to be opened for reading and writing, even
      when the underlying fd 2 is write-only.  */
   std (s->_stderr, __SRW | __SNBF, 2, s);
+#endif
 
   s->__sdidinit = 1;
 
