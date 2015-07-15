@@ -156,15 +156,15 @@ libc-libtool-objectlist: $(LIBM_OBJECTLISTS) $(LIBC_OBJECTLISTS)
 
 else
 
+# TENSILICA: removed libg.a hard link from the following rule
 libc.a: libc/libc.a libm.a
-	rm -rf libc.a libg.a tmp
+	rm -rf libc.a tmp
 	mkdir tmp
 	cd tmp; \
 	 $(AR) x ../libm.a $(MATHOBJS_IN_LIBC) ; \
 	 $(AR) x ../libc/libc.a ; \
 	 $(AR) $(AR_FLAGS) ../$@ *.o
 	$(RANLIB) libc.a
-	ln libc.a libg.a >/dev/null 2>/dev/null || cp libc.a libg.a
 	rm -rf tmp
 
 libc/libc.a: ; @true

@@ -121,6 +121,9 @@ double _EXFUN(wcstod, (const wchar_t *__restrict, wchar_t **__restrict));
 double _EXFUN(_wcstod_r, (struct _reent *, const wchar_t *, wchar_t **));
 float _EXFUN(wcstof, (const wchar_t *__restrict, wchar_t **__restrict));
 float _EXFUN(_wcstof_r, (struct _reent *, const wchar_t *, wchar_t **));
+#ifdef _LDBL_EQ_DBL
+long double _EXFUN(wcstold, (const wchar_t *, wchar_t **));
+#endif /* _LDBL_EQ_DBL */
 int	_EXFUN(wcswidth, (const wchar_t *, size_t));
 size_t	_EXFUN(wcsxfrm, (wchar_t *__restrict, const wchar_t *__restrict,
 				size_t));

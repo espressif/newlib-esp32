@@ -17,9 +17,25 @@
 /*
  * getpid -- only one process, so just return 1.
  */
+
+#ifndef REENTRANT_SYSCALLS_PROVIDED
+
 int
 _DEFUN (getpid, (),
         )
 {
   return __MYPID;
 }
+
+#else /* REENTRANT_SYSCALLS_PROVIDED */
+
+#include <sys/reent.h>
+
+int
+_DEFUN (_getpid_r, (ptr),
+	struct _reent *ptr)
+{
+  return __MYPID;
+}
+
+#endif /* REENTRANT_SYSCALLS_PROVIDED */

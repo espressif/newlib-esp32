@@ -55,6 +55,10 @@ typedef struct
 typedef int (*__compar_fn_t) (const _PTR, const _PTR);
 #endif
 
+#ifndef NULL
+#define NULL 0
+#endif
+
 #define EXIT_FAILURE 1
 #define EXIT_SUCCESS 0
 
@@ -112,14 +116,22 @@ int	_EXFUN(mkostemp,(char *, int));
 int	_EXFUN(mkostemps,(char *, int, int));
 int	_EXFUN(mkstemp,(char *));
 int	_EXFUN(mkstemps,(char *, int));
+#if (__GNUC__ < 4) || defined(__XTENSA__)
+char *	_EXFUN(mktemp,(char *));
+#else
 char *	_EXFUN(mktemp,(char *) _ATTRIBUTE ((__warning__ ("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
+#endif
 #endif
 char *	_EXFUN(_mkdtemp_r, (struct _reent *, char *));
 int	_EXFUN(_mkostemp_r, (struct _reent *, char *, int));
 int	_EXFUN(_mkostemps_r, (struct _reent *, char *, int, int));
 int	_EXFUN(_mkstemp_r, (struct _reent *, char *));
 int	_EXFUN(_mkstemps_r, (struct _reent *, char *, int));
+#if (__GNUC__ < 4) || defined(__XTENSA__)
+char *	_EXFUN(_mktemp_r, (struct _reent *, char *)); 
+#else
 char *	_EXFUN(_mktemp_r, (struct _reent *, char *) _ATTRIBUTE ((__warning__ ("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
+#endif
 #endif
 _VOID	_EXFUN(qsort,(_PTR __base, size_t __nmemb, size_t __size, __compar_fn_t _compar));
 int	_EXFUN(rand,(_VOID));
