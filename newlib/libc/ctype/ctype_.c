@@ -153,7 +153,7 @@ char *__ctype_ptr = (char *) _ctype_ + 1;
 #ifndef _MB_CAPABLE
 _CONST
 #endif
-char *__ctype_ptr__ = (char *) _ctype_;
+char * _CONST __ctype_ptr__ = (char *) _ctype_;
 
 #endif
 

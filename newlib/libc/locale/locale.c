@@ -191,14 +191,16 @@ No supporting OS subroutines are required.
 #ifdef __CYGWIN__ /* Cygwin starts with LC_CTYPE set to "C.UTF-8". */
 int __EXPORT __mb_cur_max = 6;
 #else
-int __EXPORT __mb_cur_max = 1;
+_CONST int __EXPORT __mb_cur_max = 1;
 #endif
 
+#ifdef __HAVE_LOCALE_INFO__
 int __nlocale_changed = 0;
 int __mlocale_changed = 0;
 char *_PathLocale = NULL;
+#endif
 
-static
+static _CONST
 struct lconv lconv = 
 {
   ".", "", "", "", "", "", "", "", "", "",
@@ -265,12 +267,12 @@ static const char *__get_locale_env(struct _reent *, int);
 #endif /* _MB_CAPABLE */
 
 #ifdef __CYGWIN__
-static char lc_ctype_charset[ENCODING_LEN + 1] = "UTF-8";
+static const char lc_ctype_charset[ENCODING_LEN + 1] = "UTF-8";
 #else
-static char lc_ctype_charset[ENCODING_LEN + 1] = "ASCII";
+static const char lc_ctype_charset[ENCODING_LEN + 1] = "ASCII";
 #endif
-static char lc_message_charset[ENCODING_LEN + 1] = "ASCII";
-static int lc_ctype_cjk_lang = 0;
+static const char lc_message_charset[ENCODING_LEN + 1] = "ASCII";
+static const int lc_ctype_cjk_lang = 0;
 
 char *
 _DEFUN(_setlocale_r, (p, category, locale),

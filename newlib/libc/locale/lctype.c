@@ -29,7 +29,7 @@
 
 #define LCCTYPE_SIZE (sizeof(struct lc_ctype_T) / sizeof(char *))
 
-static char	numone[] = { '\1', '\0'};
+static _CONST char	numone[] = { '\1', '\0'};
 
 static const struct lc_ctype_T _C_ctype_locale = {
 	"ASCII",			/* codeset */

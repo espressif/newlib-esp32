@@ -7,7 +7,7 @@
 #include <errno.h>
 #include "local.h"
 
-int (*__mbtowc) (struct _reent *, wchar_t *, const char *, size_t,
+int (* _CONST __mbtowc) (struct _reent *, wchar_t *, const char *, size_t,
 		 const char *, mbstate_t *)
 #ifdef __CYGWIN__
    /* Cygwin starts up in UTF-8 mode. */

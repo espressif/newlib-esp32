@@ -11,7 +11,7 @@ char *__locale_charset(_NOARGS);
 #include <wchar.h>
 #endif
 
-extern int (*__wctomb) (struct _reent *, char *, wchar_t, const char *,
+extern int (* _CONST __wctomb) (struct _reent *, char *, wchar_t, const char *,
 			mbstate_t *);
 int __ascii_wctomb (struct _reent *, char *, wchar_t, const char *,
 		    mbstate_t *);
@@ -30,7 +30,7 @@ int __big5_wctomb (struct _reent *, char *, wchar_t, const char *, mbstate_t *);
 #endif
 #endif
 
-extern int (*__mbtowc) (struct _reent *, wchar_t *, const char *, size_t,
+extern int (* _CONST __mbtowc) (struct _reent *, wchar_t *, const char *, size_t,
 			const char *, mbstate_t *);
 int __ascii_mbtowc (struct _reent *, wchar_t *, const char *, size_t,
 		    const char *, mbstate_t *);
