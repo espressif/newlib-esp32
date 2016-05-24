@@ -45,7 +45,7 @@ void
 _DEFUN (_reclaim_reent, (ptr),
      struct _reent *ptr)
 {
-  if (ptr != _impure_ptr)
+  if (ptr != _REENT)
     {
       /* used by mprec routines. */
 #ifdef _REENT_SMALL
