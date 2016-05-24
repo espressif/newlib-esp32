@@ -36,8 +36,8 @@ extern const char * __fix_locale_grouping_str(const char *);
 
 #define LCMONETARY_SIZE (sizeof(struct lc_monetary_T) / sizeof(char *))
 
-static char	empty[] = "";
-static char	numempty[] = { CHAR_MAX, '\0'};
+static _CONST char	empty[] = "";
+static _CONST char	numempty[] = { CHAR_MAX, '\0'};
 #ifdef __HAVE_LOCALE_INFO_EXTENDED__
 static wchar_t	wempty[] = L"";
 #endif
