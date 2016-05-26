@@ -159,8 +159,8 @@ __get_current_time_locale(void) {
 int
 __time_load_locale(const char *name, void *f_wctomb, const char *charset) {
 
-	int	ret;
-
+	int	ret = 0;
+#ifdef __HAVE_LOCALE_INFO__
 #ifdef __CYGWIN__
 	extern int __set_lc_time_from_win (const char *,
 					   const struct lc_time_T *,
@@ -184,5 +184,6 @@ __time_load_locale(const char *name, void *f_wctomb, const char *charset) {
 			LCTIME_SIZE, LCTIME_SIZE,
 			(const char **)&_time_locale);
 #endif
+#endif /*__HAVE_LOCALE_INFO__*/
 	return (ret);
 }
