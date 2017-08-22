@@ -62,6 +62,8 @@ struct sched_param {
 }
 #endif
 
+int sched_yield( void );
+
 #endif
 /* end of include file */
 
