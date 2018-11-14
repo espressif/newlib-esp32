@@ -248,7 +248,7 @@ const struct __locale_t __C_locale =
 };
 #endif /* _MB_CAPABLE */
 
-struct __locale_t __global_locale =
+const struct __locale_t __default_global_locale =
 {
   { "C", "C", DEFAULT_LOCALE, "C", "C", "C", "C", },
 #ifdef _MB_CAPABLE
@@ -295,6 +295,8 @@ struct __locale_t __global_locale =
   },
 #endif /* __HAVE_LOCALE_INFO__ */
 };
+
+struct __locale_t* __global_locale_ptr = &__default_global_locale;
 
 char *
 _setlocale_r (struct _reent *p,
