@@ -27,7 +27,8 @@ multilibtool_LIBRARIES += %D%/libnosys.a %D%/libpthread_stubs.a
 	%D%/getentropy.c \
 	%D%/_exit.c \
 	%D%/getreent.c \
-	%D%/pthread.c
+	%D%/pthread.c \
+	%D%/time.c
 
 %C%_libpthread_stubs_a_SOURCES = \
 	%D%/pthread.c

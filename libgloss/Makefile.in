@@ -439,7 +439,8 @@ libnosys_libnosys_a_LIBADD =
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.$(OBJEXT) \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.$(OBJEXT)
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/time.$(OBJEXT)
 libnosys_libnosys_a_OBJECTS = $(am_libnosys_libnosys_a_OBJECTS)
 libnosys_libpthread_stubs_a_AR = $(AR) $(ARFLAGS)
 libnosys_libpthread_stubs_a_LIBADD =
@@ -1056,7 +1057,8 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.c \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.c
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/time.c
 
 @CONFIG_LIBNOSYS_TRUE@libnosys_libpthread_stubs_a_SOURCES = \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.c
@@ -1655,6 +1657,8 @@ libnosys/getreent.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
 libnosys/pthread.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/time.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
 
 libnosys/libnosys.a: $(libnosys_libnosys_a_OBJECTS) $(libnosys_libnosys_a_DEPENDENCIES) $(EXTRA_libnosys_libnosys_a_DEPENDENCIES) libnosys/$(am__dirstamp)
 	$(AM_V_at)-rm -f libnosys/libnosys.a
@@ -2129,6 +2133,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/sbrk.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/stat.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/symlink.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/time.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/times.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/unlink.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/wait.Po@am__quote@
