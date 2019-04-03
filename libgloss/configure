@@ -710,6 +710,7 @@ spu
 tic6x
 iq2000
 or1k
+xtensa
 libnosys'
 
 # Initialize some variables set by options.
@@ -2586,6 +2587,11 @@ case "${target}" in
 	subdirs="$subdirs or1k"
 
 	;;
+  xtensa-*-*)
+	subdirs="$subdirs xtensa"
+
+	;;
+
 esac
 
 
