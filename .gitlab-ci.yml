@@ -85,6 +85,7 @@ build_crosstool_ng:
 
 .get_toolchain: &get_toolchain |
   tar xf ${CTNG_ARCHIVE}
+  cit_rm ${CTNG_ARCHIVE}
   export PATH=${CI_PROJECT_DIR}/${CTNG_CONF_TARGET}/bin:${PATH}
 
 esp-tests:
@@ -97,11 +98,17 @@ esp-tests:
     paths:
       - esp-compiler-tests/*/*.log
       - esp-compiler-tests/*/*.elf
+  variables:
+    GIT_STRATEGY: none
+  after_script:
+    - source citools/import_functions
+    - cit_rm ${CTNG_CONF_TARGET}
   script:
     - *get_toolchain
     - *add_gitlab_key
+    - cit_rm esp-compiler-tests
     - ESP_COMPILER_TESTS_BRANCH="-b master"
-    - git clone $ESP_COMPILER_TESTS_BRANCH ${GITLAB_SSH_SERVER}/idf/esp-compiler-tests.git
+    - git clone --depth 1 $ESP_COMPILER_TESTS_BRANCH ${GITLAB_SSH_SERVER}/idf/esp-compiler-tests.git
     - cd esp-compiler-tests
     - source xtensa-esp32-profile
     - ./run-all.sh
