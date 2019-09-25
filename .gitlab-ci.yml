@@ -107,7 +107,7 @@ esp-tests:
     - *get_toolchain
     - *add_gitlab_key
     - cit_rm esp-compiler-tests
-    - ESP_COMPILER_TESTS_BRANCH="-b master"
+    - ESP_COMPILER_TESTS_BRANCH="-b esp-2019r2-branch"
     - git clone --depth 1 $ESP_COMPILER_TESTS_BRANCH ${GITLAB_SSH_SERVER}/idf/esp-compiler-tests.git
     - cd esp-compiler-tests
     - source xtensa-esp32-profile
