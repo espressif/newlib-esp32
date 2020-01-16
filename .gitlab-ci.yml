@@ -40,6 +40,8 @@ build_crosstool_ng:
       - build.log
     when: always
     expire_in: 3 day
+  variables:
+    CTNG_BRANCH: "-b esp-2019r2"
   after_script:
     # 'after_script' has a new clean environment
     - source citools/import_functions
@@ -56,7 +58,6 @@ build_crosstool_ng:
 
     # Getting crosstool
     - *add_gitlab_key
-    - CTNG_BRANCH="-b esp-develop"
     - git clone ${CTNG_BRANCH} --depth 1 ${GITLAB_SSH_SERVER}/idf/crosstool-NG.git
     - cd crosstool-NG
     - *update_crosstool_submodules
@@ -100,6 +101,7 @@ esp-tests:
       - esp-compiler-tests/*/*.elf
   variables:
     GIT_STRATEGY: none
+    ESP_COMPILER_TESTS_BRANCH: "-b esp-2019r2"
   after_script:
     - source citools/import_functions
     - cit_rm ${CTNG_CONF_TARGET}
@@ -107,7 +109,6 @@ esp-tests:
     - *get_toolchain
     - *add_gitlab_key
     - cit_rm esp-compiler-tests
-    - ESP_COMPILER_TESTS_BRANCH="-b esp-2019r2-branch"
     - git clone --depth 1 $ESP_COMPILER_TESTS_BRANCH ${GITLAB_SSH_SERVER}/idf/esp-compiler-tests.git
     - cd esp-compiler-tests
     - source xtensa-esp32-profile
