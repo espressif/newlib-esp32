@@ -59,7 +59,10 @@ __assert_func (const char *file,
 	   "assertion \"%s\" failed: file \"%s\", line %d%s%s\n",
 	   failedexpr, file, line,
 	   func ? ", function: " : "", func ? func : "");
+  #ifndef __XTENSA__
+  /* Xtensa has no abort implementation in stdlib, ignore it. */
   abort();
+  #endif /* __XTENSA__ */
   /* NOTREACHED */
 }
 #endif /* HAVE_ASSERT_FUNC */
