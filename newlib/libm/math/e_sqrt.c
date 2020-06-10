@@ -81,7 +81,6 @@
  *---------------
  */
 
-#include <xtensa/config/core-isa.h>
 #include "fdlibm.h"
 
 #ifndef _DOUBLE_IS_32BITS

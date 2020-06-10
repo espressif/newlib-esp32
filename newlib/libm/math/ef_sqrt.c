@@ -17,7 +17,9 @@
    FP by using a function in libgcc instead of this one when
    fp is present.  */
 
+#ifdef __XTENSA__
 #include <xtensa/config/core-isa.h>
+#endif // __XTENSA__
 #include "fdlibm.h"
 
 #ifdef __STDC__
