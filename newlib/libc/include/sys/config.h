@@ -204,7 +204,6 @@
 #ifndef _REENT_SMALL
 #define _REENT_SMALL
 #endif
-#define HAVE_GETOPT
 #endif
 
 /* This block should be kept in sync with GCC's limits.h.  The point
