@@ -364,8 +364,7 @@ case "${host_cpu}" in
 	libm_machine_dir=xtensa
 	machine_dir=xtensa
 	newlib_cflags="${newlib_cflags} -mlongcalls"
-	newlib_cflags="${newlib_cflags} -DREENTRANT_SYSCALLS_PROVIDED"
-        ;;
+	;;
   z8k)
 	machine_dir=z8k
 	;;
@@ -927,7 +926,7 @@ newlib_cflags="${newlib_cflags} -DCLOCK_PROVIDED -DMALLOC_PROVIDED -DEXIT_PROVID
 	;;
   xtensa*-*-* | xtensa*-*)
 	syscall_dir=syscalls
-	newlib_cflags="${newlib_cflags} -DHAVE_RENAME_R -DHAVE_GETTIMEOFDAY -DHAVE_FCNTL -DSIGNAL_PROVIDED -DABORT_PROVIDED -I."
+	newlib_cflags="${newlib_cflags} -DHAVE_FCNTL -DHAVE_BLKSIZE -DGETREENT_PROVIDED -DREENTRANT_SYSCALLS_PROVIDED -DSIGNAL_PROVIDED -I."
 	;;
   z8k-*-*)
 	syscall_dir=syscalls
