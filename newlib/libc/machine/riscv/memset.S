@@ -54,7 +54,7 @@ memset:
   lpad 0
 #endif
 
-#if defined(PREFER_SIZE_OVER_SPEED) || defined(__OPTIMIZE_SIZE__)
+#if defined(PREFER_SIZE_OVER_SPEED)
   mv     a3, a0
   beqz   a2, .Ldone
 

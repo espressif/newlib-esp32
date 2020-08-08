@@ -66,7 +66,7 @@ static __inline char *__libc_strcpy(char *dst, const char *src, bool ret_start)
 {
   char *dst0 = dst;
 
-#if !defined(PREFER_SIZE_OVER_SPEED) && !defined(__OPTIMIZE_SIZE__)
+#if !defined(PREFER_SIZE_OVER_SPEED)
 #if !(__riscv_misaligned_slow || __riscv_misaligned_fast)
   int misaligned = ((uintxlen_t)dst | (uintxlen_t)src) & (sizeof (uintxlen_t) - 1);
   if (__builtin_expect(!misaligned, 1))

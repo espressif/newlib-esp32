@@ -19,7 +19,7 @@ strcmp:
   lpad 0
 #endif
 
-#if defined(PREFER_SIZE_OVER_SPEED) || defined(__OPTIMIZE_SIZE__)
+#if defined(PREFER_SIZE_OVER_SPEED)
 .Lcompare:
   lbu   a2, 0(a0)
   lbu   a3, 0(a1)
