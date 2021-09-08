@@ -184,10 +184,13 @@ check_PROGRAMS = $(am__EXEEXT_2) $(am__EXEEXT_3)
 @CONFIG_RISCV_TRUE@	riscv/nano.specs \
 @CONFIG_RISCV_TRUE@	riscv/sim.specs \
 @CONFIG_RISCV_TRUE@	riscv/semihost.specs \
-@CONFIG_RISCV_TRUE@	riscv/crt0.o
+@CONFIG_RISCV_TRUE@	riscv/default.specs \
+@CONFIG_RISCV_TRUE@	riscv/sys.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/crt0.o \
+@CONFIG_RISCV_TRUE@	riscv/crt1-sim.o
 
 @CONFIG_RISCV_TRUE@am__append_35 = riscv/libgloss.a \
-@CONFIG_RISCV_TRUE@	riscv/libsemihost.a
+@CONFIG_RISCV_TRUE@	riscv/libsemihost.a riscv/libsys_qemu.a
 @CONFIG_WINCE_TRUE@am__append_36 = $(gdbdir)
 @CONFIG_WINCE_TRUE@am__append_37 = wince/stub.exe
 @CONFIG_XTENSA_TRUE@am__append_38 = -D_LIBGLOSS -I$(srcdir)/xtensa/include
@@ -552,6 +555,10 @@ riscv_libsemihost_a_LIBADD =
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-semihost-sys_unlink.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-semihost-sys_write.$(OBJEXT)
 riscv_libsemihost_a_OBJECTS = $(am_riscv_libsemihost_a_OBJECTS)
+riscv_libsys_qemu_a_AR = $(AR) $(ARFLAGS)
+riscv_libsys_qemu_a_LIBADD =
+@CONFIG_RISCV_TRUE@am_riscv_libsys_qemu_a_OBJECTS = riscv/riscv_libsys_qemu_a-qemu-syscalls.$(OBJEXT)
+riscv_libsys_qemu_a_OBJECTS = $(am_riscv_libsys_qemu_a_OBJECTS)
 xtensa_libgloss_a_AR = $(AR) $(ARFLAGS)
 xtensa_libgloss_a_LIBADD =
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_7 = xtensa/boards/esp32/xtensa_libgloss_a-board.$(OBJEXT)
@@ -634,7 +641,7 @@ SOURCES = $(aarch64_librdimon_a_SOURCES) $(arc_libnsim_a_SOURCES) \
 	$(libnosys_libpthread_stubs_a_SOURCES) $(libobjs_a_SOURCES) \
 	$(lm32_libgloss_a_SOURCES) $(nios2_libnios2_a_SOURCES) \
 	$(riscv_libgloss_a_SOURCES) $(riscv_libsemihost_a_SOURCES) \
-	$(xtensa_libgloss_a_SOURCES) \
+	$(riscv_libsys_qemu_a_SOURCES) $(xtensa_libgloss_a_SOURCES) \
 	$(xtensa_libsys_openocd_a_SOURCES) \
 	$(xtensa_libsys_qemu_a_SOURCES) bfin/sim-test.c iq2000/test.c \
 	$(wince_stub_exe_SOURCES)
@@ -1158,6 +1165,10 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_RISCV_TRUE@	riscv/semihost-sys_stat_common.c \
 @CONFIG_RISCV_TRUE@	riscv/semihost-sys_unlink.c \
 @CONFIG_RISCV_TRUE@	riscv/semihost-sys_write.c
+
+@CONFIG_RISCV_TRUE@riscv_libsys_qemu_a_CPPFLAGS = -I$(srcdir)/riscv
+@CONFIG_RISCV_TRUE@riscv_libsys_qemu_a_SOURCES = \
+@CONFIG_RISCV_TRUE@	riscv/qemu-syscalls.c
 
 @CONFIG_RISCV_TRUE@includemachinetooldir = $(tooldir)/include/machine
 @CONFIG_RISCV_TRUE@includemachinetool_DATA = riscv/machine/syscall.h
@@ -1886,6 +1897,13 @@ riscv/libsemihost.a: $(riscv_libsemihost_a_OBJECTS) $(riscv_libsemihost_a_DEPEND
 	$(AM_V_at)-rm -f riscv/libsemihost.a
 	$(AM_V_AR)$(riscv_libsemihost_a_AR) riscv/libsemihost.a $(riscv_libsemihost_a_OBJECTS) $(riscv_libsemihost_a_LIBADD)
 	$(AM_V_at)$(RANLIB) riscv/libsemihost.a
+riscv/riscv_libsys_qemu_a-qemu-syscalls.$(OBJEXT):  \
+	riscv/$(am__dirstamp) riscv/$(DEPDIR)/$(am__dirstamp)
+
+riscv/libsys_qemu.a: $(riscv_libsys_qemu_a_OBJECTS) $(riscv_libsys_qemu_a_DEPENDENCIES) $(EXTRA_riscv_libsys_qemu_a_DEPENDENCIES) riscv/$(am__dirstamp)
+	$(AM_V_at)-rm -f riscv/libsys_qemu.a
+	$(AM_V_AR)$(riscv_libsys_qemu_a_AR) riscv/libsys_qemu.a $(riscv_libsys_qemu_a_OBJECTS) $(riscv_libsys_qemu_a_LIBADD)
+	$(AM_V_at)$(RANLIB) riscv/libsys_qemu.a
 xtensa/$(am__dirstamp):
 	@$(MKDIR_P) xtensa
 	@: > xtensa/$(am__dirstamp)
@@ -2224,6 +2242,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_kill.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_utime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_wait.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsys_qemu_a-qemu-syscalls.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libgloss_a-sleep.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libgloss_a-syscalls.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libgloss_a-window-vectors.Po@am__quote@
@@ -4015,6 +4034,20 @@ riscv/riscv_libsemihost_a-semihost-sys_write.obj: riscv/semihost-sys_write.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/semihost-sys_write.c' object='riscv/riscv_libsemihost_a-semihost-sys_write.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsemihost_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsemihost_a-semihost-sys_write.obj `if test -f 'riscv/semihost-sys_write.c'; then $(CYGPATH_W) 'riscv/semihost-sys_write.c'; else $(CYGPATH_W) '$(srcdir)/riscv/semihost-sys_write.c'; fi`
+
+riscv/riscv_libsys_qemu_a-qemu-syscalls.o: riscv/qemu-syscalls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsys_qemu_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsys_qemu_a-qemu-syscalls.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libsys_qemu_a-qemu-syscalls.Tpo -c -o riscv/riscv_libsys_qemu_a-qemu-syscalls.o `test -f 'riscv/qemu-syscalls.c' || echo '$(srcdir)/'`riscv/qemu-syscalls.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libsys_qemu_a-qemu-syscalls.Tpo riscv/$(DEPDIR)/riscv_libsys_qemu_a-qemu-syscalls.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/qemu-syscalls.c' object='riscv/riscv_libsys_qemu_a-qemu-syscalls.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsys_qemu_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsys_qemu_a-qemu-syscalls.o `test -f 'riscv/qemu-syscalls.c' || echo '$(srcdir)/'`riscv/qemu-syscalls.c
+
+riscv/riscv_libsys_qemu_a-qemu-syscalls.obj: riscv/qemu-syscalls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsys_qemu_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsys_qemu_a-qemu-syscalls.obj -MD -MP -MF riscv/$(DEPDIR)/riscv_libsys_qemu_a-qemu-syscalls.Tpo -c -o riscv/riscv_libsys_qemu_a-qemu-syscalls.obj `if test -f 'riscv/qemu-syscalls.c'; then $(CYGPATH_W) 'riscv/qemu-syscalls.c'; else $(CYGPATH_W) '$(srcdir)/riscv/qemu-syscalls.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libsys_qemu_a-qemu-syscalls.Tpo riscv/$(DEPDIR)/riscv_libsys_qemu_a-qemu-syscalls.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/qemu-syscalls.c' object='riscv/riscv_libsys_qemu_a-qemu-syscalls.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsys_qemu_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsys_qemu_a-qemu-syscalls.obj `if test -f 'riscv/qemu-syscalls.c'; then $(CYGPATH_W) 'riscv/qemu-syscalls.c'; else $(CYGPATH_W) '$(srcdir)/riscv/qemu-syscalls.c'; fi`
 
 xtensa/xtensa_libgloss_a-syscalls.o: xtensa/syscalls.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xtensa/xtensa_libgloss_a-syscalls.o -MD -MP -MF xtensa/$(DEPDIR)/xtensa_libgloss_a-syscalls.Tpo -c -o xtensa/xtensa_libgloss_a-syscalls.o `test -f 'xtensa/syscalls.c' || echo '$(srcdir)/'`xtensa/syscalls.c

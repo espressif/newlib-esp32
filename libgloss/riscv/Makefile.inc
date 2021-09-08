@@ -2,7 +2,10 @@ multilibtool_DATA += \
 	%D%/nano.specs \
 	%D%/sim.specs \
 	%D%/semihost.specs \
-	%D%/crt0.o
+	%D%/default.specs \
+	%D%/sys.qemu.specs \
+	%D%/crt0.o \
+	%D%/crt1-sim.o
 
 multilibtool_LIBRARIES += %D%/libgloss.a
 %C%_libgloss_a_CPPFLAGS = -I$(srcdir)/%D%
@@ -69,6 +72,11 @@ multilibtool_LIBRARIES += %D%/libsemihost.a
 	%D%/semihost-sys_stat_common.c \
 	%D%/semihost-sys_unlink.c \
 	%D%/semihost-sys_write.c
+
+multilibtool_LIBRARIES += %D%/libsys_qemu.a
+%C%_libsys_qemu_a_CPPFLAGS = -I$(srcdir)/%D%
+%C%_libsys_qemu_a_SOURCES = \
+	%D%/qemu-syscalls.c
 
 includemachinetooldir = $(tooldir)/include/machine
 includemachinetool_DATA = %D%/machine/syscall.h
