@@ -15,6 +15,7 @@
 
 #include "math.h"
 #include "fdlibm.h"
+#include <errno.h>
 
 #ifdef __STDC__
 	float tgammaf(float x)
@@ -23,6 +24,11 @@
 	float x;
 #endif
 {
+	if (__builtin_isless(x, 0.0)) {
+	  errno = EDOM;
+	  return __builtin_nanf("");
+	}
+
         float y;
 	int local_signgam;
 	y = __ieee754_gammaf_r(x,&local_signgam);

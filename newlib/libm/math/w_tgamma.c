@@ -16,6 +16,7 @@
  */
 
 #include "fdlibm.h"
+#include <errno.h>
 
 #ifndef _DOUBLE_IS_32BITS
 
@@ -26,6 +27,11 @@
 	double x;
 #endif
 {
+	if (__builtin_isless(x, 0.0)) {
+	  errno = EDOM;
+	  return __builtin_nanf("");
+	}
+
         double y;
 	int local_signgam;
 	y = __ieee754_gamma_r(x,&local_signgam);
