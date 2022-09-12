@@ -417,7 +417,7 @@ extern float hypotf (float, float);
    are implemented independently from newlib to be able to use optimized
    assembler functions despite using the Microsoft x86_64 ABI. */
 
-/* Espressif-specific: add stubs for long double to libm/common/*.c for riscv */
+/* Espressif-specific: add stubs for long double to libm/common/ for riscv */
 #if defined (_LDBL_EQ_DBL) || defined (__CYGWIN__) || defined(__riscv)
 
 /* Reentrant ANSI C functions.  */
