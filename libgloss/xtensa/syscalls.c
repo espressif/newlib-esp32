@@ -18,9 +18,8 @@ static inline int
 __attribute__ ((always_inline))
 __semihosting_call(int id, int arg1, int arg2, int arg3, int arg4)
 {
-    register long a2 asm("a2") = id;
-
 # ifdef OPENOCD_SEMIHOSTING
+    register long a2 asm("a2") = id;
     long args[] = {arg1, arg2, arg3, arg4};
     register long a3 asm("a3") = (long)&args;
 
@@ -33,20 +32,12 @@ __semihosting_call(int id, int arg1, int arg2, int arg3, int arg4)
         : "+r"(a2): "r"(a3)
         : "memory");
 
-# else // OPENOCD_SEMIHOSTING
-    register long a3 asm("a3") = arg1;
-    register long a4 asm("a4") = arg2;
-    register long a5 asm("a5") = arg3;
-    register long a6 asm("a6") = arg4;
-    __asm__  __volatile__ (
-        "simcall\n"
-        : "+r"(a2) : "r"(a3), "r"(a4), "r"(a5), "r"(a6)
-        : "memory");
-
-# endif // OPENOCD_SEMIHOSTING
-
     // return code is placed in a2 register, so return it to the caller
     return a2;
+# else // OPENOCD_SEMIHOSTING
+    extern int __sim_call(int id, int arg1, int arg2, int arg3, int arg4);
+    return __sim_call(id, arg1, arg2, arg3, arg4);
+# endif // OPENOCD_SEMIHOSTING
 }
 
 # ifdef OPENOCD_SEMIHOSTING

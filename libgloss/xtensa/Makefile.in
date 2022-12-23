@@ -114,6 +114,7 @@ ifneq ("$(wildcard $(src_dir)/boards/$(TARGET_BOARD))", "")
 	app.elf.ld
 
   syscalls_qemu_src += \
+        sim-call.S \
         syscalls.c
 
   syscalls_openocd_src += \
@@ -144,7 +145,7 @@ junk += $(gloss_c_deps) $(gloss_c_objs)
 
 # libsys_qemu
 syscalls_qemu_c_srcs = $(filter %.c, $(syscalls_qemu_src))
-syscalls_qemu_objs = $(syscalls_qemu_c_srcs:%.c=%_qemu.o)
+syscalls_qemu_c_objs = $(syscalls_qemu_c_srcs:%.c=%_qemu.o)
 syscalls_qemu_c_deps = $(syscalls_qemu_c_srcs:%.c=%_qemu.d)
 
 syscalls_qemu_objs += $(syscalls_qemu_c_objs)
@@ -169,6 +170,14 @@ gloss_asm_deps = $(patsubst %.S, %.d, $(notdir $(gloss_asm_srcs)))
 gloss_objs += $(gloss_asm_objs)
 deps += $(gloss_asm_deps)
 junk += $(gloss_asm_deps) $(gloss_asm_objs)
+
+syscalls_qemu_asm_srcs = $(filter %.S, $(syscalls_qemu_src))
+syscalls_qemu_asm_objs = $(patsubst %.S, %.o, $(notdir $(syscalls_qemu_asm_srcs)))
+syscalls_qemu_asm_deps = $(patsubst %.S, %.d, $(notdir $(syscalls_qemu_asm_srcs)))
+
+syscalls_qemu_objs += $(syscalls_qemu_asm_objs)
+deps += $(syscalls_qemu_asm_deps)
+junk += $(syscalls_qemu_asm_deps) $(syscalls_qemu_asm_objs)
 
 #-------------------------------------------------------------------------
 # Build libgloss.a
