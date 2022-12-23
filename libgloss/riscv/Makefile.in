@@ -70,12 +70,16 @@ semihost_srcs = \
 	semihost-sys_unlink.c \
 	semihost-sys_write.c
 
+qemu_srcs = \
+	qemu-syscalls.c
+
 gloss_specs = \
-	default.specs nano.specs sim.specs semihost.specs
+	default.specs nano.specs sim.specs semihost.specs sys.qemu.specs
 
 # Extra files
 
 crt0_asm      = crt0.S
+crt1_sim_asm  = crt1-sim.S
 
 # Multilib support variables.
 # TOP is used instead of MULTI{BUILD,SRC}TOP.
@@ -175,6 +179,17 @@ semihost_objs += $(semihost_c_objs)
 deps += $(semihost_c_deps)
 junk += $(semihost_c_deps) $(semihost_c_objs)
 
+qemu_c_srcs = $(filter %.c, $(qemu_srcs))
+qemu_c_objs = $(patsubst %.c, qemu-%.o, $(notdir $(qemu_c_srcs)))
+qemu_c_deps = $(patsubst %.c, qemu-%.d, $(notdir $(qemu_c_srcs)))
+
+$(qemu_c_objs): qemu-%.o : %.c
+	$(COMPILE) -c -o $@ $<
+
+qemu_objs += $(qemu_c_objs)
+deps += $(qemu_c_deps)
+junk += $(qemu_c_deps) $(qemu_c_objs)
+
 #-------------------------------------------------------------------------
 # Build Object Files from Assembly Source
 #-------------------------------------------------------------------------
@@ -252,6 +267,19 @@ junk += $(semihost_lib)
 install_libs += $(semihost_lib)
 
 #-------------------------------------------------------------------------
+# Build libsys_qemu.a
+#-------------------------------------------------------------------------
+
+qemu_lib  = libsys_qemu.a
+$(qemu_lib) : $(qemu_objs)
+	$(AR) rcv $@ $^
+	$(RANLIB) $@
+
+junk += $(qemu_lib)
+
+install_libs += $(qemu_lib)
+
+#-------------------------------------------------------------------------
 # Build crt0.o
 #-------------------------------------------------------------------------
 
@@ -265,6 +293,21 @@ deps += $(crt0_deps)
 junk += $(crt0_deps) $(crt0_obj)
 
 install_libs += $(crt0_obj)
+
+#-------------------------------------------------------------------------
+# Build crt1-sim.o
+#-------------------------------------------------------------------------
+
+crt1_sim_obj  = $(patsubst %.S, %.o, $(crt1_sim_asm))
+crt1_sim_deps = $(patsubst %.S, %.d, $(crt1_sim_asm))
+
+$(crt1_sim_obj) : %.o : %.S
+	$(COMPILE) -c $<
+
+deps += $(crt1_sim_deps)
+junk += $(crt1_sim_deps) $(crt1_sim_obj)
+
+install_libs += $(crt1_sim_obj)
 
 #-------------------------------------------------------------------------
 # Autodependency files
