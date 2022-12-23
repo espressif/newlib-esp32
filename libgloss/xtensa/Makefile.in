@@ -88,43 +88,54 @@ INSTALL_DATA  := @INSTALL_DATA@
 # Append variables with board specific data
 #-------------------------------------------------------------------------
 
-TARGET_BOARD = $(strip $(patsubst xtensa-%-elf, %, $(shell $(CC) -dumpmachine)))
+# actually Xtensa `boards` dir contains subdirs for different chips,
+# so we need to detect chip from command line and select proper board subdir (if any) for build
+ifeq ($(shell $(CC) -v 2>&1 | grep -c "clang version"), 1)
+    ifeq ($(shell $(CC) -dumpmachine 2>&1), xtensa-esp-unknown-elf)
+        TARGET_BOARD = $(strip $(patsubst -mcpu=%, %, $(filter -mcpu=%, $(CC))))
+        ifeq ("$(TARGET_BOARD)", "")
+            TARGET_BOARD = esp32
+        endif
+    endif
+else
+    TARGET_BOARD = $(strip $(patsubst xtensa-%-elf, %, $(shell $(CC) -dumpmachine)))
+endif
 
 # add board specific sources if board exists
 ifneq ("$(wildcard $(src_dir)/boards/$(TARGET_BOARD))", "")
-  CPPFLAGS += -I$(src_dir)/boards/$(TARGET_BOARD)/include
+	CPPFLAGS += -I$(src_dir)/boards/$(TARGET_BOARD)/include
 
-  board_outdir += $(WORKDIR)/boards/$(TARGET_BOARD)
-  junk += $(WORKDIR)/boards
+	board_outdir += $(WORKDIR)/boards/$(TARGET_BOARD)
+	junk += $(WORKDIR)/boards
 
-  gloss_srcs += \
-        window-vectors.S \
-        sleep.S \
-        syscalls.c \
-        boards/$(TARGET_BOARD)/board.c
+	gloss_srcs += \
+		window-vectors.S \
+		sleep.S \
+		syscalls.c \
+		boards/$(TARGET_BOARD)/board.c
 
-  gloss_specs += \
-	sim.elf.specs \
-	board.elf.specs \
-	sys.qemu.specs \
-	sys.openocd.specs
+	gloss_specs += \
+		sim.elf.specs \
+		board.elf.specs \
+		sys.qemu.specs \
+		sys.openocd.specs
 
-  gloss_ldscripts += \
-	boards/$(TARGET_BOARD)/memory.elf.ld \
-	app.elf.ld
+	gloss_ldscripts += \
+		boards/$(TARGET_BOARD)/memory.elf.ld \
+		app.elf.ld
 
-  syscalls_qemu_src += \
-        sim-call.S \
-        syscalls.c
+	syscalls_qemu_src += \
+		sim-vectors.S \
+		sim-call.S \
+		syscalls.c
 
-  syscalls_openocd_src += \
-        syscalls.c
+	syscalls_openocd_src += \
+		syscalls.c
 
-  crtX_source += crt1-sim.S crt1-boards.S
+	crtX_source += crt1-sim.S crt1-boards.S
 
-  install_libs += $(libsys_qemu)
-  install_libs += $(libsys_openocd)
-
+	install_libs += $(libsys_qemu)
+	install_libs += $(libsys_openocd)
 endif
 
 $(board_outdir):
