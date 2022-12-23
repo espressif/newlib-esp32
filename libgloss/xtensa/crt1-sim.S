@@ -26,7 +26,7 @@
 
 #include <syscalls.h>
 #include <xtensa/corebits.h>
-
+#include <xtensa/config/core-isa.h>
 
 // Exports
 .global _start
@@ -146,6 +146,11 @@ _start:
 	movi	a3, PS_UM|PS_WOE	// PS.WOE = 1, PS.UM = 1, PS.EXCM = 0, PS.INTLEVEL = 0
 	wsr	a3, PS
 	rsync
+
+	#if XCHAL_HAVE_FP || XCHAL_HAVE_DFP
+	movi	a3, 1
+	wsr	a3, CPENABLE
+	#endif
 
 1:
 
