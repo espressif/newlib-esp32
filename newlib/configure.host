@@ -883,6 +883,18 @@ newlib_cflags="${newlib_cflags} -DCLOCK_PROVIDED -DMALLOC_PROVIDED -DEXIT_PROVID
 	;;
 esac
 
+# Espressif-specific configuration
+case "${host}" in
+  *-esp*-*)
+	newlib_cflags="${newlib_cflags} -DHAVE_OPENDIR -DHAVE_RENAME"
+	newlib_cflags="${newlib_cflags} -D_NO_GLOB -D_NO_EXECVE -D_NO_GETLOGIN -D_NO_GETPWENT -D_NO_GETUT"
+	newlib_cflags="${newlib_cflags} -D_NO_GETPASS -D_NO_SIGSET -D_NO_WORDEXP -D_NO_POPEN -D_NO_POSIX_SPAWN"
+	newlib_cflags="${newlib_cflags} -DHAVE_FCNTL -DHAVE_BLKSIZE"
+	newlib_cflags="${newlib_cflags} -DGETREENT_PROVIDED -DSIGNAL_PROVIDED"
+	posix_dir=posix
+	;;
+esac
+
 # Use defaults for certain settings if not specified by user
 
 # Enable C99 format support in I/O routines if requested.
