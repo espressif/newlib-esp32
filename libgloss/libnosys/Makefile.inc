@@ -1,5 +1,5 @@
 multilibtool_DATA += %D%/nosys.specs
-multilibtool_LIBRARIES += %D%/libnosys.a
+multilibtool_LIBRARIES += %D%/libnosys.a %D%/libpthread_stubs.a
 %C%_libnosys_a_SOURCES = \
 	%D%/chown.c \
 	%D%/close.c \
@@ -26,4 +26,8 @@ multilibtool_LIBRARIES += %D%/libnosys.a
 	%D%/write.c \
 	%D%/getentropy.c \
 	%D%/_exit.c \
-	%D%/getreent.c
+	%D%/getreent.c \
+	%D%/pthread.c
+
+%C%_libpthread_stubs_a_SOURCES = \
+	%D%/pthread.c

@@ -172,7 +172,7 @@ check_PROGRAMS = $(am__EXEEXT_2) $(am__EXEEXT_3)
 @CONFIG_IQ2000_TRUE@am__append_25 = iq2000/crt0.S iq2000/test.o
 @CONFIG_IQ2000_TRUE@am__append_26 = iq2000/test
 @CONFIG_LIBNOSYS_TRUE@am__append_27 = libnosys/nosys.specs
-@CONFIG_LIBNOSYS_TRUE@am__append_28 = libnosys/libnosys.a
+@CONFIG_LIBNOSYS_TRUE@am__append_28 = libnosys/libnosys.a libnosys/libpthread_stubs.a
 @CONFIG_LM32_TRUE@am__append_29 = lm32/crt0.o lm32/sim.ld
 @CONFIG_LM32_TRUE@am__append_30 = lm32/libgloss.a
 @CONFIG_LM32_TRUE@am__append_31 = lm32/crt0.S
@@ -438,8 +438,15 @@ libnosys_libnosys_a_LIBADD =
 @CONFIG_LIBNOSYS_TRUE@	libnosys/write.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.$(OBJEXT) \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.$(OBJEXT)
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.$(OBJEXT)
 libnosys_libnosys_a_OBJECTS = $(am_libnosys_libnosys_a_OBJECTS)
+libnosys_libpthread_stubs_a_AR = $(AR) $(ARFLAGS)
+libnosys_libpthread_stubs_a_LIBADD =
+@CONFIG_LIBNOSYS_TRUE@am_libnosys_libpthread_stubs_a_OBJECTS =  \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.$(OBJEXT)
+libnosys_libpthread_stubs_a_OBJECTS =  \
+	$(am_libnosys_libpthread_stubs_a_OBJECTS)
 libobjs_a_AR = $(AR) $(ARFLAGS)
 libobjs_a_LIBADD =
 @CONFIG_BFIN_TRUE@am__objects_3 = bfin/crt0.$(OBJEXT) \
@@ -622,9 +629,10 @@ SOURCES = $(aarch64_librdimon_a_SOURCES) $(arc_libnsim_a_SOURCES) \
 	$(bfin_libbfinbsp_a_SOURCES) $(bfin_libsim_a_SOURCES) \
 	$(csky_libsemi_a_SOURCES) $(d30v_libsim_a_SOURCES) \
 	$(iq2000_libeval_a_SOURCES) $(libnosys_libnosys_a_SOURCES) \
-	$(libobjs_a_SOURCES) $(lm32_libgloss_a_SOURCES) \
-	$(nios2_libnios2_a_SOURCES) $(riscv_libgloss_a_SOURCES) \
-	$(riscv_libsemihost_a_SOURCES) $(xtensa_libgloss_a_SOURCES) \
+	$(libnosys_libpthread_stubs_a_SOURCES) $(libobjs_a_SOURCES) \
+	$(lm32_libgloss_a_SOURCES) $(nios2_libnios2_a_SOURCES) \
+	$(riscv_libgloss_a_SOURCES) $(riscv_libsemihost_a_SOURCES) \
+	$(xtensa_libgloss_a_SOURCES) \
 	$(xtensa_libsys_openocd_a_SOURCES) \
 	$(xtensa_libsys_qemu_a_SOURCES) bfin/sim-test.c iq2000/test.c \
 	$(wince_stub_exe_SOURCES)
@@ -1047,7 +1055,11 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_LIBNOSYS_TRUE@	libnosys/write.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.c \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.c
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.c
+
+@CONFIG_LIBNOSYS_TRUE@libnosys_libpthread_stubs_a_SOURCES = \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.c
 
 @CONFIG_LM32_TRUE@lm32_libgloss_a_SOURCES = \
 @CONFIG_LM32_TRUE@	lm32/isatty.c \
@@ -1641,11 +1653,18 @@ libnosys/_exit.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
 libnosys/getreent.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
 
 libnosys/libnosys.a: $(libnosys_libnosys_a_OBJECTS) $(libnosys_libnosys_a_DEPENDENCIES) $(EXTRA_libnosys_libnosys_a_DEPENDENCIES) libnosys/$(am__dirstamp)
 	$(AM_V_at)-rm -f libnosys/libnosys.a
 	$(AM_V_AR)$(libnosys_libnosys_a_AR) libnosys/libnosys.a $(libnosys_libnosys_a_OBJECTS) $(libnosys_libnosys_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libnosys/libnosys.a
+
+libnosys/libpthread_stubs.a: $(libnosys_libpthread_stubs_a_OBJECTS) $(libnosys_libpthread_stubs_a_DEPENDENCIES) $(EXTRA_libnosys_libpthread_stubs_a_DEPENDENCIES) libnosys/$(am__dirstamp)
+	$(AM_V_at)-rm -f libnosys/libpthread_stubs.a
+	$(AM_V_AR)$(libnosys_libpthread_stubs_a_AR) libnosys/libpthread_stubs.a $(libnosys_libpthread_stubs_a_OBJECTS) $(libnosys_libpthread_stubs_a_LIBADD)
+	$(AM_V_at)$(RANLIB) libnosys/libpthread_stubs.a
 bfin/crt0.$(OBJEXT): bfin/$(am__dirstamp) \
 	bfin/$(DEPDIR)/$(am__dirstamp)
 bfin/basiccrt.$(OBJEXT): bfin/$(am__dirstamp) \
@@ -2104,6 +2123,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/link.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/lseek.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/open.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/read.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/readlink.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/sbrk.Po@am__quote@
