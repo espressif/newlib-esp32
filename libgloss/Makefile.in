@@ -437,7 +437,8 @@ libnosys_libnosys_a_LIBADD =
 @CONFIG_LIBNOSYS_TRUE@	libnosys/wait.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/write.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.$(OBJEXT) \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.$(OBJEXT)
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.$(OBJEXT)
 libnosys_libnosys_a_OBJECTS = $(am_libnosys_libnosys_a_OBJECTS)
 libobjs_a_AR = $(AR) $(ARFLAGS)
 libobjs_a_LIBADD =
@@ -1045,7 +1046,8 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_LIBNOSYS_TRUE@	libnosys/wait.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/write.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.c \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.c
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.c
 
 @CONFIG_LM32_TRUE@lm32_libgloss_a_SOURCES = \
 @CONFIG_LM32_TRUE@	lm32/isatty.c \
@@ -1637,6 +1639,8 @@ libnosys/getentropy.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
 libnosys/_exit.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/getreent.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
 
 libnosys/libnosys.a: $(libnosys_libnosys_a_OBJECTS) $(libnosys_libnosys_a_DEPENDENCIES) $(EXTRA_libnosys_libnosys_a_DEPENDENCIES) libnosys/$(am__dirstamp)
 	$(AM_V_at)-rm -f libnosys/libnosys.a
@@ -2093,6 +2097,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/fstat.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/getentropy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/getpid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/getreent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/gettod.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/isatty.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/kill.Po@am__quote@
