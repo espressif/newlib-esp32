@@ -68,7 +68,42 @@ OBJCOPY = `if [ -f ${objroot}/../binutils/objcopy ] ; \
 OBJS = chown.o close.o environ.o errno.o execve.o fork.o fstat.o \
 	getpid.o gettod.o isatty.o kill.o link.o lseek.o open.o \
 	read.o readlink.o sbrk.o stat.o symlink.o times.o unlink.o \
-	wait.o write.o _exit.o
+	wait.o write.o _exit.o \
+	_pthread_cleanup_pop.o _pthread_cleanup_pop_restore.o _pthread_cleanup_push.o _pthread_cleanup_push_defer.o \
+	fcntl.o \
+	ftw.o getreent.o \
+	nftw.o \
+	pthread_atfork.o pthread_attr_destroy.o pthread_attr_getaffinity_np.o pthread_attr_getdetachstate.o \
+	pthread_attr_getguardsize.o pthread_attr_getinheritsched.o pthread_attr_getschedparam.o pthread_attr_getschedpolicy.o \
+	pthread_attr_getscope.o pthread_attr_getstack.o pthread_attr_getstackaddr.o pthread_attr_getstacksize.o \
+	pthread_attr_init.o pthread_attr_setaffinity_np.o pthread_attr_setdetachstate.o pthread_attr_setguardsize.o \
+	pthread_attr_setinheritsched.o pthread_attr_setschedparam.o pthread_attr_setschedpolicy.o pthread_attr_setscope.o \
+	pthread_attr_setstack.o pthread_attr_setstackaddr.o pthread_attr_setstacksize.o pthread_barrier_destroy.o \
+	pthread_barrier_init.o pthread_barrier_wait.o pthread_barrierattr_destroy.o pthread_barrierattr_getpshared.o \
+	pthread_barrierattr_init.o pthread_barrierattr_setpshared.o pthread_cancel.o pthread_cond_broadcast.o \
+	pthread_cond_clockwait.o pthread_cond_destroy.o pthread_cond_init.o pthread_cond_signal.o \
+	pthread_cond_timedwait.o pthread_cond_wait.o pthread_condattr_destroy.o pthread_condattr_getclock.o \
+	pthread_condattr_getpshared.o pthread_condattr_init.o pthread_condattr_setclock.o pthread_condattr_setpshared.o \
+	pthread_create.o pthread_detach.o pthread_equal.o pthread_exit.o \
+	pthread_getaffinity_np.o pthread_getattr_np.o pthread_getconcurrency.o pthread_getcpuclockid.o \
+	pthread_getname_np.o pthread_getschedparam.o pthread_getspecific.o pthread_join.o \
+	pthread_key_create.o pthread_key_delete.o pthread_mutex_clocklock.o pthread_mutex_destroy.o \
+	pthread_mutex_getprioceiling.o pthread_mutex_init.o pthread_mutex_lock.o pthread_mutex_setprioceiling.o \
+	pthread_mutex_timedlock.o pthread_mutex_trylock.o pthread_mutex_unlock.o pthread_mutexattr_destroy.o \
+	pthread_mutexattr_getprioceiling.o pthread_mutexattr_getprotocol.o pthread_mutexattr_getpshared.o pthread_mutexattr_gettype.o \
+	pthread_mutexattr_init.o pthread_mutexattr_setprioceiling.o pthread_mutexattr_setprotocol.o pthread_mutexattr_setpshared.o \
+	pthread_mutexattr_settype.o pthread_once.o pthread_rwlock_clockrdlock.o pthread_rwlock_clockwrlock.o \
+	pthread_rwlock_destroy.o pthread_rwlock_init.o pthread_rwlock_rdlock.o pthread_rwlock_timedrdlock.o \
+	pthread_rwlock_timedwrlock.o pthread_rwlock_tryrdlock.o pthread_rwlock_trywrlock.o pthread_rwlock_unlock.o \
+	pthread_rwlock_wrlock.o pthread_rwlockattr_destroy.o pthread_rwlockattr_getpshared.o pthread_rwlockattr_init.o \
+	pthread_rwlockattr_setpshared.o pthread_self.o pthread_setaffinity_np.o pthread_setcancelstate.o \
+	pthread_setcanceltype.o pthread_setconcurrency.o pthread_setname_np.o pthread_setschedparam.o \
+	pthread_setschedprio.o pthread_setspecific.o pthread_spin_destroy.o pthread_spin_init.o \
+	pthread_spin_lock.o pthread_spin_trylock.o pthread_spin_unlock.o pthread_testcancel.o \
+	pthread_yield.o rename.o \
+	sched_yield.o \
+	time.o
+
 
 # Object files specific to particular targets.
 EVALOBJS = ${OBJS}
