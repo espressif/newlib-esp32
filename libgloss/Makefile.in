@@ -263,7 +263,7 @@ multilibtool_PROGRAMS = $(am__EXEEXT_7)
 @CONFIG_IQ2000_TRUE@am__append_51 = iq2000/crt0.S iq2000/test.o
 @CONFIG_IQ2000_TRUE@am__append_52 = iq2000/test
 @CONFIG_LIBNOSYS_TRUE@am__append_53 = libnosys/nosys.specs
-@CONFIG_LIBNOSYS_TRUE@am__append_54 = libnosys/libnosys.a
+@CONFIG_LIBNOSYS_TRUE@am__append_54 = libnosys/libnosys.a libnosys/libpthread_stubs.a
 @CONFIG_LM32_TRUE@am__append_55 = lm32/crt0.o lm32/sim.ld
 @CONFIG_LM32_TRUE@am__append_56 = lm32/libgloss.a
 @CONFIG_LM32_TRUE@am__append_57 = lm32/crt0.S
@@ -898,6 +898,120 @@ iq2000_libeval_a_LIBADD =
 iq2000_libeval_a_OBJECTS = $(am_iq2000_libeval_a_OBJECTS)
 libnosys_libnosys_a_AR = $(AR) $(ARFLAGS)
 libnosys_libnosys_a_LIBADD =
+@CONFIG_LIBNOSYS_TRUE@am__objects_3 =  \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_pop.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_pop_restore.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_push.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_push_defer.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_atfork.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getaffinity_np.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getdetachstate.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getguardsize.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getinheritsched.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getschedparam.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getschedpolicy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getscope.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getstack.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getstackaddr.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getstacksize.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setaffinity_np.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setdetachstate.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setguardsize.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setinheritsched.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setschedparam.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setschedpolicy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setscope.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setstack.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setstackaddr.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setstacksize.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrier_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrier_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrier_wait.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_getpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_setpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cancel.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_broadcast.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_clockwait.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_signal.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_timedwait.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_wait.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_getclock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_getpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_setclock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_setpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_create.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_detach.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_equal.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_exit.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getaffinity_np.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getattr_np.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getconcurrency.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getcpuclockid.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getname_np.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getschedparam.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getspecific.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_join.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_key_create.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_key_delete.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_clocklock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_getprioceiling.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_lock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_setprioceiling.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_timedlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_trylock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_unlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_getprioceiling.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_getprotocol.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_getpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_gettype.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_setprioceiling.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_setprotocol.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_setpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_settype.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_once.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_clockrdlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_clockwrlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_rdlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_timedrdlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_timedwrlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_tryrdlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_trywrlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_unlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_wrlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_getpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_setpshared.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_self.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setaffinity_np.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setcancelstate.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setcanceltype.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setconcurrency.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setname_np.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setschedparam.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setschedprio.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setspecific.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_destroy.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_init.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_lock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_trylock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_unlock.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_testcancel.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_yield.$(OBJEXT)
 @CONFIG_LIBNOSYS_TRUE@am_libnosys_libnosys_a_OBJECTS =  \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/chown.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/close.$(OBJEXT) \
@@ -923,34 +1037,62 @@ libnosys_libnosys_a_LIBADD =
 @CONFIG_LIBNOSYS_TRUE@	libnosys/wait.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/write.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.$(OBJEXT) \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.$(OBJEXT)
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/time.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/fcntl.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/chdir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/chmod.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/closedir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/ftw.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getcwd.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/mkdir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/nftw.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/opendir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pathconf.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/readdir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/rewinddir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/scandir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/seekdir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/telldir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/rename.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/sched_yield.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/statvfs.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/fstatvfs.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	$(am__objects_3)
 libnosys_libnosys_a_OBJECTS = $(am_libnosys_libnosys_a_OBJECTS)
+libnosys_libpthread_stubs_a_AR = $(AR) $(ARFLAGS)
+libnosys_libpthread_stubs_a_LIBADD =
+@CONFIG_LIBNOSYS_TRUE@am_libnosys_libpthread_stubs_a_OBJECTS =  \
+@CONFIG_LIBNOSYS_TRUE@	$(am__objects_3)
+libnosys_libpthread_stubs_a_OBJECTS =  \
+	$(am_libnosys_libpthread_stubs_a_OBJECTS)
 libobjs_a_AR = $(AR) $(ARFLAGS)
 libobjs_a_LIBADD =
-@CONFIG_ARC_TRUE@am__objects_3 = arc/crt0.$(OBJEXT) \
+@CONFIG_ARC_TRUE@am__objects_4 = arc/crt0.$(OBJEXT) \
 @CONFIG_ARC_TRUE@	arc/gcrt0.$(OBJEXT) \
 @CONFIG_ARC_TRUE@	arc/arc-main-helper.$(OBJEXT)
-@CONFIG_ARC64_TRUE@am__objects_4 = arc64/crt0.$(OBJEXT) \
+@CONFIG_ARC64_TRUE@am__objects_5 = arc64/crt0.$(OBJEXT) \
 @CONFIG_ARC64_TRUE@	arc64/crtn.$(OBJEXT) arc64/crti.$(OBJEXT) \
 @CONFIG_ARC64_TRUE@	arc/arc-main-helper.$(OBJEXT)
-@CONFIG_BFIN_TRUE@am__objects_5 = bfin/crt0.$(OBJEXT) \
+@CONFIG_BFIN_TRUE@am__objects_6 = bfin/crt0.$(OBJEXT) \
 @CONFIG_BFIN_TRUE@	bfin/basiccrt.$(OBJEXT)
-@CONFIG_CR16_TRUE@am__objects_6 = cr16/crti.$(OBJEXT) \
+@CONFIG_CR16_TRUE@am__objects_7 = cr16/crti.$(OBJEXT) \
 @CONFIG_CR16_TRUE@	cr16/crtn.$(OBJEXT) cr16/crt1.$(OBJEXT)
-@CONFIG_CSKY_TRUE@am__objects_7 = csky/crt0.$(OBJEXT)
-@CONFIG_EPIPHANY_TRUE@am__objects_8 = epiphany/crt0.$(OBJEXT)
-@CONFIG_FR30_TRUE@am__objects_9 = fr30/crt0.$(OBJEXT)
-@CONFIG_FRV_TRUE@am__objects_10 = frv/crt0.$(OBJEXT)
-@CONFIG_FT32_TRUE@am__objects_11 = ft32/crt0.$(OBJEXT)
-@CONFIG_I386_TRUE@am__objects_12 = i386/cygmon-crt0.$(OBJEXT)
-@CONFIG_I960_TRUE@am__objects_13 = i960/crt0.$(OBJEXT)
-@CONFIG_IQ2000_TRUE@am__objects_14 = iq2000/crt0.$(OBJEXT)
-@CONFIG_LM32_TRUE@am__objects_15 = lm32/crt0.$(OBJEXT)
-@CONFIG_M32R_TRUE@am__objects_16 = m32r/crt0.$(OBJEXT) \
+@CONFIG_CSKY_TRUE@am__objects_8 = csky/crt0.$(OBJEXT)
+@CONFIG_EPIPHANY_TRUE@am__objects_9 = epiphany/crt0.$(OBJEXT)
+@CONFIG_FR30_TRUE@am__objects_10 = fr30/crt0.$(OBJEXT)
+@CONFIG_FRV_TRUE@am__objects_11 = frv/crt0.$(OBJEXT)
+@CONFIG_FT32_TRUE@am__objects_12 = ft32/crt0.$(OBJEXT)
+@CONFIG_I386_TRUE@am__objects_13 = i386/cygmon-crt0.$(OBJEXT)
+@CONFIG_I960_TRUE@am__objects_14 = i960/crt0.$(OBJEXT)
+@CONFIG_IQ2000_TRUE@am__objects_15 = iq2000/crt0.$(OBJEXT)
+@CONFIG_LM32_TRUE@am__objects_16 = lm32/crt0.$(OBJEXT)
+@CONFIG_M32R_TRUE@am__objects_17 = m32r/crt0.$(OBJEXT) \
 @CONFIG_M32R_TRUE@	m32r/m32r-lib.$(OBJEXT) \
 @CONFIG_M32R_TRUE@	m32r/m32r-stub.$(OBJEXT)
-@CONFIG_MCORE_TRUE@am__objects_17 = mcore/crt0.$(OBJEXT)
-@CONFIG_MICROBLAZE_TRUE@am__objects_18 = microblaze/crt0.$(OBJEXT) \
+@CONFIG_MCORE_TRUE@am__objects_18 = mcore/crt0.$(OBJEXT)
+@CONFIG_MICROBLAZE_TRUE@am__objects_19 = microblaze/crt0.$(OBJEXT) \
 @CONFIG_MICROBLAZE_TRUE@	microblaze/crt1.$(OBJEXT) \
 @CONFIG_MICROBLAZE_TRUE@	microblaze/crt2.$(OBJEXT) \
 @CONFIG_MICROBLAZE_TRUE@	microblaze/crt3.$(OBJEXT) \
@@ -960,52 +1102,52 @@ libobjs_a_LIBADD =
 @CONFIG_MICROBLAZE_TRUE@	microblaze/sim-crtinit.$(OBJEXT) \
 @CONFIG_MICROBLAZE_TRUE@	microblaze/sim-pgcrtinit.$(OBJEXT) \
 @CONFIG_MICROBLAZE_TRUE@	microblaze/linux-crt0.$(OBJEXT)
-@CONFIG_MN10200_TRUE@am__objects_19 = mn10200/crt0.$(OBJEXT)
-@CONFIG_MN10300_TRUE@am__objects_20 = mn10300/crt0.$(OBJEXT) \
+@CONFIG_MN10200_TRUE@am__objects_20 = mn10200/crt0.$(OBJEXT)
+@CONFIG_MN10300_TRUE@am__objects_21 = mn10300/crt0.$(OBJEXT) \
 @CONFIG_MN10300_TRUE@	mn10300/crt0_cygmon.$(OBJEXT) \
 @CONFIG_MN10300_TRUE@	mn10300/crt0_redboot.$(OBJEXT)
-@CONFIG_MOXIE_TRUE@am__objects_21 = moxie/crt0.$(OBJEXT)
-@CONFIG_MSP430_TRUE@am__objects_22 = msp430/gcrt0.$(OBJEXT) \
+@CONFIG_MOXIE_TRUE@am__objects_22 = moxie/crt0.$(OBJEXT)
+@CONFIG_MSP430_TRUE@am__objects_23 = msp430/gcrt0.$(OBJEXT) \
 @CONFIG_MSP430_TRUE@	msp430/crt0.$(OBJEXT)
-@CONFIG_NDS32_TRUE@am__objects_23 = nds32/crt0.$(OBJEXT) \
+@CONFIG_NDS32_TRUE@am__objects_24 = nds32/crt0.$(OBJEXT) \
 @CONFIG_NDS32_TRUE@	nds32/crt1.$(OBJEXT)
-@CONFIG_OR1K_TRUE@am__objects_24 = or1k/crt0.$(OBJEXT)
-@CONFIG_PRU_TRUE@am__objects_25 = pru/crt0.$(OBJEXT) \
+@CONFIG_OR1K_TRUE@am__objects_25 = or1k/crt0.$(OBJEXT)
+@CONFIG_PRU_TRUE@am__objects_26 = pru/crt0.$(OBJEXT) \
 @CONFIG_PRU_TRUE@	pru/crt0-minrt.$(OBJEXT)
-@CONFIG_RL78_TRUE@am__objects_26 = rl78/gcrt0.$(OBJEXT) \
+@CONFIG_RL78_TRUE@am__objects_27 = rl78/gcrt0.$(OBJEXT) \
 @CONFIG_RL78_TRUE@	rl78/crt0.$(OBJEXT) rl78/crtn.$(OBJEXT)
-@CONFIG_RX_TRUE@am__objects_27 = rx/gcrt0.$(OBJEXT) rx/crt0.$(OBJEXT) \
+@CONFIG_RX_TRUE@am__objects_28 = rx/gcrt0.$(OBJEXT) rx/crt0.$(OBJEXT) \
 @CONFIG_RX_TRUE@	rx/crtn.$(OBJEXT)
-@CONFIG_SPARC_TRUE@am__objects_28 = sparc/crt0.$(OBJEXT) \
+@CONFIG_SPARC_TRUE@am__objects_29 = sparc/crt0.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	sparc/erc32-crt0.$(OBJEXT)
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_CYGMON_TRUE@am__objects_29 = sparc/cygmon-crt0.$(OBJEXT)
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_SPLET_TRUE@am__objects_30 = sparc/crt0-701.$(OBJEXT)
-@CONFIG_SPARC_LEON_TRUE@am__objects_31 = sparc_leon/crt0.$(OBJEXT) \
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_CYGMON_TRUE@am__objects_30 = sparc/cygmon-crt0.$(OBJEXT)
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_SPLET_TRUE@am__objects_31 = sparc/crt0-701.$(OBJEXT)
+@CONFIG_SPARC_LEON_TRUE@am__objects_32 = sparc_leon/crt0.$(OBJEXT) \
 @CONFIG_SPARC_LEON_TRUE@	sparc_leon/pnpinit.$(OBJEXT) \
 @CONFIG_SPARC_LEON_TRUE@	sparc_leon/pnpinit_simple.$(OBJEXT) \
 @CONFIG_SPARC_LEON_TRUE@	sparc_leon/locore_svt.$(OBJEXT) \
 @CONFIG_SPARC_LEON_TRUE@	sparc_leon/locore_mvt.$(OBJEXT)
-@CONFIG_TIC6X_TRUE@am__objects_32 = tic6x/crt0.$(OBJEXT)
-@CONFIG_V850_TRUE@am__objects_33 = v850/crt0.$(OBJEXT)
-@CONFIG_VISIUM_TRUE@am__objects_34 = visium/crt0.$(OBJEXT)
-@CONFIG_XSTORMY16_TRUE@am__objects_35 = xstormy16/crt0.$(OBJEXT) \
+@CONFIG_TIC6X_TRUE@am__objects_33 = tic6x/crt0.$(OBJEXT)
+@CONFIG_V850_TRUE@am__objects_34 = v850/crt0.$(OBJEXT)
+@CONFIG_VISIUM_TRUE@am__objects_35 = visium/crt0.$(OBJEXT)
+@CONFIG_XSTORMY16_TRUE@am__objects_36 = xstormy16/crt0.$(OBJEXT) \
 @CONFIG_XSTORMY16_TRUE@	xstormy16/crti.$(OBJEXT) \
 @CONFIG_XSTORMY16_TRUE@	xstormy16/crtn.$(OBJEXT)
-@CONFIG_XTENSA_TRUE@am__objects_36 = xtensa/crt0.$(OBJEXT) \
+@CONFIG_XTENSA_TRUE@am__objects_37 = xtensa/crt0.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@	xtensa/crt1-sim.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@	xtensa/crt1-boards.$(OBJEXT)
-am_libobjs_a_OBJECTS = $(am__objects_3) $(am__objects_4) \
-	$(am__objects_5) $(am__objects_6) $(am__objects_7) \
-	$(am__objects_8) $(am__objects_9) $(am__objects_10) \
-	$(am__objects_11) $(am__objects_12) $(am__objects_13) \
-	$(am__objects_14) $(am__objects_15) $(am__objects_16) \
-	$(am__objects_17) $(am__objects_18) $(am__objects_19) \
-	$(am__objects_20) $(am__objects_21) $(am__objects_22) \
-	$(am__objects_23) $(am__objects_24) $(am__objects_25) \
-	$(am__objects_26) $(am__objects_27) $(am__objects_28) \
-	$(am__objects_29) $(am__objects_30) $(am__objects_31) \
-	$(am__objects_32) $(am__objects_33) $(am__objects_34) \
-	$(am__objects_35) $(am__objects_36)
+am_libobjs_a_OBJECTS = $(am__objects_4) $(am__objects_5) \
+	$(am__objects_6) $(am__objects_7) $(am__objects_8) \
+	$(am__objects_9) $(am__objects_10) $(am__objects_11) \
+	$(am__objects_12) $(am__objects_13) $(am__objects_14) \
+	$(am__objects_15) $(am__objects_16) $(am__objects_17) \
+	$(am__objects_18) $(am__objects_19) $(am__objects_20) \
+	$(am__objects_21) $(am__objects_22) $(am__objects_23) \
+	$(am__objects_24) $(am__objects_25) $(am__objects_26) \
+	$(am__objects_27) $(am__objects_28) $(am__objects_29) \
+	$(am__objects_30) $(am__objects_31) $(am__objects_32) \
+	$(am__objects_33) $(am__objects_34) $(am__objects_35) \
+	$(am__objects_36) $(am__objects_37)
 libobjs_a_OBJECTS = $(am_libobjs_a_OBJECTS)
 lm32_libgloss_a_AR = $(AR) $(ARFLAGS)
 lm32_libgloss_a_LIBADD =
@@ -1014,7 +1156,7 @@ lm32_libgloss_a_LIBADD =
 lm32_libgloss_a_OBJECTS = $(am_lm32_libgloss_a_OBJECTS)
 m32r_libgloss_a_AR = $(AR) $(ARFLAGS)
 m32r_libgloss_a_LIBADD =
-@CONFIG_M32R_TRUE@am__objects_37 = m32r/chmod.$(OBJEXT) \
+@CONFIG_M32R_TRUE@am__objects_38 = m32r/chmod.$(OBJEXT) \
 @CONFIG_M32R_TRUE@	m32r/close.$(OBJEXT) m32r/exit.$(OBJEXT) \
 @CONFIG_M32R_TRUE@	m32r/fstat.$(OBJEXT) m32r/getpid.$(OBJEXT) \
 @CONFIG_M32R_TRUE@	m32r/isatty.$(OBJEXT) m32r/kill.$(OBJEXT) \
@@ -1024,16 +1166,16 @@ m32r_libgloss_a_LIBADD =
 @CONFIG_M32R_TRUE@	m32r/unlink.$(OBJEXT) m32r/utime.$(OBJEXT) \
 @CONFIG_M32R_TRUE@	m32r/write.$(OBJEXT)
 @CONFIG_M32R_TRUE@am_m32r_libgloss_a_OBJECTS = m32r/trap0.$(OBJEXT) \
-@CONFIG_M32R_TRUE@	$(am__objects_37)
+@CONFIG_M32R_TRUE@	$(am__objects_38)
 m32r_libgloss_a_OBJECTS = $(am_m32r_libgloss_a_OBJECTS)
 m32r_libmon_a_AR = $(AR) $(ARFLAGS)
 m32r_libmon_a_LIBADD =
 @CONFIG_M32R_TRUE@am_m32r_libmon_a_OBJECTS = m32r/trapmon0.$(OBJEXT) \
-@CONFIG_M32R_TRUE@	$(am__objects_37)
+@CONFIG_M32R_TRUE@	$(am__objects_38)
 m32r_libmon_a_OBJECTS = $(am_m32r_libmon_a_OBJECTS)
 mcore_libcmb_a_AR = $(AR) $(ARFLAGS)
 mcore_libcmb_a_LIBADD =
-@CONFIG_MCORE_TRUE@am__objects_38 = mcore/fstat.$(OBJEXT) \
+@CONFIG_MCORE_TRUE@am__objects_39 = mcore/fstat.$(OBJEXT) \
 @CONFIG_MCORE_TRUE@	mcore/getpid.$(OBJEXT) isatty.$(OBJEXT) \
 @CONFIG_MCORE_TRUE@	mcore/kill.$(OBJEXT) mcore/raise.$(OBJEXT) \
 @CONFIG_MCORE_TRUE@	mcore/putnum.$(OBJEXT) mcore/stat.$(OBJEXT) \
@@ -1045,12 +1187,12 @@ mcore_libcmb_a_LIBADD =
 @CONFIG_MCORE_TRUE@	mcore/cmb-exit.$(OBJEXT) \
 @CONFIG_MCORE_TRUE@	mcore/cmb-inbyte.$(OBJEXT) \
 @CONFIG_MCORE_TRUE@	mcore/cmb-outbyte.$(OBJEXT) \
-@CONFIG_MCORE_TRUE@	$(am__objects_38)
+@CONFIG_MCORE_TRUE@	$(am__objects_39)
 mcore_libcmb_a_OBJECTS = $(am_mcore_libcmb_a_OBJECTS)
 mcore_libsim_a_AR = $(AR) $(ARFLAGS)
 mcore_libsim_a_LIBADD =
 @CONFIG_MCORE_TRUE@am_mcore_libsim_a_OBJECTS =  \
-@CONFIG_MCORE_TRUE@	mcore/syscalls.$(OBJEXT) $(am__objects_38)
+@CONFIG_MCORE_TRUE@	mcore/syscalls.$(OBJEXT) $(am__objects_39)
 mcore_libsim_a_OBJECTS = $(am_mcore_libsim_a_OBJECTS)
 microblaze_libgloss_linux_a_AR = $(AR) $(ARFLAGS)
 microblaze_libgloss_linux_a_LIBADD =
@@ -1107,7 +1249,7 @@ mn10200_libeval_a_LIBADD =
 mn10200_libeval_a_OBJECTS = $(am_mn10200_libeval_a_OBJECTS)
 mn10300_libcygmon_a_AR = $(AR) $(ARFLAGS)
 mn10300_libcygmon_a_LIBADD =
-@CONFIG_MN10300_TRUE@am__objects_39 = mn10300/_exit.$(OBJEXT) \
+@CONFIG_MN10300_TRUE@am__objects_40 = mn10300/_exit.$(OBJEXT) \
 @CONFIG_MN10300_TRUE@	mn10300/access.$(OBJEXT) \
 @CONFIG_MN10300_TRUE@	mn10300/chmod.$(OBJEXT) \
 @CONFIG_MN10300_TRUE@	mn10300/close.$(OBJEXT) \
@@ -1126,12 +1268,12 @@ mn10300_libcygmon_a_LIBADD =
 @CONFIG_MN10300_TRUE@	mn10300/unlink.$(OBJEXT) \
 @CONFIG_MN10300_TRUE@	mn10300/utime.$(OBJEXT) \
 @CONFIG_MN10300_TRUE@	mn10300/write.$(OBJEXT)
-@CONFIG_MN10300_TRUE@@MN10300_BUILD_LIBCYGMON_TRUE@am_mn10300_libcygmon_a_OBJECTS = $(am__objects_39) \
+@CONFIG_MN10300_TRUE@@MN10300_BUILD_LIBCYGMON_TRUE@am_mn10300_libcygmon_a_OBJECTS = $(am__objects_40) \
 @CONFIG_MN10300_TRUE@@MN10300_BUILD_LIBCYGMON_TRUE@	mn10300/cygmon.$(OBJEXT)
 mn10300_libcygmon_a_OBJECTS = $(am_mn10300_libcygmon_a_OBJECTS)
 mn10300_libeval_a_AR = $(AR) $(ARFLAGS)
 mn10300_libeval_a_LIBADD =
-@CONFIG_MN10300_TRUE@am_mn10300_libeval_a_OBJECTS = $(am__objects_39) \
+@CONFIG_MN10300_TRUE@am_mn10300_libeval_a_OBJECTS = $(am__objects_40) \
 @CONFIG_MN10300_TRUE@	mn10300/trap.$(OBJEXT)
 mn10300_libeval_a_OBJECTS = $(am_mn10300_libeval_a_OBJECTS)
 moxie_libqemu_a_AR = $(AR) $(ARFLAGS)
@@ -1391,7 +1533,7 @@ riscv_libsemihost_a_LIBADD =
 riscv_libsemihost_a_OBJECTS = $(am_riscv_libsemihost_a_OBJECTS)
 riscv_libsim_a_AR = $(AR) $(ARFLAGS)
 riscv_libsim_a_LIBADD =
-@CONFIG_RISCV_TRUE@am__objects_40 =  \
+@CONFIG_RISCV_TRUE@am__objects_41 =  \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_access.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_chdir.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_chmod.$(OBJEXT) \
@@ -1424,7 +1566,7 @@ riscv_libsim_a_LIBADD =
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_utime.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_wait.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_write.$(OBJEXT)
-@CONFIG_RISCV_TRUE@am_riscv_libsim_a_OBJECTS = $(am__objects_40)
+@CONFIG_RISCV_TRUE@am_riscv_libsim_a_OBJECTS = $(am__objects_41)
 riscv_libsim_a_OBJECTS = $(am_riscv_libsim_a_OBJECTS)
 rl78_libsim_a_AR = $(AR) $(ARFLAGS)
 rl78_libsim_a_LIBADD =
@@ -1466,14 +1608,14 @@ sparc_libcygmon_a_LIBADD =
 sparc_libcygmon_a_OBJECTS = $(am_sparc_libcygmon_a_OBJECTS)
 sparc_liberc32_a_AR = $(AR) $(ARFLAGS)
 sparc_liberc32_a_LIBADD =
-@CONFIG_SPARC_TRUE@am__objects_41 = close.$(OBJEXT) fstat.$(OBJEXT) \
+@CONFIG_SPARC_TRUE@am__objects_42 = close.$(OBJEXT) fstat.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	getpid.$(OBJEXT) isatty.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	kill.$(OBJEXT) lseek.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	open.$(OBJEXT) print.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	putnum.$(OBJEXT) read.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	sbrk.$(OBJEXT) stat.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	unlink.$(OBJEXT) write.$(OBJEXT)
-@CONFIG_SPARC_TRUE@am_sparc_liberc32_a_OBJECTS = $(am__objects_41) \
+@CONFIG_SPARC_TRUE@am_sparc_liberc32_a_OBJECTS = $(am__objects_42) \
 @CONFIG_SPARC_TRUE@	sparc/erc32-io.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	sparc/traps.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@	sparc/erc32-stub.$(OBJEXT) debug.$(OBJEXT) \
@@ -1481,18 +1623,18 @@ sparc_liberc32_a_LIBADD =
 sparc_liberc32_a_OBJECTS = $(am_sparc_liberc32_a_OBJECTS)
 sparc_libslite86x_a_AR = $(AR) $(ARFLAGS)
 sparc_libslite86x_a_LIBADD =
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@am__objects_42 =  \
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_41) \
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@am__objects_43 =  \
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_42) \
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	sparc/salib.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	sparc/sparcl-stub.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	sparc/cache.$(OBJEXT)
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@am_sparc_libslite86x_a_OBJECTS =  \
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_42)
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_43)
 sparc_libslite86x_a_OBJECTS = $(am_sparc_libslite86x_a_OBJECTS)
 sparc_libslite930_a_AR = $(AR) $(ARFLAGS)
 sparc_libslite930_a_LIBADD =
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@am_sparc_libslite930_a_OBJECTS =  \
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_41) \
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_42) \
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	sparc/salib.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	sparc/sparcl-stub.$(OBJEXT) \
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	sparc/cache.$(OBJEXT)
@@ -1500,12 +1642,12 @@ sparc_libslite930_a_OBJECTS = $(am_sparc_libslite930_a_OBJECTS)
 sparc_libslite931_a_AR = $(AR) $(ARFLAGS)
 sparc_libslite931_a_LIBADD =
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@am_sparc_libslite931_a_OBJECTS =  \
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_42)
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_43)
 sparc_libslite931_a_OBJECTS = $(am_sparc_libslite931_a_OBJECTS)
 sparc_libslite934_a_AR = $(AR) $(ARFLAGS)
 sparc_libslite934_a_LIBADD =
 @CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@am_sparc_libslite934_a_OBJECTS =  \
-@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_42)
+@CONFIG_SPARC_TRUE@@SPARC_BUILD_SLITE_TRUE@	$(am__objects_43)
 sparc_libslite934_a_OBJECTS = $(am_sparc_libslite934_a_OBJECTS)
 sparc_libsplet701_a_AR = $(AR) $(ARFLAGS)
 sparc_libsplet701_a_LIBADD =
@@ -1622,11 +1764,11 @@ v850_libsim_a_LIBADD =
 v850_libsim_a_OBJECTS = $(am_v850_libsim_a_OBJECTS)
 visium_libdebug_a_AR = $(AR) $(ARFLAGS)
 visium_libdebug_a_LIBADD =
-@CONFIG_VISIUM_TRUE@am__objects_43 = getpid.$(OBJEXT) kill.$(OBJEXT) \
+@CONFIG_VISIUM_TRUE@am__objects_44 = getpid.$(OBJEXT) kill.$(OBJEXT) \
 @CONFIG_VISIUM_TRUE@	visium/io-gdb.$(OBJEXT) \
 @CONFIG_VISIUM_TRUE@	visium/io-stubs.$(OBJEXT) \
 @CONFIG_VISIUM_TRUE@	visium/sbrk.$(OBJEXT)
-@CONFIG_VISIUM_TRUE@am_visium_libdebug_a_OBJECTS = $(am__objects_43) \
+@CONFIG_VISIUM_TRUE@am_visium_libdebug_a_OBJECTS = $(am__objects_44) \
 @CONFIG_VISIUM_TRUE@	visium/syscalls.$(OBJEXT)
 visium_libdebug_a_OBJECTS = $(am_visium_libdebug_a_OBJECTS)
 visium_libserial_a_AR = $(AR) $(ARFLAGS)
@@ -1646,7 +1788,7 @@ visium_libserial_a_LIBADD =
 visium_libserial_a_OBJECTS = $(am_visium_libserial_a_OBJECTS)
 visium_libsim_a_AR = $(AR) $(ARFLAGS)
 visium_libsim_a_LIBADD =
-@CONFIG_VISIUM_TRUE@am_visium_libsim_a_OBJECTS = $(am__objects_43) \
+@CONFIG_VISIUM_TRUE@am_visium_libsim_a_OBJECTS = $(am__objects_44) \
 @CONFIG_VISIUM_TRUE@	visium/sim-syscalls.$(OBJEXT)
 visium_libsim_a_OBJECTS = $(am_visium_libsim_a_OBJECTS)
 xstormy16_libeva_app_a_AR = $(AR) $(ARFLAGS)
@@ -1672,13 +1814,14 @@ xstormy16_libsim_a_LIBADD =
 xstormy16_libsim_a_OBJECTS = $(am_xstormy16_libsim_a_OBJECTS)
 xtensa_libgloss_a_AR = $(AR) $(ARFLAGS)
 xtensa_libgloss_a_LIBADD =
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_44 = xtensa/boards/esp32/xtensa_libgloss_a-board.$(OBJEXT)
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_45 = xtensa/boards/esp32s3/xtensa_libgloss_a-board.$(OBJEXT)
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am_xtensa_libgloss_a_OBJECTS = xtensa/xtensa_libgloss_a-sleep.$(OBJEXT) \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_45 = xtensa/boards/esp32/xtensa_libgloss_a-board.$(OBJEXT)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_46 = xtensa/boards/esp32s3/xtensa_libgloss_a-board.$(OBJEXT)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am_xtensa_libgloss_a_OBJECTS = xtensa/xtensa_libgloss_a-clibrary_init.$(OBJEXT) \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/xtensa_libgloss_a-sleep.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/xtensa_libgloss_a-syscalls.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/xtensa_libgloss_a-window-vectors.$(OBJEXT) \
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_44) \
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_45)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_45) \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_46)
 xtensa_libgloss_a_OBJECTS = $(am_xtensa_libgloss_a_OBJECTS)
 xtensa_libsys_openocd_a_AR = $(AR) $(ARFLAGS)
 xtensa_libsys_openocd_a_LIBADD =
@@ -1798,7 +1941,8 @@ SOURCES = $(aarch64_librdimon_a_SOURCES) \
 	$(fr30_libsim_a_SOURCES) $(frv_libsim_a_SOURCES) \
 	$(ft32_libsim_a_SOURCES) $(i386_libcygmon_a_SOURCES) \
 	$(i960_libmon960_a_SOURCES) $(iq2000_libeval_a_SOURCES) \
-	$(libnosys_libnosys_a_SOURCES) $(libobjs_a_SOURCES) \
+	$(libnosys_libnosys_a_SOURCES) \
+	$(libnosys_libpthread_stubs_a_SOURCES) $(libobjs_a_SOURCES) \
 	$(lm32_libgloss_a_SOURCES) $(m32r_libgloss_a_SOURCES) \
 	$(m32r_libmon_a_SOURCES) $(mcore_libcmb_a_SOURCES) \
 	$(mcore_libsim_a_SOURCES) \
@@ -2447,6 +2591,121 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_IQ2000_TRUE@	iq2000/kill.c iq2000/lseek.c iq2000/open.c iq2000/read.c \
 @CONFIG_IQ2000_TRUE@	iq2000/sbrk.c iq2000/stat.c iq2000/time.c iq2000/trap.c iq2000/unlink.c iq2000/utime.c iq2000/write.c
 
+@CONFIG_LIBNOSYS_TRUE@pthread_stubs = \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_pop.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_pop_restore.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_push.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_pthread_cleanup_push_defer.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_atfork.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getaffinity_np.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getdetachstate.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getguardsize.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getinheritsched.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getschedparam.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getschedpolicy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getscope.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getstack.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getstackaddr.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_getstacksize.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setaffinity_np.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setdetachstate.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setguardsize.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setinheritsched.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setschedparam.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setschedpolicy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setscope.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setstack.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setstackaddr.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_attr_setstacksize.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrier_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrier_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrier_wait.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_getpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_barrierattr_setpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cancel.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_broadcast.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_clockwait.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_signal.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_timedwait.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_cond_wait.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_getclock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_getpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_setclock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_condattr_setpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_create.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_detach.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_equal.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_exit.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getaffinity_np.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getattr_np.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getconcurrency.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getcpuclockid.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getname_np.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getschedparam.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_getspecific.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_join.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_key_create.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_key_delete.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_clocklock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_getprioceiling.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_lock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_setprioceiling.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_timedlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_trylock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutex_unlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_getprioceiling.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_getprotocol.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_getpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_gettype.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_setprioceiling.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_setprotocol.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_setpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_mutexattr_settype.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_once.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_clockrdlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_clockwrlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_rdlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_timedrdlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_timedwrlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_tryrdlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_trywrlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_unlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlock_wrlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_getpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_rwlockattr_setpshared.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_self.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setaffinity_np.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setcancelstate.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setcanceltype.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setconcurrency.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setname_np.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setschedparam.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setschedprio.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_setspecific.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_destroy.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_init.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_lock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_trylock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_spin_unlock.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_testcancel.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pthread_yield.c
+
 @CONFIG_LIBNOSYS_TRUE@libnosys_libnosys_a_SOURCES = \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/chown.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/close.c \
@@ -2472,7 +2731,32 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_LIBNOSYS_TRUE@	libnosys/wait.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/write.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getentropy.c \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.c
+@CONFIG_LIBNOSYS_TRUE@	libnosys/_exit.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/time.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/fcntl.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/chdir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/chmod.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/closedir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/ftw.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/getcwd.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/mkdir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/nftw.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/opendir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/pathconf.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/readdir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/rewinddir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/scandir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/seekdir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/telldir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/rename.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/sched_yield.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/statvfs.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/fstatvfs.c \
+@CONFIG_LIBNOSYS_TRUE@	$(pthread_stubs)
+
+@CONFIG_LIBNOSYS_TRUE@libnosys_libpthread_stubs_a_SOURCES = \
+@CONFIG_LIBNOSYS_TRUE@	$(pthread_stubs)
 
 @CONFIG_LM32_TRUE@lm32_libgloss_a_SOURCES = \
 @CONFIG_LM32_TRUE@	lm32/isatty.c \
@@ -3133,7 +3417,8 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_XSTORMY16_TRUE@	-nostartfiles -T$(srcdir)/xstormy16/eva_stub.ld
 
 @CONFIG_XTENSA_TRUE@AM_CPPFLAGS_xtensa = -D_LIBGLOSS -I$(srcdir)/xtensa/include
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libgloss_a_SOURCES = xtensa/sleep.S \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libgloss_a_SOURCES = xtensa/clibrary_init.c \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/sleep.S \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/syscalls.c \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/window-vectors.S \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_146) \
@@ -3977,11 +4262,284 @@ libnosys/getentropy.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
 libnosys/_exit.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/getreent.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/time.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/fcntl.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/chdir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/chmod.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/closedir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/ftw.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/getcwd.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/mkdir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/nftw.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/opendir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pathconf.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/readdir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/rewinddir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/scandir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/seekdir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/telldir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/rename.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/sched_yield.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/statvfs.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/fstatvfs.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/_pthread_cleanup_pop.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/_pthread_cleanup_pop_restore.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/_pthread_cleanup_push.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/_pthread_cleanup_push_defer.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_atfork.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_destroy.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getaffinity_np.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getdetachstate.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getguardsize.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getinheritsched.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getschedparam.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getschedpolicy.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getscope.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getstack.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getstackaddr.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_getstacksize.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setaffinity_np.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setdetachstate.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setguardsize.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setinheritsched.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setschedparam.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setschedpolicy.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setscope.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setstack.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setstackaddr.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_attr_setstacksize.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_barrier_destroy.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_barrier_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_barrier_wait.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_barrierattr_destroy.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_barrierattr_getpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_barrierattr_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_barrierattr_setpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cancel.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cond_broadcast.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cond_clockwait.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cond_destroy.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cond_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cond_signal.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cond_timedwait.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_cond_wait.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_condattr_destroy.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_condattr_getclock.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_condattr_getpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_condattr_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_condattr_setclock.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_condattr_setpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_create.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_detach.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_equal.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_exit.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_getaffinity_np.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_getattr_np.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_getconcurrency.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_getcpuclockid.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_getname_np.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_getschedparam.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_getspecific.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_join.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_key_create.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_key_delete.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_clocklock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_destroy.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_getprioceiling.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_lock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_setprioceiling.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_timedlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_trylock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutex_unlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_destroy.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_getprioceiling.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_getprotocol.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_getpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_gettype.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_setprioceiling.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_setprotocol.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_setpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_mutexattr_settype.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_once.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_clockrdlock.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_clockwrlock.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_destroy.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_rdlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_timedrdlock.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_timedwrlock.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_tryrdlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_trywrlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_unlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlock_wrlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlockattr_destroy.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlockattr_getpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlockattr_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_rwlockattr_setpshared.$(OBJEXT):  \
+	libnosys/$(am__dirstamp) libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_self.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setaffinity_np.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setcancelstate.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setcanceltype.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setconcurrency.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setname_np.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setschedparam.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setschedprio.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_setspecific.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_spin_destroy.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_spin_init.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_spin_lock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_spin_trylock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_spin_unlock.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_testcancel.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/pthread_yield.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
 
 libnosys/libnosys.a: $(libnosys_libnosys_a_OBJECTS) $(libnosys_libnosys_a_DEPENDENCIES) $(EXTRA_libnosys_libnosys_a_DEPENDENCIES) libnosys/$(am__dirstamp)
 	$(AM_V_at)-rm -f libnosys/libnosys.a
 	$(AM_V_AR)$(libnosys_libnosys_a_AR) libnosys/libnosys.a $(libnosys_libnosys_a_OBJECTS) $(libnosys_libnosys_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libnosys/libnosys.a
+
+libnosys/libpthread_stubs.a: $(libnosys_libpthread_stubs_a_OBJECTS) $(libnosys_libpthread_stubs_a_DEPENDENCIES) $(EXTRA_libnosys_libpthread_stubs_a_DEPENDENCIES) libnosys/$(am__dirstamp)
+	$(AM_V_at)-rm -f libnosys/libpthread_stubs.a
+	$(AM_V_AR)$(libnosys_libpthread_stubs_a_AR) libnosys/libpthread_stubs.a $(libnosys_libpthread_stubs_a_OBJECTS) $(libnosys_libpthread_stubs_a_LIBADD)
+	$(AM_V_at)$(RANLIB) libnosys/libpthread_stubs.a
 arc/crt0.$(OBJEXT): arc/$(am__dirstamp) arc/$(DEPDIR)/$(am__dirstamp)
 arc/gcrt0.$(OBJEXT): arc/$(am__dirstamp) arc/$(DEPDIR)/$(am__dirstamp)
 arc/arc-main-helper.$(OBJEXT): arc/$(am__dirstamp) \
@@ -5419,6 +5977,8 @@ xstormy16/libsim.a: $(xstormy16_libsim_a_OBJECTS) $(xstormy16_libsim_a_DEPENDENC
 	$(AM_V_at)-rm -f xstormy16/libsim.a
 	$(AM_V_AR)$(xstormy16_libsim_a_AR) xstormy16/libsim.a $(xstormy16_libsim_a_OBJECTS) $(xstormy16_libsim_a_LIBADD)
 	$(AM_V_at)$(RANLIB) xstormy16/libsim.a
+xtensa/xtensa_libgloss_a-clibrary_init.$(OBJEXT):  \
+	xtensa/$(am__dirstamp) xtensa/$(DEPDIR)/$(am__dirstamp)
 xtensa/xtensa_libgloss_a-sleep.$(OBJEXT): xtensa/$(am__dirstamp) \
 	xtensa/$(DEPDIR)/$(am__dirstamp)
 xtensa/xtensa_libgloss_a-syscalls.$(OBJEXT): xtensa/$(am__dirstamp) \
@@ -5912,26 +6472,160 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@iq2000/$(DEPDIR)/utime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@iq2000/$(DEPDIR)/write.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/_exit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/_pthread_cleanup_pop.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/_pthread_cleanup_pop_restore.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/_pthread_cleanup_push.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/_pthread_cleanup_push_defer.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/chdir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/chmod.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/chown.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/close.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/closedir.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/environ.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/errno.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/execve.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/fcntl.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/fork.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/fstat.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/fstatvfs.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/ftw.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/getcwd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/getentropy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/getpid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/getreent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/gettod.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/isatty.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/kill.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/link.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/lseek.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/mkdir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/nftw.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/open.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/opendir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pathconf.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_atfork.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getaffinity_np.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getdetachstate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getguardsize.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getinheritsched.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getschedparam.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getschedpolicy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getscope.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getstack.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getstackaddr.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_getstacksize.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setaffinity_np.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setdetachstate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setguardsize.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setinheritsched.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setschedparam.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setschedpolicy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setscope.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setstack.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setstackaddr.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_attr_setstacksize.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_barrier_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_barrier_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_barrier_wait.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_barrierattr_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_barrierattr_getpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_barrierattr_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_barrierattr_setpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cancel.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cond_broadcast.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cond_clockwait.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cond_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cond_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cond_signal.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cond_timedwait.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_cond_wait.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_condattr_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_condattr_getclock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_condattr_getpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_condattr_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_condattr_setclock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_condattr_setpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_create.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_detach.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_equal.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_exit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_getaffinity_np.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_getattr_np.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_getconcurrency.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_getcpuclockid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_getname_np.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_getschedparam.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_getspecific.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_join.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_key_create.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_key_delete.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_clocklock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_getprioceiling.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_lock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_setprioceiling.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_timedlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_trylock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutex_unlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_getprioceiling.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_getprotocol.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_getpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_gettype.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_setprioceiling.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_setprotocol.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_setpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_mutexattr_settype.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_once.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_clockrdlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_clockwrlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_rdlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_timedrdlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_timedwrlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_tryrdlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_trywrlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_unlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlock_wrlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlockattr_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlockattr_getpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlockattr_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_rwlockattr_setpshared.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_self.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setaffinity_np.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setcancelstate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setcanceltype.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setconcurrency.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setname_np.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setschedparam.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setschedprio.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_setspecific.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_spin_destroy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_spin_init.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_spin_lock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_spin_trylock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_spin_unlock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_testcancel.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread_yield.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/read.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/readdir.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/readlink.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/rename.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/rewinddir.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/sbrk.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/scandir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/sched_yield.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/seekdir.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/stat.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/statvfs.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/symlink.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/telldir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/time.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/times.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/unlink.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/wait.Po@am__quote@
@@ -6454,6 +7148,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/crt0.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/crt1-boards.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/crt1-sim.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libgloss_a-clibrary_init.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libgloss_a-sleep.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libgloss_a-syscalls.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libgloss_a-window-vectors.Po@am__quote@
@@ -9449,6 +10144,20 @@ riscv/riscv_libsim_a-sys_write.obj: riscv/sys_write.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_write.c' object='riscv/riscv_libsim_a-sys_write.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsim_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsim_a-sys_write.obj `if test -f 'riscv/sys_write.c'; then $(CYGPATH_W) 'riscv/sys_write.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_write.c'; fi`
+
+xtensa/xtensa_libgloss_a-clibrary_init.o: xtensa/clibrary_init.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xtensa/xtensa_libgloss_a-clibrary_init.o -MD -MP -MF xtensa/$(DEPDIR)/xtensa_libgloss_a-clibrary_init.Tpo -c -o xtensa/xtensa_libgloss_a-clibrary_init.o `test -f 'xtensa/clibrary_init.c' || echo '$(srcdir)/'`xtensa/clibrary_init.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) xtensa/$(DEPDIR)/xtensa_libgloss_a-clibrary_init.Tpo xtensa/$(DEPDIR)/xtensa_libgloss_a-clibrary_init.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xtensa/clibrary_init.c' object='xtensa/xtensa_libgloss_a-clibrary_init.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xtensa/xtensa_libgloss_a-clibrary_init.o `test -f 'xtensa/clibrary_init.c' || echo '$(srcdir)/'`xtensa/clibrary_init.c
+
+xtensa/xtensa_libgloss_a-clibrary_init.obj: xtensa/clibrary_init.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xtensa/xtensa_libgloss_a-clibrary_init.obj -MD -MP -MF xtensa/$(DEPDIR)/xtensa_libgloss_a-clibrary_init.Tpo -c -o xtensa/xtensa_libgloss_a-clibrary_init.obj `if test -f 'xtensa/clibrary_init.c'; then $(CYGPATH_W) 'xtensa/clibrary_init.c'; else $(CYGPATH_W) '$(srcdir)/xtensa/clibrary_init.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) xtensa/$(DEPDIR)/xtensa_libgloss_a-clibrary_init.Tpo xtensa/$(DEPDIR)/xtensa_libgloss_a-clibrary_init.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xtensa/clibrary_init.c' object='xtensa/xtensa_libgloss_a-clibrary_init.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xtensa/xtensa_libgloss_a-clibrary_init.obj `if test -f 'xtensa/clibrary_init.c'; then $(CYGPATH_W) 'xtensa/clibrary_init.c'; else $(CYGPATH_W) '$(srcdir)/xtensa/clibrary_init.c'; fi`
 
 xtensa/xtensa_libgloss_a-syscalls.o: xtensa/syscalls.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xtensa/xtensa_libgloss_a-syscalls.o -MD -MP -MF xtensa/$(DEPDIR)/xtensa_libgloss_a-syscalls.Tpo -c -o xtensa/xtensa_libgloss_a-syscalls.o `test -f 'xtensa/syscalls.c' || echo '$(srcdir)/'`xtensa/syscalls.c
