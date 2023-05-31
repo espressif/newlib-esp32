@@ -258,7 +258,7 @@ memcpy:
 	   unaligned src.  */
 	ssa8	a3		// set shift amount from byte offset
 #if UNALIGNED_ADDRESSES_CHECKED
-	srli    a11, a8, 30     // save unalignment offset for below
+	extui   a11, a8, 30, 2  // save unalignment offset for below
 	sub	a3, a3, a11	// align a3
 #endif
 	l32i	a6, a3, 0	// load first word
