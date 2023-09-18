@@ -8,6 +8,7 @@ extern int _fstat(int file, struct stat *st);
    other minimal implementations, which only support output to stdout,
    this minimal implementation is suggested by the newlib docs.  */
 
+__attribute__((__weak__))
 int
 _isatty(int file)
 {
