@@ -29,7 +29,9 @@ multilibtool_LIBRARIES += %D%/libnosys.a %D%/libpthread_stubs.a
 	%D%/getreent.c \
 	%D%/pthread.c \
 	%D%/time.c \
-	%D%/fcntl.c
+	%D%/fcntl.c \
+	%D%/dir.c \
+	%D%/rename.c
 
 %C%_libpthread_stubs_a_SOURCES = \
 	%D%/pthread.c

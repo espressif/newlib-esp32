@@ -444,7 +444,9 @@ libnosys_libnosys_a_LIBADD =
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.$(OBJEXT) \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/time.$(OBJEXT) \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/fcntl.$(OBJEXT)
+@CONFIG_LIBNOSYS_TRUE@	libnosys/fcntl.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/dir.$(OBJEXT) \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/rename.$(OBJEXT)
 libnosys_libnosys_a_OBJECTS = $(am_libnosys_libnosys_a_OBJECTS)
 libnosys_libpthread_stubs_a_AR = $(AR) $(ARFLAGS)
 libnosys_libpthread_stubs_a_LIBADD =
@@ -1106,7 +1108,9 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_LIBNOSYS_TRUE@	libnosys/getreent.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.c \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/time.c \
-@CONFIG_LIBNOSYS_TRUE@	libnosys/fcntl.c
+@CONFIG_LIBNOSYS_TRUE@	libnosys/fcntl.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/dir.c \
+@CONFIG_LIBNOSYS_TRUE@	libnosys/rename.c
 
 @CONFIG_LIBNOSYS_TRUE@libnosys_libpthread_stubs_a_SOURCES = \
 @CONFIG_LIBNOSYS_TRUE@	libnosys/pthread.c
@@ -1716,6 +1720,10 @@ libnosys/time.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
 libnosys/fcntl.$(OBJEXT): libnosys/$(am__dirstamp) \
 	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/dir.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
+libnosys/rename.$(OBJEXT): libnosys/$(am__dirstamp) \
+	libnosys/$(DEPDIR)/$(am__dirstamp)
 
 libnosys/libnosys.a: $(libnosys_libnosys_a_OBJECTS) $(libnosys_libnosys_a_DEPENDENCIES) $(EXTRA_libnosys_libnosys_a_DEPENDENCIES) libnosys/$(am__dirstamp)
 	$(AM_V_at)-rm -f libnosys/libnosys.a
@@ -2248,6 +2256,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/_exit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/chown.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/close.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/dir.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/environ.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/errno.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/execve.Po@am__quote@
@@ -2266,6 +2275,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/pthread.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/read.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/readlink.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/rename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/sbrk.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/stat.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libnosys/$(DEPDIR)/symlink.Po@am__quote@
