@@ -33,6 +33,16 @@
 #include <sys/cdefs.h>
 #include <sys/_types.h>
 
+#ifdef __clang__
+/*
+  This file is included from Clang's "stdatomic.h".
+  Atomic types definitions here (like 'atomic_int_least8_t') need types defined in "stdint.h",
+  so include it.
+  GCC does not use it because it defines everything in its own "stdatomic.h".
+*/
+#include <stdint.h>
+#endif
+
 #if __has_extension(c_atomic) || __has_extension(cxx_atomic)
 #define	__CLANG_ATOMICS
 #elif __GNUC_PREREQ__(4, 7)
