@@ -56,7 +56,7 @@
    the appropriate _newlib_XXX_exit macro. */
 
 #if !defined (__SINGLE_THREAD__) && defined (_POSIX_THREADS) \
-    && !defined (__rtems__)
+    && !defined (__rtems__) && !defined(__ESP__)
 #define _STDIO_WITH_THREAD_CANCELLATION_SUPPORT
 #endif
 
