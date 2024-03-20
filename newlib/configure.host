@@ -451,6 +451,7 @@ case "${host}" in
 	newlib_cflags="${newlib_cflags} -D_NO_GETPASS -D_NO_SIGSET -D_NO_WORDEXP -D_NO_POPEN -D_NO_POSIX_SPAWN"
 	newlib_cflags="${newlib_cflags} -DHAVE_FCNTL -DHAVE_BLKSIZE -DHAVE_OPENDIR -DHAVE_RENAME"
 	newlib_cflags="${newlib_cflags} -DGETREENT_PROVIDED -DSIGNAL_PROVIDED"
+	newlib_cflags="${newlib_cflags} -D__ESP__"
 	;;
   a29k-*-*)
 	sys_dir=a29khif
