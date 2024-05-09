@@ -26,6 +26,6 @@ _gettimeofday(struct timeval *tp, void *tzp)
   tp->tv_usec = ts64.tv_nsec / 1000;
   return rv;
 #else
-  return syscall_errno (SYS_gettimeofday, 1, tp, 0, 0, 0, 0, 0);
+  return syscall_errno (SYS_gettimeofday, 1, (long)tp, 0, 0, 0, 0, 0);
 #endif
 }
