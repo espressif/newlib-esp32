@@ -24,6 +24,11 @@
 	float x;
 #endif
 {
+	if (__builtin_isless(x, 0.0)) {
+	  errno = EDOM;
+	  return __builtin_nanf("");
+	}
+
         float y;
 	y = __ieee754_tgammaf(x);
 #ifdef _IEEE_LIBM
