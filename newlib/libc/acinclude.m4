@@ -15,6 +15,7 @@ m4_foreach_w([SYS_DIR], [
   a29khif amdgcn arm
   d10v
   epiphany
+  esp
   h8300hms h8500hms
   m88kbug mmixware
   netware
