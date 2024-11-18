@@ -13,6 +13,9 @@ endif
 if HAVE_LIBC_SYS_EPIPHANY_DIR
 include %D%/epiphany/Makefile.inc
 endif
+if HAVE_LIBC_SYS_ESP_DIR
+include %D%/esp/Makefile.inc
+endif
 if HAVE_LIBC_SYS_H8300HMS_DIR
 include %D%/h8300hms/Makefile.inc
 endif

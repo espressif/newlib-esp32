@@ -811,6 +811,8 @@ HAVE_LIBC_SYS_H8500HMS_DIR_FALSE
 HAVE_LIBC_SYS_H8500HMS_DIR_TRUE
 HAVE_LIBC_SYS_H8300HMS_DIR_FALSE
 HAVE_LIBC_SYS_H8300HMS_DIR_TRUE
+HAVE_LIBC_SYS_ESP_DIR_FALSE
+HAVE_LIBC_SYS_ESP_DIR_TRUE
 HAVE_LIBC_SYS_EPIPHANY_DIR_FALSE
 HAVE_LIBC_SYS_EPIPHANY_DIR_TRUE
 HAVE_LIBC_SYS_D10V_DIR_FALSE
@@ -5421,6 +5423,13 @@ else
   HAVE_LIBC_SYS_EPIPHANY_DIR_TRUE='#'
   HAVE_LIBC_SYS_EPIPHANY_DIR_FALSE=
 fi
+ if test "${sys_dir}" = esp; then
+  HAVE_LIBC_SYS_ESP_DIR_TRUE=
+  HAVE_LIBC_SYS_ESP_DIR_FALSE='#'
+else
+  HAVE_LIBC_SYS_ESP_DIR_TRUE='#'
+  HAVE_LIBC_SYS_ESP_DIR_FALSE=
+fi
  if test "${sys_dir}" = h8300hms; then
   HAVE_LIBC_SYS_H8300HMS_DIR_TRUE=
   HAVE_LIBC_SYS_H8300HMS_DIR_FALSE='#'
@@ -7707,6 +7716,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_LIBC_SYS_EPIPHANY_DIR_TRUE}" && test -z "${HAVE_LIBC_SYS_EPIPHANY_DIR_FALSE}"; then
   as_fn_error $? "conditional \"HAVE_LIBC_SYS_EPIPHANY_DIR\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${HAVE_LIBC_SYS_ESP_DIR_TRUE}" && test -z "${HAVE_LIBC_SYS_ESP_DIR_FALSE}"; then
+  as_fn_error $? "conditional \"HAVE_LIBC_SYS_ESP_DIR\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_LIBC_SYS_H8300HMS_DIR_TRUE}" && test -z "${HAVE_LIBC_SYS_H8300HMS_DIR_FALSE}"; then
