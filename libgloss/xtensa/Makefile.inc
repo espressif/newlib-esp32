@@ -47,6 +47,14 @@ multilibtool_DATA += %D%/boards/esp32/memory.elf.ld
 %C%_libsys_openocd_a_CPPFLAGS += -I$(srcdir)/%D%/boards/esp32/include
 endif
 
+if HAVE_XTENSA_BOARD_ESP32S2
+multilibtool_DATA += %D%/boards/esp32s2/memory.elf.ld
+%C%_libgloss_a_SOURCES += %D%/boards/esp32s2/board.c
+%C%_libgloss_a_CPPFLAGS = -I$(srcdir)/%D%/boards/esp32s2/include
+%C%_libsys_qemu_a_CPPFLAGS += -I$(srcdir)/%D%/boards/esp32s2/include
+%C%_libsys_openocd_a_CPPFLAGS += -I$(srcdir)/%D%/boards/esp32s2/include
+endif
+
 if HAVE_XTENSA_BOARD_ESP32S3
 multilibtool_DATA += %D%/boards/esp32s3/memory.elf.ld
 %C%_libgloss_a_SOURCES += %D%/boards/esp32s3/board.c

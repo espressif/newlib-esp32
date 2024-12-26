@@ -550,10 +550,14 @@ multilibtool_PROGRAMS = $(am__EXEEXT_7)
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_147 = xtensa/boards/esp32/board.c
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_148 = -I$(srcdir)/xtensa/boards/esp32/include
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_149 = -I$(srcdir)/xtensa/boards/esp32/include
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_150 = xtensa/boards/esp32s3/memory.elf.ld
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_151 = xtensa/boards/esp32s3/board.c
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_152 = -I$(srcdir)/xtensa/boards/esp32s3/include
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_153 = -I$(srcdir)/xtensa/boards/esp32s3/include
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S2_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_150 = xtensa/boards/esp32s2/memory.elf.ld
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S2_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_151 = xtensa/boards/esp32s2/board.c
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S2_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_152 = -I$(srcdir)/xtensa/boards/esp32s2/include
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S2_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_153 = -I$(srcdir)/xtensa/boards/esp32s2/include
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_154 = xtensa/boards/esp32s3/memory.elf.ld
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_155 = xtensa/boards/esp32s3/board.c
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_156 = -I$(srcdir)/xtensa/boards/esp32s3/include
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__append_157 = -I$(srcdir)/xtensa/boards/esp32s3/include
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/../config/depstand.m4 \
@@ -1848,13 +1852,15 @@ xstormy16_libsim_a_OBJECTS = $(am_xstormy16_libsim_a_OBJECTS)
 xtensa_libgloss_a_AR = $(AR) $(ARFLAGS)
 xtensa_libgloss_a_LIBADD =
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_45 = xtensa/boards/esp32/xtensa_libgloss_a-board.$(OBJEXT)
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_46 = xtensa/boards/esp32s3/xtensa_libgloss_a-board.$(OBJEXT)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S2_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_46 = xtensa/boards/esp32s2/xtensa_libgloss_a-board.$(OBJEXT)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am__objects_47 = xtensa/boards/esp32s3/xtensa_libgloss_a-board.$(OBJEXT)
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@am_xtensa_libgloss_a_OBJECTS = xtensa/xtensa_libgloss_a-clibrary_init.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/xtensa_libgloss_a-sleep.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/xtensa_libgloss_a-syscalls.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/xtensa_libgloss_a-window-vectors.$(OBJEXT) \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_45) \
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_46)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_46) \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__objects_47)
 xtensa_libgloss_a_OBJECTS = $(am_xtensa_libgloss_a_OBJECTS)
 xtensa_libsys_openocd_a_AR = $(AR) $(ARFLAGS)
 xtensa_libsys_openocd_a_LIBADD =
@@ -2251,7 +2257,8 @@ multilibtool_DATA = $(am__append_3) $(am__append_6) $(am__append_9) \
 	$(am__append_112) $(am__append_115) $(am__append_117) \
 	$(am__append_122) $(am__append_124) $(am__append_127) \
 	$(am__append_130) $(am__append_135) $(am__append_141) \
-	$(am__append_144) $(am__append_146) $(am__append_150)
+	$(am__append_144) $(am__append_146) $(am__append_150) \
+	$(am__append_154)
 multilibtool_LIBRARIES = $(am__append_2) $(am__append_5) \
 	$(am__append_8) $(am__append_13) $(am__append_15) \
 	$(am__append_24) $(am__append_27) $(am__append_28) \
@@ -3462,10 +3469,12 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/syscalls.c \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/window-vectors.S \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_147) \
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_151)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_151) \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_155)
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libsys_qemu_a_CPPFLAGS = -DQEMU_SEMIHOSTING \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_148) \
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_152)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_152) \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_156)
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libsys_qemu_a_SOURCES = \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/sim-vectors.S \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/sim-call.S \
@@ -3473,10 +3482,12 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libsys_openocd_a_CPPFLAGS = -DOPENOCD_SEMIHOSTING \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_149) \
-@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_153)
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_153) \
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	$(am__append_157)
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libsys_openocd_a_SOURCES = \
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@	xtensa/syscalls.c
 
+@CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S2_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libgloss_a_CPPFLAGS = -I$(srcdir)/xtensa/boards/esp32s2/include
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32S3_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libgloss_a_CPPFLAGS = -I$(srcdir)/xtensa/boards/esp32s3/include
 @CONFIG_XTENSA_TRUE@@HAVE_XTENSA_BOARD_ESP32_TRUE@@HAVE_XTENSA_BOARD_ESP_TRUE@xtensa_libgloss_a_CPPFLAGS = -I$(srcdir)/xtensa/boards/esp32/include
 all: config.h
@@ -6052,6 +6063,15 @@ xtensa/boards/esp32/$(DEPDIR)/$(am__dirstamp):
 xtensa/boards/esp32/xtensa_libgloss_a-board.$(OBJEXT):  \
 	xtensa/boards/esp32/$(am__dirstamp) \
 	xtensa/boards/esp32/$(DEPDIR)/$(am__dirstamp)
+xtensa/boards/esp32s2/$(am__dirstamp):
+	@$(MKDIR_P) xtensa/boards/esp32s2
+	@: > xtensa/boards/esp32s2/$(am__dirstamp)
+xtensa/boards/esp32s2/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) xtensa/boards/esp32s2/$(DEPDIR)
+	@: > xtensa/boards/esp32s2/$(DEPDIR)/$(am__dirstamp)
+xtensa/boards/esp32s2/xtensa_libgloss_a-board.$(OBJEXT):  \
+	xtensa/boards/esp32s2/$(am__dirstamp) \
+	xtensa/boards/esp32s2/$(DEPDIR)/$(am__dirstamp)
 xtensa/boards/esp32s3/$(am__dirstamp):
 	@$(MKDIR_P) xtensa/boards/esp32s3
 	@: > xtensa/boards/esp32s3/$(am__dirstamp)
@@ -6273,6 +6293,7 @@ mostlyclean-compile:
 	-rm -f xstormy16/*.$(OBJEXT)
 	-rm -f xtensa/*.$(OBJEXT)
 	-rm -f xtensa/boards/esp32/*.$(OBJEXT)
+	-rm -f xtensa/boards/esp32s2/*.$(OBJEXT)
 	-rm -f xtensa/boards/esp32s3/*.$(OBJEXT)
 
 distclean-compile:
@@ -7221,6 +7242,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libsys_qemu_a-sim-vectors.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/$(DEPDIR)/xtensa_libsys_qemu_a-syscalls.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/boards/esp32/$(DEPDIR)/xtensa_libgloss_a-board.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@xtensa/boards/esp32s2/$(DEPDIR)/xtensa_libgloss_a-board.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@xtensa/boards/esp32s3/$(DEPDIR)/xtensa_libgloss_a-board.Po@am__quote@
 
 .S.o:
@@ -10321,6 +10343,20 @@ xtensa/boards/esp32/xtensa_libgloss_a-board.obj: xtensa/boards/esp32/board.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xtensa/boards/esp32/xtensa_libgloss_a-board.obj `if test -f 'xtensa/boards/esp32/board.c'; then $(CYGPATH_W) 'xtensa/boards/esp32/board.c'; else $(CYGPATH_W) '$(srcdir)/xtensa/boards/esp32/board.c'; fi`
 
+xtensa/boards/esp32s2/xtensa_libgloss_a-board.o: xtensa/boards/esp32s2/board.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xtensa/boards/esp32s2/xtensa_libgloss_a-board.o -MD -MP -MF xtensa/boards/esp32s2/$(DEPDIR)/xtensa_libgloss_a-board.Tpo -c -o xtensa/boards/esp32s2/xtensa_libgloss_a-board.o `test -f 'xtensa/boards/esp32s2/board.c' || echo '$(srcdir)/'`xtensa/boards/esp32s2/board.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) xtensa/boards/esp32s2/$(DEPDIR)/xtensa_libgloss_a-board.Tpo xtensa/boards/esp32s2/$(DEPDIR)/xtensa_libgloss_a-board.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xtensa/boards/esp32s2/board.c' object='xtensa/boards/esp32s2/xtensa_libgloss_a-board.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xtensa/boards/esp32s2/xtensa_libgloss_a-board.o `test -f 'xtensa/boards/esp32s2/board.c' || echo '$(srcdir)/'`xtensa/boards/esp32s2/board.c
+
+xtensa/boards/esp32s2/xtensa_libgloss_a-board.obj: xtensa/boards/esp32s2/board.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xtensa/boards/esp32s2/xtensa_libgloss_a-board.obj -MD -MP -MF xtensa/boards/esp32s2/$(DEPDIR)/xtensa_libgloss_a-board.Tpo -c -o xtensa/boards/esp32s2/xtensa_libgloss_a-board.obj `if test -f 'xtensa/boards/esp32s2/board.c'; then $(CYGPATH_W) 'xtensa/boards/esp32s2/board.c'; else $(CYGPATH_W) '$(srcdir)/xtensa/boards/esp32s2/board.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) xtensa/boards/esp32s2/$(DEPDIR)/xtensa_libgloss_a-board.Tpo xtensa/boards/esp32s2/$(DEPDIR)/xtensa_libgloss_a-board.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='xtensa/boards/esp32s2/board.c' object='xtensa/boards/esp32s2/xtensa_libgloss_a-board.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o xtensa/boards/esp32s2/xtensa_libgloss_a-board.obj `if test -f 'xtensa/boards/esp32s2/board.c'; then $(CYGPATH_W) 'xtensa/boards/esp32s2/board.c'; else $(CYGPATH_W) '$(srcdir)/xtensa/boards/esp32s2/board.c'; fi`
+
 xtensa/boards/esp32s3/xtensa_libgloss_a-board.o: xtensa/boards/esp32s3/board.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(xtensa_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT xtensa/boards/esp32s3/xtensa_libgloss_a-board.o -MD -MP -MF xtensa/boards/esp32s3/$(DEPDIR)/xtensa_libgloss_a-board.Tpo -c -o xtensa/boards/esp32s3/xtensa_libgloss_a-board.o `test -f 'xtensa/boards/esp32s3/board.c' || echo '$(srcdir)/'`xtensa/boards/esp32s3/board.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) xtensa/boards/esp32s3/$(DEPDIR)/xtensa_libgloss_a-board.Tpo xtensa/boards/esp32s3/$(DEPDIR)/xtensa_libgloss_a-board.Po
@@ -10919,6 +10955,8 @@ distclean-generic:
 	-rm -f xtensa/$(am__dirstamp)
 	-rm -f xtensa/boards/esp32/$(DEPDIR)/$(am__dirstamp)
 	-rm -f xtensa/boards/esp32/$(am__dirstamp)
+	-rm -f xtensa/boards/esp32s2/$(DEPDIR)/$(am__dirstamp)
+	-rm -f xtensa/boards/esp32s2/$(am__dirstamp)
 	-rm -f xtensa/boards/esp32s3/$(DEPDIR)/$(am__dirstamp)
 	-rm -f xtensa/boards/esp32s3/$(am__dirstamp)
 
@@ -10935,7 +10973,7 @@ clean-am: clean-aminfo clean-binPROGRAMS clean-checkPROGRAMS \
 
 distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) riscv/esp/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) riscv/esp/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s2/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-hdr distclean-local distclean-tags
@@ -11079,7 +11117,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) riscv/esp/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) riscv/esp/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s2/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-aminfo \
 	maintainer-clean-generic maintainer-clean-local

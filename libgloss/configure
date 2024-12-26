@@ -593,6 +593,8 @@ HAVE_XTENSA_BOARD_ESP_FALSE
 HAVE_XTENSA_BOARD_ESP_TRUE
 HAVE_XTENSA_BOARD_ESP32S3_FALSE
 HAVE_XTENSA_BOARD_ESP32S3_TRUE
+HAVE_XTENSA_BOARD_ESP32S2_FALSE
+HAVE_XTENSA_BOARD_ESP32S2_TRUE
 HAVE_XTENSA_BOARD_ESP32_FALSE
 HAVE_XTENSA_BOARD_ESP32_TRUE
 XTENSA_BOARD_ESP
@@ -5602,6 +5604,14 @@ else
   HAVE_XTENSA_BOARD_ESP32_FALSE=
 fi
 
+ if test x$XTENSA_BOARD_ESP = xesp32s2; then
+  HAVE_XTENSA_BOARD_ESP32S2_TRUE=
+  HAVE_XTENSA_BOARD_ESP32S2_FALSE='#'
+else
+  HAVE_XTENSA_BOARD_ESP32S2_TRUE='#'
+  HAVE_XTENSA_BOARD_ESP32S2_FALSE=
+fi
+
  if test x$XTENSA_BOARD_ESP = xesp32s3; then
   HAVE_XTENSA_BOARD_ESP32S3_TRUE=
   HAVE_XTENSA_BOARD_ESP32S3_FALSE='#'
@@ -5610,7 +5620,7 @@ else
   HAVE_XTENSA_BOARD_ESP32S3_FALSE=
 fi
 
- if echo $XTENSA_BOARD_ESP | grep -w -e esp32 -e esp32s3 >/dev/null 2>&1; then
+ if echo $XTENSA_BOARD_ESP | grep -w -e esp32 -e esp32s2 -e esp32s3 >/dev/null 2>&1; then
   HAVE_XTENSA_BOARD_ESP_TRUE=
   HAVE_XTENSA_BOARD_ESP_FALSE='#'
 else
@@ -6029,6 +6039,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_XTENSA_BOARD_ESP32_TRUE}" && test -z "${HAVE_XTENSA_BOARD_ESP32_FALSE}"; then
   as_fn_error $? "conditional \"HAVE_XTENSA_BOARD_ESP32\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${HAVE_XTENSA_BOARD_ESP32S2_TRUE}" && test -z "${HAVE_XTENSA_BOARD_ESP32S2_FALSE}"; then
+  as_fn_error $? "conditional \"HAVE_XTENSA_BOARD_ESP32S2\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_XTENSA_BOARD_ESP32S3_TRUE}" && test -z "${HAVE_XTENSA_BOARD_ESP32S3_FALSE}"; then
