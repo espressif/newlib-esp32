@@ -215,6 +215,14 @@ int	pthread_setcancelstate (int __state, int *__oldstate);
 int	pthread_setcanceltype (int __type, int *__oldtype);
 void 	pthread_testcancel (void);
 
+#ifndef __cplusplus
+int	pthread_rwlock_rdlock (pthread_rwlock_t *__rwlock);
+int	pthread_rwlock_tryrdlock (pthread_rwlock_t *__rwlock);
+int	pthread_rwlock_wrlock (pthread_rwlock_t *__rwlock);
+int	pthread_rwlock_trywrlock (pthread_rwlock_t *__rwlock);
+int	pthread_rwlock_unlock (pthread_rwlock_t *__rwlock);
+#endif /* !__cplusplus */
+
 #endif /* defined(_POSIX_THREADS) */
 
 #ifdef __cplusplus

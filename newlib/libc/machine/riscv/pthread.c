@@ -207,3 +207,40 @@ pthread_setspecific (pthread_key_t __key, const void *__value)
 }
 stub_warning(pthread_setspecific)
 
+#ifndef __cplusplus
+int _ATTRIBUTE((__weak__))
+pthread_rwlock_rdlock (pthread_rwlock_t *__rwlock)
+{
+  return -1;
+}
+stub_warning(pthread_rwlock_rdlock)
+
+int _ATTRIBUTE((__weak__))
+pthread_rwlock_tryrdlock (pthread_rwlock_t *__rwlock)
+{
+  return -1;
+}
+stub_warning(pthread_rwlock_tryrdlock)
+
+int _ATTRIBUTE((__weak__))
+pthread_rwlock_wrlock (pthread_rwlock_t *__rwlock)
+{
+  return -1;
+}
+stub_warning(pthread_rwlock_wrlock)
+
+int _ATTRIBUTE((__weak__))
+pthread_rwlock_trywrlock (pthread_rwlock_t *__rwlock)
+{
+  return -1;
+}
+stub_warning(pthread_rwlock_trywrlock)
+
+int _ATTRIBUTE((__weak__))
+pthread_rwlock_unlock (pthread_rwlock_t *__rwlock)
+{
+  return -1;
+}
+stub_warning(pthread_rwlock_unlock)
+#endif /* !__cplusplus */
+

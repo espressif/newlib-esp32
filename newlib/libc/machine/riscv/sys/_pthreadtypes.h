@@ -157,5 +157,10 @@ typedef int pthread_once_t;
 
 #define _PTHREAD_ONCE_INIT  0  /* is initialized and not run */
 
+#ifndef __cplusplus
+typedef __uint32_t pthread_rwlock_t;         /* POSIX RWLock Object */
+#define _PTHREAD_RWLOCK_INITIALIZER ((pthread_rwlock_t) 0xFFFFFFFF)
+#endif /* ! __cplusplus */
+
 #endif /* ! _SYS__PTHREADTYPES_H_ */
 
