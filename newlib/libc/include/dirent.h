@@ -35,7 +35,7 @@
 #ifndef _DIRENT_H_
 #define	_DIRENT_H_
 
-#include <sys/cdefs.h>
+#include <sys/types.h>
 #include <sys/dirent.h>
 
 #if !defined(MAXNAMLEN) && __BSD_VISIBLE
