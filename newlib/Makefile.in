@@ -245,14 +245,7 @@ check_PROGRAMS =
 @HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/ssputs_r.c \
 @HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/ssputws_r.c \
 @HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/ssprint_r.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/sswprint_r.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/svfiwprintf.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/svfiwscanf.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/svfwprintf.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/svfwscanf.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vfiwprintf.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vfiwscanf.c \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vfwscanf.c
+@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/sswprint_r.c
 
 @HAVE_STDIO_DIR_TRUE@am__append_12 = libc/stdio/clearerr.c \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/fclose.c libc/stdio/fdopen.c \
@@ -285,9 +278,16 @@ check_PROGRAMS =
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/setvbuf.c \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/snprintf.c \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/sprintf.c libc/stdio/sscanf.c \
-@HAVE_STDIO_DIR_TRUE@	libc/stdio/stdio.c libc/stdio/tmpfile.c \
-@HAVE_STDIO_DIR_TRUE@	libc/stdio/tmpnam.c libc/stdio/ungetc.c \
-@HAVE_STDIO_DIR_TRUE@	libc/stdio/vdprintf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/stdio.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/svfiwprintf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/svfiwscanf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/svfwprintf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/svfwscanf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/tmpfile.c libc/stdio/tmpnam.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/ungetc.c libc/stdio/vdprintf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/vfiwprintf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/vfiwscanf.c \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/vfwscanf.c \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/vprintf.c libc/stdio/vscanf.c \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/vsnprintf.c \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/vsprintf.c \
@@ -297,42 +297,12 @@ check_PROGRAMS =
 @HAVE_STDIO_DIR_TRUE@	$(libc_stdio_ELIX_4_SOURCES)
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__append_13 = \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/asiprintf.c \
-@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/getw.c \
-@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/putw.c \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vasiprintf.c
 
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__append_14 = \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/asniprintf.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/diprintf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fgetwc.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fgetwc_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fgetws.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fgetws_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fputwc.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fputwc_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fputws.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fputws_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fwide.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fwprintf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/fwscanf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/getwc.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/getwc_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/getwchar.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/getwchar_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/putwc.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/putwc_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/putwchar.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/putwchar_u.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/swprintf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/swscanf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/ungetwc.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vasniprintf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vswprintf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vswscanf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vwprintf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vwscanf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/wprintf.c \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/wscanf.c
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/vasniprintf.c
 
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO64_DIR_TRUE@am__append_15 = \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO64_DIR_TRUE@	libc/stdio64/fdopen64.c \
@@ -1235,56 +1205,21 @@ am__objects_5 = libc/stdlib/libc_a-rpmatch.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-ssputs_r.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-ssputws_r.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-ssprint_r.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-sswprint_r.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-svfiwprintf.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-svfiwscanf.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-svfwprintf.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-svfwscanf.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vfiwprintf.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vfiwscanf.$(OBJEXT) \
-@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vfwscanf.$(OBJEXT)
+@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-sswprint_r.$(OBJEXT)
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_12 = libc/stdio/libc_a-asiprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-getw.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-putw.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vasiprintf.$(OBJEXT)
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@am__objects_13 = libc/stdio/libc_a-asprintf.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fcloseall.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fseeko.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-ftello.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-getw.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-mktemp.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-putw.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vasprintf.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	$(am__objects_12)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@am__objects_14 = libc/stdio/libc_a-asniprintf.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-diprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fgetwc.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fgetwc_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fgetws.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fgetws_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fputwc.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fputwc_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fputws.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fputws_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fwide.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fwprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-fwscanf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-getwc.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-getwc_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-getwchar.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-getwchar_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-putwc.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-putwc_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-putwchar.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-putwchar_u.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-swprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-swscanf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-ungetwc.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vasniprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vswprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vswscanf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vwprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vwscanf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-wprintf.$(OBJEXT) \
-@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-wscanf.$(OBJEXT)
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@@NEWLIB_NANO_FORMATTED_IO_FALSE@	libc/stdio/libc_a-vasniprintf.$(OBJEXT)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@am__objects_15 = libc/stdio/libc_a-asnprintf.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-clearerr_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-dprintf.$(OBJEXT) \
@@ -1293,19 +1228,47 @@ am__objects_5 = libc/stdlib/libc_a-rpmatch.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fflush_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fgetc_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fgets_u.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fgetwc.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fgetwc_u.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fgetws.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fgetws_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fileno_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fmemopen.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fopencookie.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fpurge.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fputc_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fputs_u.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fputwc.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fputwc_u.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fputws.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fputws_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fread_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fsetlocking.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-funopen.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fwide.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fwprintf.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fwrite_u.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-fwscanf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-getwc.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-getwc_u.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-getwchar.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-getwchar_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-open_memstream.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-putwc.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-putwc_u.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-putwchar.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-putwchar_u.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-stdio_ext.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-swprintf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-swscanf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-ungetwc.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vasnprintf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vswprintf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vswscanf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vwprintf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vwscanf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-wprintf.$(OBJEXT) \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-wscanf.$(OBJEXT) \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	$(am__objects_14)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_TRUE@@HAVE_STDIO_DIR_TRUE@am__objects_15 = $(am__objects_14)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_TRUE@@HAVE_STDIO_DIR_TRUE@am__objects_15 = $(am__objects_14)
@@ -1367,10 +1330,17 @@ am__objects_5 = libc/stdlib/libc_a-rpmatch.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-sprintf.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-sscanf.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-stdio.$(OBJEXT) \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-svfiwprintf.$(OBJEXT) \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-svfiwscanf.$(OBJEXT) \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-svfwprintf.$(OBJEXT) \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-svfwscanf.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-tmpfile.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-tmpnam.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-ungetc.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vdprintf.$(OBJEXT) \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vfiwprintf.$(OBJEXT) \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vfiwscanf.$(OBJEXT) \
+@HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vfwscanf.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vprintf.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vscanf.$(OBJEXT) \
 @HAVE_STDIO_DIR_TRUE@	libc/stdio/libc_a-vsnprintf.$(OBJEXT) \
@@ -4552,7 +4522,9 @@ libc_stdlib_ELIX_4_SOURCES = \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fcloseall.c \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fseeko.c \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/ftello.c \
+@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/getw.c \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/mktemp.c \
+@ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/putw.c \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/vasprintf.c \
 @ELIX_LEVEL_1_FALSE@@HAVE_STDIO_DIR_TRUE@	$(am__append_13)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@libc_stdio_ELIX_4_SOURCES = libc/stdio/asnprintf.c \
@@ -4563,19 +4535,47 @@ libc_stdlib_ELIX_4_SOURCES = \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fflush_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fgetc_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fgets_u.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fgetwc.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fgetwc_u.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fgetws.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fgetws_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fileno_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fmemopen.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fopencookie.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fpurge.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fputc_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fputs_u.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fputwc.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fputwc_u.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fputws.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fputws_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fread_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fsetlocking.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/funopen.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fwide.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fwprintf.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fwrite_u.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/fwscanf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/getwc.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/getwc_u.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/getwchar.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/getwchar_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/open_memstream.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/putwc.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/putwc_u.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/putwchar.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/putwchar_u.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/stdio_ext.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/swprintf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/swscanf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/ungetwc.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/vasnprintf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/vswprintf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/vswscanf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/vwprintf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/vwscanf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/wprintf.c \
+@ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	libc/stdio/wscanf.c \
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_FALSE@@HAVE_STDIO_DIR_TRUE@	$(am__append_14)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_FALSE@@ELIX_LEVEL_3_TRUE@@HAVE_STDIO_DIR_TRUE@libc_stdio_ELIX_4_SOURCES = $(am__append_14)
 @ELIX_LEVEL_1_FALSE@@ELIX_LEVEL_2_TRUE@@HAVE_STDIO_DIR_TRUE@libc_stdio_ELIX_4_SOURCES = $(am__append_14)
@@ -6043,20 +6043,6 @@ libc/stdio/libc_a-ssprint_r.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-sswprint_r.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-svfiwprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-svfiwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-svfwprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-svfwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-vfiwprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-vfiwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-vfwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-clearerr.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fclose.$(OBJEXT): libc/stdio/$(am__dirstamp) \
@@ -6167,6 +6153,14 @@ libc/stdio/libc_a-sscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-stdio.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-svfiwprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-svfiwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-svfwprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-svfwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-tmpfile.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-tmpnam.$(OBJEXT): libc/stdio/$(am__dirstamp) \
@@ -6174,6 +6168,12 @@ libc/stdio/libc_a-tmpnam.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 libc/stdio/libc_a-ungetc.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-vdprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-vfiwprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-vfiwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-vfwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-vprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
@@ -6199,15 +6199,15 @@ libc/stdio/libc_a-fseeko.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-ftello.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-getw.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-mktemp.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-putw.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-vasprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-asiprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-getw.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-putw.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-vasiprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
@@ -6227,6 +6227,14 @@ libc/stdio/libc_a-fgetc_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fgets_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-fgetwc.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-fgetwc_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-fgetws.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-fgetws_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fileno_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fmemopen.$(OBJEXT): libc/stdio/$(am__dirstamp) \
@@ -6239,33 +6247,6 @@ libc/stdio/libc_a-fputc_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fputs_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-fread_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-fsetlocking.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-funopen.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-fwrite_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-open_memstream.$(OBJEXT):  \
-	libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-stdio_ext.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-vasnprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-asniprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-diprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-fgetwc.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-fgetwc_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-fgetws.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-fgetws_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
-	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fputwc.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fputwc_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
@@ -6274,9 +6255,17 @@ libc/stdio/libc_a-fputws.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fputws_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-fread_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-fsetlocking.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-funopen.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fwide.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fwprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-fwrite_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-fwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
@@ -6288,6 +6277,9 @@ libc/stdio/libc_a-getwchar.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-getwchar_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-open_memstream.$(OBJEXT):  \
+	libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-putwc.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-putwc_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
@@ -6296,13 +6288,15 @@ libc/stdio/libc_a-putwchar.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-putwchar_u.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-stdio_ext.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-swprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-swscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-ungetwc.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
-libc/stdio/libc_a-vasniprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+libc/stdio/libc_a-vasnprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-vswprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
@@ -6315,6 +6309,12 @@ libc/stdio/libc_a-vwscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 libc/stdio/libc_a-wprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio/libc_a-wscanf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-asniprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-diprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
+	libc/stdio/$(DEPDIR)/$(am__dirstamp)
+libc/stdio/libc_a-vasniprintf.$(OBJEXT): libc/stdio/$(am__dirstamp) \
 	libc/stdio/$(DEPDIR)/$(am__dirstamp)
 libc/stdio64/$(am__dirstamp):
 	@$(MKDIR_P) libc/stdio64
@@ -24356,104 +24356,6 @@ libc/stdio/libc_a-sswprint_r.obj: libc/stdio/sswprint_r.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-sswprint_r.obj `if test -f 'libc/stdio/sswprint_r.c'; then $(CYGPATH_W) 'libc/stdio/sswprint_r.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/sswprint_r.c'; fi`
 
-libc/stdio/libc_a-svfiwprintf.o: libc/stdio/svfiwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo -c -o libc/stdio/libc_a-svfiwprintf.o `test -f 'libc/stdio/svfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfiwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwprintf.c' object='libc/stdio/libc_a-svfiwprintf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwprintf.o `test -f 'libc/stdio/svfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfiwprintf.c
-
-libc/stdio/libc_a-svfiwprintf.obj: libc/stdio/svfiwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo -c -o libc/stdio/libc_a-svfiwprintf.obj `if test -f 'libc/stdio/svfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwprintf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwprintf.c' object='libc/stdio/libc_a-svfiwprintf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwprintf.obj `if test -f 'libc/stdio/svfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwprintf.c'; fi`
-
-libc/stdio/libc_a-svfiwscanf.o: libc/stdio/svfiwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo -c -o libc/stdio/libc_a-svfiwscanf.o `test -f 'libc/stdio/svfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfiwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwscanf.c' object='libc/stdio/libc_a-svfiwscanf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwscanf.o `test -f 'libc/stdio/svfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfiwscanf.c
-
-libc/stdio/libc_a-svfiwscanf.obj: libc/stdio/svfiwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo -c -o libc/stdio/libc_a-svfiwscanf.obj `if test -f 'libc/stdio/svfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwscanf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwscanf.c' object='libc/stdio/libc_a-svfiwscanf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwscanf.obj `if test -f 'libc/stdio/svfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwscanf.c'; fi`
-
-libc/stdio/libc_a-svfwprintf.o: libc/stdio/svfwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo -c -o libc/stdio/libc_a-svfwprintf.o `test -f 'libc/stdio/svfwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwprintf.c' object='libc/stdio/libc_a-svfwprintf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwprintf.o `test -f 'libc/stdio/svfwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfwprintf.c
-
-libc/stdio/libc_a-svfwprintf.obj: libc/stdio/svfwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo -c -o libc/stdio/libc_a-svfwprintf.obj `if test -f 'libc/stdio/svfwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwprintf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwprintf.c' object='libc/stdio/libc_a-svfwprintf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwprintf.obj `if test -f 'libc/stdio/svfwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwprintf.c'; fi`
-
-libc/stdio/libc_a-svfwscanf.o: libc/stdio/svfwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo -c -o libc/stdio/libc_a-svfwscanf.o `test -f 'libc/stdio/svfwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwscanf.c' object='libc/stdio/libc_a-svfwscanf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwscanf.o `test -f 'libc/stdio/svfwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfwscanf.c
-
-libc/stdio/libc_a-svfwscanf.obj: libc/stdio/svfwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo -c -o libc/stdio/libc_a-svfwscanf.obj `if test -f 'libc/stdio/svfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwscanf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwscanf.c' object='libc/stdio/libc_a-svfwscanf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwscanf.obj `if test -f 'libc/stdio/svfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwscanf.c'; fi`
-
-libc/stdio/libc_a-vfiwprintf.o: libc/stdio/vfiwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo -c -o libc/stdio/libc_a-vfiwprintf.o `test -f 'libc/stdio/vfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/vfiwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwprintf.c' object='libc/stdio/libc_a-vfiwprintf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwprintf.o `test -f 'libc/stdio/vfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/vfiwprintf.c
-
-libc/stdio/libc_a-vfiwprintf.obj: libc/stdio/vfiwprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo -c -o libc/stdio/libc_a-vfiwprintf.obj `if test -f 'libc/stdio/vfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwprintf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwprintf.c' object='libc/stdio/libc_a-vfiwprintf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwprintf.obj `if test -f 'libc/stdio/vfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwprintf.c'; fi`
-
-libc/stdio/libc_a-vfiwscanf.o: libc/stdio/vfiwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo -c -o libc/stdio/libc_a-vfiwscanf.o `test -f 'libc/stdio/vfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfiwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwscanf.c' object='libc/stdio/libc_a-vfiwscanf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwscanf.o `test -f 'libc/stdio/vfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfiwscanf.c
-
-libc/stdio/libc_a-vfiwscanf.obj: libc/stdio/vfiwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo -c -o libc/stdio/libc_a-vfiwscanf.obj `if test -f 'libc/stdio/vfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwscanf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwscanf.c' object='libc/stdio/libc_a-vfiwscanf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwscanf.obj `if test -f 'libc/stdio/vfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwscanf.c'; fi`
-
-libc/stdio/libc_a-vfwscanf.o: libc/stdio/vfwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo -c -o libc/stdio/libc_a-vfwscanf.o `test -f 'libc/stdio/vfwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfwscanf.c' object='libc/stdio/libc_a-vfwscanf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfwscanf.o `test -f 'libc/stdio/vfwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfwscanf.c
-
-libc/stdio/libc_a-vfwscanf.obj: libc/stdio/vfwscanf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo -c -o libc/stdio/libc_a-vfwscanf.obj `if test -f 'libc/stdio/vfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfwscanf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfwscanf.c' object='libc/stdio/libc_a-vfwscanf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfwscanf.obj `if test -f 'libc/stdio/vfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfwscanf.c'; fi`
-
 libc/stdio/libc_a-clearerr.o: libc/stdio/clearerr.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-clearerr.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-clearerr.Tpo -c -o libc/stdio/libc_a-clearerr.o `test -f 'libc/stdio/clearerr.c' || echo '$(srcdir)/'`libc/stdio/clearerr.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-clearerr.Tpo libc/stdio/$(DEPDIR)/libc_a-clearerr.Po
@@ -25224,6 +25126,62 @@ libc/stdio/libc_a-stdio.obj: libc/stdio/stdio.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-stdio.obj `if test -f 'libc/stdio/stdio.c'; then $(CYGPATH_W) 'libc/stdio/stdio.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/stdio.c'; fi`
 
+libc/stdio/libc_a-svfiwprintf.o: libc/stdio/svfiwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo -c -o libc/stdio/libc_a-svfiwprintf.o `test -f 'libc/stdio/svfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfiwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwprintf.c' object='libc/stdio/libc_a-svfiwprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwprintf.o `test -f 'libc/stdio/svfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfiwprintf.c
+
+libc/stdio/libc_a-svfiwprintf.obj: libc/stdio/svfiwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo -c -o libc/stdio/libc_a-svfiwprintf.obj `if test -f 'libc/stdio/svfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwprintf.c' object='libc/stdio/libc_a-svfiwprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwprintf.obj `if test -f 'libc/stdio/svfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwprintf.c'; fi`
+
+libc/stdio/libc_a-svfiwscanf.o: libc/stdio/svfiwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo -c -o libc/stdio/libc_a-svfiwscanf.o `test -f 'libc/stdio/svfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfiwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwscanf.c' object='libc/stdio/libc_a-svfiwscanf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwscanf.o `test -f 'libc/stdio/svfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfiwscanf.c
+
+libc/stdio/libc_a-svfiwscanf.obj: libc/stdio/svfiwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfiwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo -c -o libc/stdio/libc_a-svfiwscanf.obj `if test -f 'libc/stdio/svfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwscanf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfiwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfiwscanf.c' object='libc/stdio/libc_a-svfiwscanf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfiwscanf.obj `if test -f 'libc/stdio/svfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfiwscanf.c'; fi`
+
+libc/stdio/libc_a-svfwprintf.o: libc/stdio/svfwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo -c -o libc/stdio/libc_a-svfwprintf.o `test -f 'libc/stdio/svfwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwprintf.c' object='libc/stdio/libc_a-svfwprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwprintf.o `test -f 'libc/stdio/svfwprintf.c' || echo '$(srcdir)/'`libc/stdio/svfwprintf.c
+
+libc/stdio/libc_a-svfwprintf.obj: libc/stdio/svfwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo -c -o libc/stdio/libc_a-svfwprintf.obj `if test -f 'libc/stdio/svfwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwprintf.c' object='libc/stdio/libc_a-svfwprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwprintf.obj `if test -f 'libc/stdio/svfwprintf.c'; then $(CYGPATH_W) 'libc/stdio/svfwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwprintf.c'; fi`
+
+libc/stdio/libc_a-svfwscanf.o: libc/stdio/svfwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo -c -o libc/stdio/libc_a-svfwscanf.o `test -f 'libc/stdio/svfwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwscanf.c' object='libc/stdio/libc_a-svfwscanf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwscanf.o `test -f 'libc/stdio/svfwscanf.c' || echo '$(srcdir)/'`libc/stdio/svfwscanf.c
+
+libc/stdio/libc_a-svfwscanf.obj: libc/stdio/svfwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-svfwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo -c -o libc/stdio/libc_a-svfwscanf.obj `if test -f 'libc/stdio/svfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwscanf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-svfwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/svfwscanf.c' object='libc/stdio/libc_a-svfwscanf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-svfwscanf.obj `if test -f 'libc/stdio/svfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/svfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/svfwscanf.c'; fi`
+
 libc/stdio/libc_a-tmpfile.o: libc/stdio/tmpfile.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-tmpfile.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-tmpfile.Tpo -c -o libc/stdio/libc_a-tmpfile.o `test -f 'libc/stdio/tmpfile.c' || echo '$(srcdir)/'`libc/stdio/tmpfile.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-tmpfile.Tpo libc/stdio/$(DEPDIR)/libc_a-tmpfile.Po
@@ -25279,6 +25237,48 @@ libc/stdio/libc_a-vdprintf.obj: libc/stdio/vdprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vdprintf.c' object='libc/stdio/libc_a-vdprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vdprintf.obj `if test -f 'libc/stdio/vdprintf.c'; then $(CYGPATH_W) 'libc/stdio/vdprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vdprintf.c'; fi`
+
+libc/stdio/libc_a-vfiwprintf.o: libc/stdio/vfiwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo -c -o libc/stdio/libc_a-vfiwprintf.o `test -f 'libc/stdio/vfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/vfiwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwprintf.c' object='libc/stdio/libc_a-vfiwprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwprintf.o `test -f 'libc/stdio/vfiwprintf.c' || echo '$(srcdir)/'`libc/stdio/vfiwprintf.c
+
+libc/stdio/libc_a-vfiwprintf.obj: libc/stdio/vfiwprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo -c -o libc/stdio/libc_a-vfiwprintf.obj `if test -f 'libc/stdio/vfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwprintf.c' object='libc/stdio/libc_a-vfiwprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwprintf.obj `if test -f 'libc/stdio/vfiwprintf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwprintf.c'; fi`
+
+libc/stdio/libc_a-vfiwscanf.o: libc/stdio/vfiwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo -c -o libc/stdio/libc_a-vfiwscanf.o `test -f 'libc/stdio/vfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfiwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwscanf.c' object='libc/stdio/libc_a-vfiwscanf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwscanf.o `test -f 'libc/stdio/vfiwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfiwscanf.c
+
+libc/stdio/libc_a-vfiwscanf.obj: libc/stdio/vfiwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfiwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo -c -o libc/stdio/libc_a-vfiwscanf.obj `if test -f 'libc/stdio/vfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwscanf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfiwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfiwscanf.c' object='libc/stdio/libc_a-vfiwscanf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfiwscanf.obj `if test -f 'libc/stdio/vfiwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfiwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfiwscanf.c'; fi`
+
+libc/stdio/libc_a-vfwscanf.o: libc/stdio/vfwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo -c -o libc/stdio/libc_a-vfwscanf.o `test -f 'libc/stdio/vfwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfwscanf.c' object='libc/stdio/libc_a-vfwscanf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfwscanf.o `test -f 'libc/stdio/vfwscanf.c' || echo '$(srcdir)/'`libc/stdio/vfwscanf.c
+
+libc/stdio/libc_a-vfwscanf.obj: libc/stdio/vfwscanf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vfwscanf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo -c -o libc/stdio/libc_a-vfwscanf.obj `if test -f 'libc/stdio/vfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfwscanf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Tpo libc/stdio/$(DEPDIR)/libc_a-vfwscanf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vfwscanf.c' object='libc/stdio/libc_a-vfwscanf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vfwscanf.obj `if test -f 'libc/stdio/vfwscanf.c'; then $(CYGPATH_W) 'libc/stdio/vfwscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vfwscanf.c'; fi`
 
 libc/stdio/libc_a-vprintf.o: libc/stdio/vprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vprintf.Tpo -c -o libc/stdio/libc_a-vprintf.o `test -f 'libc/stdio/vprintf.c' || echo '$(srcdir)/'`libc/stdio/vprintf.c
@@ -25448,6 +25448,20 @@ libc/stdio/libc_a-ftello.obj: libc/stdio/ftello.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-ftello.obj `if test -f 'libc/stdio/ftello.c'; then $(CYGPATH_W) 'libc/stdio/ftello.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/ftello.c'; fi`
 
+libc/stdio/libc_a-getw.o: libc/stdio/getw.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-getw.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-getw.Tpo -c -o libc/stdio/libc_a-getw.o `test -f 'libc/stdio/getw.c' || echo '$(srcdir)/'`libc/stdio/getw.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-getw.Tpo libc/stdio/$(DEPDIR)/libc_a-getw.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/getw.c' object='libc/stdio/libc_a-getw.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-getw.o `test -f 'libc/stdio/getw.c' || echo '$(srcdir)/'`libc/stdio/getw.c
+
+libc/stdio/libc_a-getw.obj: libc/stdio/getw.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-getw.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-getw.Tpo -c -o libc/stdio/libc_a-getw.obj `if test -f 'libc/stdio/getw.c'; then $(CYGPATH_W) 'libc/stdio/getw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/getw.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-getw.Tpo libc/stdio/$(DEPDIR)/libc_a-getw.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/getw.c' object='libc/stdio/libc_a-getw.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-getw.obj `if test -f 'libc/stdio/getw.c'; then $(CYGPATH_W) 'libc/stdio/getw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/getw.c'; fi`
+
 libc/stdio/libc_a-mktemp.o: libc/stdio/mktemp.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-mktemp.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-mktemp.Tpo -c -o libc/stdio/libc_a-mktemp.o `test -f 'libc/stdio/mktemp.c' || echo '$(srcdir)/'`libc/stdio/mktemp.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-mktemp.Tpo libc/stdio/$(DEPDIR)/libc_a-mktemp.Po
@@ -25461,6 +25475,20 @@ libc/stdio/libc_a-mktemp.obj: libc/stdio/mktemp.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/mktemp.c' object='libc/stdio/libc_a-mktemp.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-mktemp.obj `if test -f 'libc/stdio/mktemp.c'; then $(CYGPATH_W) 'libc/stdio/mktemp.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/mktemp.c'; fi`
+
+libc/stdio/libc_a-putw.o: libc/stdio/putw.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-putw.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-putw.Tpo -c -o libc/stdio/libc_a-putw.o `test -f 'libc/stdio/putw.c' || echo '$(srcdir)/'`libc/stdio/putw.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-putw.Tpo libc/stdio/$(DEPDIR)/libc_a-putw.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/putw.c' object='libc/stdio/libc_a-putw.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-putw.o `test -f 'libc/stdio/putw.c' || echo '$(srcdir)/'`libc/stdio/putw.c
+
+libc/stdio/libc_a-putw.obj: libc/stdio/putw.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-putw.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-putw.Tpo -c -o libc/stdio/libc_a-putw.obj `if test -f 'libc/stdio/putw.c'; then $(CYGPATH_W) 'libc/stdio/putw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/putw.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-putw.Tpo libc/stdio/$(DEPDIR)/libc_a-putw.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/putw.c' object='libc/stdio/libc_a-putw.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-putw.obj `if test -f 'libc/stdio/putw.c'; then $(CYGPATH_W) 'libc/stdio/putw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/putw.c'; fi`
 
 libc/stdio/libc_a-vasprintf.o: libc/stdio/vasprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasprintf.Tpo -c -o libc/stdio/libc_a-vasprintf.o `test -f 'libc/stdio/vasprintf.c' || echo '$(srcdir)/'`libc/stdio/vasprintf.c
@@ -25489,34 +25517,6 @@ libc/stdio/libc_a-asiprintf.obj: libc/stdio/asiprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/asiprintf.c' object='libc/stdio/libc_a-asiprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-asiprintf.obj `if test -f 'libc/stdio/asiprintf.c'; then $(CYGPATH_W) 'libc/stdio/asiprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/asiprintf.c'; fi`
-
-libc/stdio/libc_a-getw.o: libc/stdio/getw.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-getw.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-getw.Tpo -c -o libc/stdio/libc_a-getw.o `test -f 'libc/stdio/getw.c' || echo '$(srcdir)/'`libc/stdio/getw.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-getw.Tpo libc/stdio/$(DEPDIR)/libc_a-getw.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/getw.c' object='libc/stdio/libc_a-getw.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-getw.o `test -f 'libc/stdio/getw.c' || echo '$(srcdir)/'`libc/stdio/getw.c
-
-libc/stdio/libc_a-getw.obj: libc/stdio/getw.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-getw.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-getw.Tpo -c -o libc/stdio/libc_a-getw.obj `if test -f 'libc/stdio/getw.c'; then $(CYGPATH_W) 'libc/stdio/getw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/getw.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-getw.Tpo libc/stdio/$(DEPDIR)/libc_a-getw.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/getw.c' object='libc/stdio/libc_a-getw.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-getw.obj `if test -f 'libc/stdio/getw.c'; then $(CYGPATH_W) 'libc/stdio/getw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/getw.c'; fi`
-
-libc/stdio/libc_a-putw.o: libc/stdio/putw.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-putw.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-putw.Tpo -c -o libc/stdio/libc_a-putw.o `test -f 'libc/stdio/putw.c' || echo '$(srcdir)/'`libc/stdio/putw.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-putw.Tpo libc/stdio/$(DEPDIR)/libc_a-putw.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/putw.c' object='libc/stdio/libc_a-putw.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-putw.o `test -f 'libc/stdio/putw.c' || echo '$(srcdir)/'`libc/stdio/putw.c
-
-libc/stdio/libc_a-putw.obj: libc/stdio/putw.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-putw.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-putw.Tpo -c -o libc/stdio/libc_a-putw.obj `if test -f 'libc/stdio/putw.c'; then $(CYGPATH_W) 'libc/stdio/putw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/putw.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-putw.Tpo libc/stdio/$(DEPDIR)/libc_a-putw.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/putw.c' object='libc/stdio/libc_a-putw.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-putw.obj `if test -f 'libc/stdio/putw.c'; then $(CYGPATH_W) 'libc/stdio/putw.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/putw.c'; fi`
 
 libc/stdio/libc_a-vasiprintf.o: libc/stdio/vasiprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasiprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasiprintf.Tpo -c -o libc/stdio/libc_a-vasiprintf.o `test -f 'libc/stdio/vasiprintf.c' || echo '$(srcdir)/'`libc/stdio/vasiprintf.c
@@ -25644,6 +25644,62 @@ libc/stdio/libc_a-fgets_u.obj: libc/stdio/fgets_u.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgets_u.obj `if test -f 'libc/stdio/fgets_u.c'; then $(CYGPATH_W) 'libc/stdio/fgets_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgets_u.c'; fi`
 
+libc/stdio/libc_a-fgetwc.o: libc/stdio/fgetwc.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo -c -o libc/stdio/libc_a-fgetwc.o `test -f 'libc/stdio/fgetwc.c' || echo '$(srcdir)/'`libc/stdio/fgetwc.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc.c' object='libc/stdio/libc_a-fgetwc.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc.o `test -f 'libc/stdio/fgetwc.c' || echo '$(srcdir)/'`libc/stdio/fgetwc.c
+
+libc/stdio/libc_a-fgetwc.obj: libc/stdio/fgetwc.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo -c -o libc/stdio/libc_a-fgetwc.obj `if test -f 'libc/stdio/fgetwc.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc.c' object='libc/stdio/libc_a-fgetwc.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc.obj `if test -f 'libc/stdio/fgetwc.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc.c'; fi`
+
+libc/stdio/libc_a-fgetwc_u.o: libc/stdio/fgetwc_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo -c -o libc/stdio/libc_a-fgetwc_u.o `test -f 'libc/stdio/fgetwc_u.c' || echo '$(srcdir)/'`libc/stdio/fgetwc_u.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc_u.c' object='libc/stdio/libc_a-fgetwc_u.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc_u.o `test -f 'libc/stdio/fgetwc_u.c' || echo '$(srcdir)/'`libc/stdio/fgetwc_u.c
+
+libc/stdio/libc_a-fgetwc_u.obj: libc/stdio/fgetwc_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo -c -o libc/stdio/libc_a-fgetwc_u.obj `if test -f 'libc/stdio/fgetwc_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc_u.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc_u.c' object='libc/stdio/libc_a-fgetwc_u.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc_u.obj `if test -f 'libc/stdio/fgetwc_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc_u.c'; fi`
+
+libc/stdio/libc_a-fgetws.o: libc/stdio/fgetws.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo -c -o libc/stdio/libc_a-fgetws.o `test -f 'libc/stdio/fgetws.c' || echo '$(srcdir)/'`libc/stdio/fgetws.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws.c' object='libc/stdio/libc_a-fgetws.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws.o `test -f 'libc/stdio/fgetws.c' || echo '$(srcdir)/'`libc/stdio/fgetws.c
+
+libc/stdio/libc_a-fgetws.obj: libc/stdio/fgetws.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo -c -o libc/stdio/libc_a-fgetws.obj `if test -f 'libc/stdio/fgetws.c'; then $(CYGPATH_W) 'libc/stdio/fgetws.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws.c' object='libc/stdio/libc_a-fgetws.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws.obj `if test -f 'libc/stdio/fgetws.c'; then $(CYGPATH_W) 'libc/stdio/fgetws.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws.c'; fi`
+
+libc/stdio/libc_a-fgetws_u.o: libc/stdio/fgetws_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo -c -o libc/stdio/libc_a-fgetws_u.o `test -f 'libc/stdio/fgetws_u.c' || echo '$(srcdir)/'`libc/stdio/fgetws_u.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws_u.c' object='libc/stdio/libc_a-fgetws_u.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws_u.o `test -f 'libc/stdio/fgetws_u.c' || echo '$(srcdir)/'`libc/stdio/fgetws_u.c
+
+libc/stdio/libc_a-fgetws_u.obj: libc/stdio/fgetws_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo -c -o libc/stdio/libc_a-fgetws_u.obj `if test -f 'libc/stdio/fgetws_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetws_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws_u.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws_u.c' object='libc/stdio/libc_a-fgetws_u.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws_u.obj `if test -f 'libc/stdio/fgetws_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetws_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws_u.c'; fi`
+
 libc/stdio/libc_a-fileno_u.o: libc/stdio/fileno_u.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fileno_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fileno_u.Tpo -c -o libc/stdio/libc_a-fileno_u.o `test -f 'libc/stdio/fileno_u.c' || echo '$(srcdir)/'`libc/stdio/fileno_u.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fileno_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fileno_u.Po
@@ -25728,188 +25784,6 @@ libc/stdio/libc_a-fputs_u.obj: libc/stdio/fputs_u.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fputs_u.obj `if test -f 'libc/stdio/fputs_u.c'; then $(CYGPATH_W) 'libc/stdio/fputs_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fputs_u.c'; fi`
 
-libc/stdio/libc_a-fread_u.o: libc/stdio/fread_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fread_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo -c -o libc/stdio/libc_a-fread_u.o `test -f 'libc/stdio/fread_u.c' || echo '$(srcdir)/'`libc/stdio/fread_u.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fread_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fread_u.c' object='libc/stdio/libc_a-fread_u.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fread_u.o `test -f 'libc/stdio/fread_u.c' || echo '$(srcdir)/'`libc/stdio/fread_u.c
-
-libc/stdio/libc_a-fread_u.obj: libc/stdio/fread_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fread_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo -c -o libc/stdio/libc_a-fread_u.obj `if test -f 'libc/stdio/fread_u.c'; then $(CYGPATH_W) 'libc/stdio/fread_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fread_u.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fread_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fread_u.c' object='libc/stdio/libc_a-fread_u.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fread_u.obj `if test -f 'libc/stdio/fread_u.c'; then $(CYGPATH_W) 'libc/stdio/fread_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fread_u.c'; fi`
-
-libc/stdio/libc_a-fsetlocking.o: libc/stdio/fsetlocking.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fsetlocking.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo -c -o libc/stdio/libc_a-fsetlocking.o `test -f 'libc/stdio/fsetlocking.c' || echo '$(srcdir)/'`libc/stdio/fsetlocking.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fsetlocking.c' object='libc/stdio/libc_a-fsetlocking.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fsetlocking.o `test -f 'libc/stdio/fsetlocking.c' || echo '$(srcdir)/'`libc/stdio/fsetlocking.c
-
-libc/stdio/libc_a-fsetlocking.obj: libc/stdio/fsetlocking.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fsetlocking.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo -c -o libc/stdio/libc_a-fsetlocking.obj `if test -f 'libc/stdio/fsetlocking.c'; then $(CYGPATH_W) 'libc/stdio/fsetlocking.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fsetlocking.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fsetlocking.c' object='libc/stdio/libc_a-fsetlocking.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fsetlocking.obj `if test -f 'libc/stdio/fsetlocking.c'; then $(CYGPATH_W) 'libc/stdio/fsetlocking.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fsetlocking.c'; fi`
-
-libc/stdio/libc_a-funopen.o: libc/stdio/funopen.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-funopen.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo -c -o libc/stdio/libc_a-funopen.o `test -f 'libc/stdio/funopen.c' || echo '$(srcdir)/'`libc/stdio/funopen.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo libc/stdio/$(DEPDIR)/libc_a-funopen.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/funopen.c' object='libc/stdio/libc_a-funopen.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-funopen.o `test -f 'libc/stdio/funopen.c' || echo '$(srcdir)/'`libc/stdio/funopen.c
-
-libc/stdio/libc_a-funopen.obj: libc/stdio/funopen.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-funopen.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo -c -o libc/stdio/libc_a-funopen.obj `if test -f 'libc/stdio/funopen.c'; then $(CYGPATH_W) 'libc/stdio/funopen.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/funopen.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo libc/stdio/$(DEPDIR)/libc_a-funopen.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/funopen.c' object='libc/stdio/libc_a-funopen.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-funopen.obj `if test -f 'libc/stdio/funopen.c'; then $(CYGPATH_W) 'libc/stdio/funopen.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/funopen.c'; fi`
-
-libc/stdio/libc_a-fwrite_u.o: libc/stdio/fwrite_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fwrite_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo -c -o libc/stdio/libc_a-fwrite_u.o `test -f 'libc/stdio/fwrite_u.c' || echo '$(srcdir)/'`libc/stdio/fwrite_u.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fwrite_u.c' object='libc/stdio/libc_a-fwrite_u.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fwrite_u.o `test -f 'libc/stdio/fwrite_u.c' || echo '$(srcdir)/'`libc/stdio/fwrite_u.c
-
-libc/stdio/libc_a-fwrite_u.obj: libc/stdio/fwrite_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fwrite_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo -c -o libc/stdio/libc_a-fwrite_u.obj `if test -f 'libc/stdio/fwrite_u.c'; then $(CYGPATH_W) 'libc/stdio/fwrite_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fwrite_u.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fwrite_u.c' object='libc/stdio/libc_a-fwrite_u.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fwrite_u.obj `if test -f 'libc/stdio/fwrite_u.c'; then $(CYGPATH_W) 'libc/stdio/fwrite_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fwrite_u.c'; fi`
-
-libc/stdio/libc_a-open_memstream.o: libc/stdio/open_memstream.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-open_memstream.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo -c -o libc/stdio/libc_a-open_memstream.o `test -f 'libc/stdio/open_memstream.c' || echo '$(srcdir)/'`libc/stdio/open_memstream.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo libc/stdio/$(DEPDIR)/libc_a-open_memstream.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/open_memstream.c' object='libc/stdio/libc_a-open_memstream.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-open_memstream.o `test -f 'libc/stdio/open_memstream.c' || echo '$(srcdir)/'`libc/stdio/open_memstream.c
-
-libc/stdio/libc_a-open_memstream.obj: libc/stdio/open_memstream.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-open_memstream.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo -c -o libc/stdio/libc_a-open_memstream.obj `if test -f 'libc/stdio/open_memstream.c'; then $(CYGPATH_W) 'libc/stdio/open_memstream.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/open_memstream.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo libc/stdio/$(DEPDIR)/libc_a-open_memstream.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/open_memstream.c' object='libc/stdio/libc_a-open_memstream.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-open_memstream.obj `if test -f 'libc/stdio/open_memstream.c'; then $(CYGPATH_W) 'libc/stdio/open_memstream.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/open_memstream.c'; fi`
-
-libc/stdio/libc_a-stdio_ext.o: libc/stdio/stdio_ext.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-stdio_ext.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo -c -o libc/stdio/libc_a-stdio_ext.o `test -f 'libc/stdio/stdio_ext.c' || echo '$(srcdir)/'`libc/stdio/stdio_ext.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/stdio_ext.c' object='libc/stdio/libc_a-stdio_ext.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-stdio_ext.o `test -f 'libc/stdio/stdio_ext.c' || echo '$(srcdir)/'`libc/stdio/stdio_ext.c
-
-libc/stdio/libc_a-stdio_ext.obj: libc/stdio/stdio_ext.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-stdio_ext.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo -c -o libc/stdio/libc_a-stdio_ext.obj `if test -f 'libc/stdio/stdio_ext.c'; then $(CYGPATH_W) 'libc/stdio/stdio_ext.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/stdio_ext.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/stdio_ext.c' object='libc/stdio/libc_a-stdio_ext.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-stdio_ext.obj `if test -f 'libc/stdio/stdio_ext.c'; then $(CYGPATH_W) 'libc/stdio/stdio_ext.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/stdio_ext.c'; fi`
-
-libc/stdio/libc_a-vasnprintf.o: libc/stdio/vasnprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasnprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo -c -o libc/stdio/libc_a-vasnprintf.o `test -f 'libc/stdio/vasnprintf.c' || echo '$(srcdir)/'`libc/stdio/vasnprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasnprintf.c' object='libc/stdio/libc_a-vasnprintf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasnprintf.o `test -f 'libc/stdio/vasnprintf.c' || echo '$(srcdir)/'`libc/stdio/vasnprintf.c
-
-libc/stdio/libc_a-vasnprintf.obj: libc/stdio/vasnprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasnprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo -c -o libc/stdio/libc_a-vasnprintf.obj `if test -f 'libc/stdio/vasnprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasnprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasnprintf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasnprintf.c' object='libc/stdio/libc_a-vasnprintf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasnprintf.obj `if test -f 'libc/stdio/vasnprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasnprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasnprintf.c'; fi`
-
-libc/stdio/libc_a-asniprintf.o: libc/stdio/asniprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-asniprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo -c -o libc/stdio/libc_a-asniprintf.o `test -f 'libc/stdio/asniprintf.c' || echo '$(srcdir)/'`libc/stdio/asniprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-asniprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/asniprintf.c' object='libc/stdio/libc_a-asniprintf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-asniprintf.o `test -f 'libc/stdio/asniprintf.c' || echo '$(srcdir)/'`libc/stdio/asniprintf.c
-
-libc/stdio/libc_a-asniprintf.obj: libc/stdio/asniprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-asniprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo -c -o libc/stdio/libc_a-asniprintf.obj `if test -f 'libc/stdio/asniprintf.c'; then $(CYGPATH_W) 'libc/stdio/asniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/asniprintf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-asniprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/asniprintf.c' object='libc/stdio/libc_a-asniprintf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-asniprintf.obj `if test -f 'libc/stdio/asniprintf.c'; then $(CYGPATH_W) 'libc/stdio/asniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/asniprintf.c'; fi`
-
-libc/stdio/libc_a-diprintf.o: libc/stdio/diprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-diprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo -c -o libc/stdio/libc_a-diprintf.o `test -f 'libc/stdio/diprintf.c' || echo '$(srcdir)/'`libc/stdio/diprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-diprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/diprintf.c' object='libc/stdio/libc_a-diprintf.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-diprintf.o `test -f 'libc/stdio/diprintf.c' || echo '$(srcdir)/'`libc/stdio/diprintf.c
-
-libc/stdio/libc_a-diprintf.obj: libc/stdio/diprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-diprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo -c -o libc/stdio/libc_a-diprintf.obj `if test -f 'libc/stdio/diprintf.c'; then $(CYGPATH_W) 'libc/stdio/diprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/diprintf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-diprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/diprintf.c' object='libc/stdio/libc_a-diprintf.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-diprintf.obj `if test -f 'libc/stdio/diprintf.c'; then $(CYGPATH_W) 'libc/stdio/diprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/diprintf.c'; fi`
-
-libc/stdio/libc_a-fgetwc.o: libc/stdio/fgetwc.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo -c -o libc/stdio/libc_a-fgetwc.o `test -f 'libc/stdio/fgetwc.c' || echo '$(srcdir)/'`libc/stdio/fgetwc.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc.c' object='libc/stdio/libc_a-fgetwc.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc.o `test -f 'libc/stdio/fgetwc.c' || echo '$(srcdir)/'`libc/stdio/fgetwc.c
-
-libc/stdio/libc_a-fgetwc.obj: libc/stdio/fgetwc.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo -c -o libc/stdio/libc_a-fgetwc.obj `if test -f 'libc/stdio/fgetwc.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc.c' object='libc/stdio/libc_a-fgetwc.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc.obj `if test -f 'libc/stdio/fgetwc.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc.c'; fi`
-
-libc/stdio/libc_a-fgetwc_u.o: libc/stdio/fgetwc_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo -c -o libc/stdio/libc_a-fgetwc_u.o `test -f 'libc/stdio/fgetwc_u.c' || echo '$(srcdir)/'`libc/stdio/fgetwc_u.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc_u.c' object='libc/stdio/libc_a-fgetwc_u.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc_u.o `test -f 'libc/stdio/fgetwc_u.c' || echo '$(srcdir)/'`libc/stdio/fgetwc_u.c
-
-libc/stdio/libc_a-fgetwc_u.obj: libc/stdio/fgetwc_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetwc_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo -c -o libc/stdio/libc_a-fgetwc_u.obj `if test -f 'libc/stdio/fgetwc_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc_u.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetwc_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetwc_u.c' object='libc/stdio/libc_a-fgetwc_u.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetwc_u.obj `if test -f 'libc/stdio/fgetwc_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetwc_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetwc_u.c'; fi`
-
-libc/stdio/libc_a-fgetws.o: libc/stdio/fgetws.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo -c -o libc/stdio/libc_a-fgetws.o `test -f 'libc/stdio/fgetws.c' || echo '$(srcdir)/'`libc/stdio/fgetws.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws.c' object='libc/stdio/libc_a-fgetws.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws.o `test -f 'libc/stdio/fgetws.c' || echo '$(srcdir)/'`libc/stdio/fgetws.c
-
-libc/stdio/libc_a-fgetws.obj: libc/stdio/fgetws.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo -c -o libc/stdio/libc_a-fgetws.obj `if test -f 'libc/stdio/fgetws.c'; then $(CYGPATH_W) 'libc/stdio/fgetws.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws.c' object='libc/stdio/libc_a-fgetws.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws.obj `if test -f 'libc/stdio/fgetws.c'; then $(CYGPATH_W) 'libc/stdio/fgetws.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws.c'; fi`
-
-libc/stdio/libc_a-fgetws_u.o: libc/stdio/fgetws_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo -c -o libc/stdio/libc_a-fgetws_u.o `test -f 'libc/stdio/fgetws_u.c' || echo '$(srcdir)/'`libc/stdio/fgetws_u.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws_u.c' object='libc/stdio/libc_a-fgetws_u.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws_u.o `test -f 'libc/stdio/fgetws_u.c' || echo '$(srcdir)/'`libc/stdio/fgetws_u.c
-
-libc/stdio/libc_a-fgetws_u.obj: libc/stdio/fgetws_u.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fgetws_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo -c -o libc/stdio/libc_a-fgetws_u.obj `if test -f 'libc/stdio/fgetws_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetws_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws_u.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fgetws_u.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fgetws_u.c' object='libc/stdio/libc_a-fgetws_u.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fgetws_u.obj `if test -f 'libc/stdio/fgetws_u.c'; then $(CYGPATH_W) 'libc/stdio/fgetws_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fgetws_u.c'; fi`
-
 libc/stdio/libc_a-fputwc.o: libc/stdio/fputwc.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fputwc.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fputwc.Tpo -c -o libc/stdio/libc_a-fputwc.o `test -f 'libc/stdio/fputwc.c' || echo '$(srcdir)/'`libc/stdio/fputwc.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fputwc.Tpo libc/stdio/$(DEPDIR)/libc_a-fputwc.Po
@@ -25966,6 +25840,48 @@ libc/stdio/libc_a-fputws_u.obj: libc/stdio/fputws_u.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fputws_u.obj `if test -f 'libc/stdio/fputws_u.c'; then $(CYGPATH_W) 'libc/stdio/fputws_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fputws_u.c'; fi`
 
+libc/stdio/libc_a-fread_u.o: libc/stdio/fread_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fread_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo -c -o libc/stdio/libc_a-fread_u.o `test -f 'libc/stdio/fread_u.c' || echo '$(srcdir)/'`libc/stdio/fread_u.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fread_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fread_u.c' object='libc/stdio/libc_a-fread_u.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fread_u.o `test -f 'libc/stdio/fread_u.c' || echo '$(srcdir)/'`libc/stdio/fread_u.c
+
+libc/stdio/libc_a-fread_u.obj: libc/stdio/fread_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fread_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo -c -o libc/stdio/libc_a-fread_u.obj `if test -f 'libc/stdio/fread_u.c'; then $(CYGPATH_W) 'libc/stdio/fread_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fread_u.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fread_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fread_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fread_u.c' object='libc/stdio/libc_a-fread_u.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fread_u.obj `if test -f 'libc/stdio/fread_u.c'; then $(CYGPATH_W) 'libc/stdio/fread_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fread_u.c'; fi`
+
+libc/stdio/libc_a-fsetlocking.o: libc/stdio/fsetlocking.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fsetlocking.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo -c -o libc/stdio/libc_a-fsetlocking.o `test -f 'libc/stdio/fsetlocking.c' || echo '$(srcdir)/'`libc/stdio/fsetlocking.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fsetlocking.c' object='libc/stdio/libc_a-fsetlocking.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fsetlocking.o `test -f 'libc/stdio/fsetlocking.c' || echo '$(srcdir)/'`libc/stdio/fsetlocking.c
+
+libc/stdio/libc_a-fsetlocking.obj: libc/stdio/fsetlocking.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fsetlocking.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo -c -o libc/stdio/libc_a-fsetlocking.obj `if test -f 'libc/stdio/fsetlocking.c'; then $(CYGPATH_W) 'libc/stdio/fsetlocking.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fsetlocking.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Tpo libc/stdio/$(DEPDIR)/libc_a-fsetlocking.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fsetlocking.c' object='libc/stdio/libc_a-fsetlocking.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fsetlocking.obj `if test -f 'libc/stdio/fsetlocking.c'; then $(CYGPATH_W) 'libc/stdio/fsetlocking.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fsetlocking.c'; fi`
+
+libc/stdio/libc_a-funopen.o: libc/stdio/funopen.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-funopen.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo -c -o libc/stdio/libc_a-funopen.o `test -f 'libc/stdio/funopen.c' || echo '$(srcdir)/'`libc/stdio/funopen.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo libc/stdio/$(DEPDIR)/libc_a-funopen.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/funopen.c' object='libc/stdio/libc_a-funopen.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-funopen.o `test -f 'libc/stdio/funopen.c' || echo '$(srcdir)/'`libc/stdio/funopen.c
+
+libc/stdio/libc_a-funopen.obj: libc/stdio/funopen.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-funopen.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo -c -o libc/stdio/libc_a-funopen.obj `if test -f 'libc/stdio/funopen.c'; then $(CYGPATH_W) 'libc/stdio/funopen.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/funopen.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-funopen.Tpo libc/stdio/$(DEPDIR)/libc_a-funopen.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/funopen.c' object='libc/stdio/libc_a-funopen.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-funopen.obj `if test -f 'libc/stdio/funopen.c'; then $(CYGPATH_W) 'libc/stdio/funopen.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/funopen.c'; fi`
+
 libc/stdio/libc_a-fwide.o: libc/stdio/fwide.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fwide.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fwide.Tpo -c -o libc/stdio/libc_a-fwide.o `test -f 'libc/stdio/fwide.c' || echo '$(srcdir)/'`libc/stdio/fwide.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fwide.Tpo libc/stdio/$(DEPDIR)/libc_a-fwide.Po
@@ -25993,6 +25909,20 @@ libc/stdio/libc_a-fwprintf.obj: libc/stdio/fwprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fwprintf.c' object='libc/stdio/libc_a-fwprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fwprintf.obj `if test -f 'libc/stdio/fwprintf.c'; then $(CYGPATH_W) 'libc/stdio/fwprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fwprintf.c'; fi`
+
+libc/stdio/libc_a-fwrite_u.o: libc/stdio/fwrite_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fwrite_u.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo -c -o libc/stdio/libc_a-fwrite_u.o `test -f 'libc/stdio/fwrite_u.c' || echo '$(srcdir)/'`libc/stdio/fwrite_u.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fwrite_u.c' object='libc/stdio/libc_a-fwrite_u.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fwrite_u.o `test -f 'libc/stdio/fwrite_u.c' || echo '$(srcdir)/'`libc/stdio/fwrite_u.c
+
+libc/stdio/libc_a-fwrite_u.obj: libc/stdio/fwrite_u.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fwrite_u.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo -c -o libc/stdio/libc_a-fwrite_u.obj `if test -f 'libc/stdio/fwrite_u.c'; then $(CYGPATH_W) 'libc/stdio/fwrite_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fwrite_u.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Tpo libc/stdio/$(DEPDIR)/libc_a-fwrite_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/fwrite_u.c' object='libc/stdio/libc_a-fwrite_u.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-fwrite_u.obj `if test -f 'libc/stdio/fwrite_u.c'; then $(CYGPATH_W) 'libc/stdio/fwrite_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/fwrite_u.c'; fi`
 
 libc/stdio/libc_a-fwscanf.o: libc/stdio/fwscanf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-fwscanf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-fwscanf.Tpo -c -o libc/stdio/libc_a-fwscanf.o `test -f 'libc/stdio/fwscanf.c' || echo '$(srcdir)/'`libc/stdio/fwscanf.c
@@ -26064,6 +25994,20 @@ libc/stdio/libc_a-getwchar_u.obj: libc/stdio/getwchar_u.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-getwchar_u.obj `if test -f 'libc/stdio/getwchar_u.c'; then $(CYGPATH_W) 'libc/stdio/getwchar_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/getwchar_u.c'; fi`
 
+libc/stdio/libc_a-open_memstream.o: libc/stdio/open_memstream.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-open_memstream.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo -c -o libc/stdio/libc_a-open_memstream.o `test -f 'libc/stdio/open_memstream.c' || echo '$(srcdir)/'`libc/stdio/open_memstream.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo libc/stdio/$(DEPDIR)/libc_a-open_memstream.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/open_memstream.c' object='libc/stdio/libc_a-open_memstream.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-open_memstream.o `test -f 'libc/stdio/open_memstream.c' || echo '$(srcdir)/'`libc/stdio/open_memstream.c
+
+libc/stdio/libc_a-open_memstream.obj: libc/stdio/open_memstream.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-open_memstream.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo -c -o libc/stdio/libc_a-open_memstream.obj `if test -f 'libc/stdio/open_memstream.c'; then $(CYGPATH_W) 'libc/stdio/open_memstream.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/open_memstream.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-open_memstream.Tpo libc/stdio/$(DEPDIR)/libc_a-open_memstream.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/open_memstream.c' object='libc/stdio/libc_a-open_memstream.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-open_memstream.obj `if test -f 'libc/stdio/open_memstream.c'; then $(CYGPATH_W) 'libc/stdio/open_memstream.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/open_memstream.c'; fi`
+
 libc/stdio/libc_a-putwc.o: libc/stdio/putwc.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-putwc.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-putwc.Tpo -c -o libc/stdio/libc_a-putwc.o `test -f 'libc/stdio/putwc.c' || echo '$(srcdir)/'`libc/stdio/putwc.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-putwc.Tpo libc/stdio/$(DEPDIR)/libc_a-putwc.Po
@@ -26120,6 +26064,20 @@ libc/stdio/libc_a-putwchar_u.obj: libc/stdio/putwchar_u.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-putwchar_u.obj `if test -f 'libc/stdio/putwchar_u.c'; then $(CYGPATH_W) 'libc/stdio/putwchar_u.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/putwchar_u.c'; fi`
 
+libc/stdio/libc_a-stdio_ext.o: libc/stdio/stdio_ext.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-stdio_ext.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo -c -o libc/stdio/libc_a-stdio_ext.o `test -f 'libc/stdio/stdio_ext.c' || echo '$(srcdir)/'`libc/stdio/stdio_ext.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/stdio_ext.c' object='libc/stdio/libc_a-stdio_ext.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-stdio_ext.o `test -f 'libc/stdio/stdio_ext.c' || echo '$(srcdir)/'`libc/stdio/stdio_ext.c
+
+libc/stdio/libc_a-stdio_ext.obj: libc/stdio/stdio_ext.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-stdio_ext.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo -c -o libc/stdio/libc_a-stdio_ext.obj `if test -f 'libc/stdio/stdio_ext.c'; then $(CYGPATH_W) 'libc/stdio/stdio_ext.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/stdio_ext.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Tpo libc/stdio/$(DEPDIR)/libc_a-stdio_ext.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/stdio_ext.c' object='libc/stdio/libc_a-stdio_ext.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-stdio_ext.obj `if test -f 'libc/stdio/stdio_ext.c'; then $(CYGPATH_W) 'libc/stdio/stdio_ext.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/stdio_ext.c'; fi`
+
 libc/stdio/libc_a-swprintf.o: libc/stdio/swprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-swprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-swprintf.Tpo -c -o libc/stdio/libc_a-swprintf.o `test -f 'libc/stdio/swprintf.c' || echo '$(srcdir)/'`libc/stdio/swprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-swprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-swprintf.Po
@@ -26162,19 +26120,19 @@ libc/stdio/libc_a-ungetwc.obj: libc/stdio/ungetwc.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-ungetwc.obj `if test -f 'libc/stdio/ungetwc.c'; then $(CYGPATH_W) 'libc/stdio/ungetwc.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/ungetwc.c'; fi`
 
-libc/stdio/libc_a-vasniprintf.o: libc/stdio/vasniprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasniprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo -c -o libc/stdio/libc_a-vasniprintf.o `test -f 'libc/stdio/vasniprintf.c' || echo '$(srcdir)/'`libc/stdio/vasniprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasniprintf.c' object='libc/stdio/libc_a-vasniprintf.o' libtool=no @AMDEPBACKSLASH@
+libc/stdio/libc_a-vasnprintf.o: libc/stdio/vasnprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasnprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo -c -o libc/stdio/libc_a-vasnprintf.o `test -f 'libc/stdio/vasnprintf.c' || echo '$(srcdir)/'`libc/stdio/vasnprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasnprintf.c' object='libc/stdio/libc_a-vasnprintf.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasniprintf.o `test -f 'libc/stdio/vasniprintf.c' || echo '$(srcdir)/'`libc/stdio/vasniprintf.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasnprintf.o `test -f 'libc/stdio/vasnprintf.c' || echo '$(srcdir)/'`libc/stdio/vasnprintf.c
 
-libc/stdio/libc_a-vasniprintf.obj: libc/stdio/vasniprintf.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasniprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo -c -o libc/stdio/libc_a-vasniprintf.obj `if test -f 'libc/stdio/vasniprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasniprintf.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasniprintf.c' object='libc/stdio/libc_a-vasniprintf.obj' libtool=no @AMDEPBACKSLASH@
+libc/stdio/libc_a-vasnprintf.obj: libc/stdio/vasnprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasnprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo -c -o libc/stdio/libc_a-vasnprintf.obj `if test -f 'libc/stdio/vasnprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasnprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasnprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasnprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasnprintf.c' object='libc/stdio/libc_a-vasnprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasniprintf.obj `if test -f 'libc/stdio/vasniprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasniprintf.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasnprintf.obj `if test -f 'libc/stdio/vasnprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasnprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasnprintf.c'; fi`
 
 libc/stdio/libc_a-vswprintf.o: libc/stdio/vswprintf.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vswprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vswprintf.Tpo -c -o libc/stdio/libc_a-vswprintf.o `test -f 'libc/stdio/vswprintf.c' || echo '$(srcdir)/'`libc/stdio/vswprintf.c
@@ -26259,6 +26217,48 @@ libc/stdio/libc_a-wscanf.obj: libc/stdio/wscanf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/wscanf.c' object='libc/stdio/libc_a-wscanf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-wscanf.obj `if test -f 'libc/stdio/wscanf.c'; then $(CYGPATH_W) 'libc/stdio/wscanf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/wscanf.c'; fi`
+
+libc/stdio/libc_a-asniprintf.o: libc/stdio/asniprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-asniprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo -c -o libc/stdio/libc_a-asniprintf.o `test -f 'libc/stdio/asniprintf.c' || echo '$(srcdir)/'`libc/stdio/asniprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-asniprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/asniprintf.c' object='libc/stdio/libc_a-asniprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-asniprintf.o `test -f 'libc/stdio/asniprintf.c' || echo '$(srcdir)/'`libc/stdio/asniprintf.c
+
+libc/stdio/libc_a-asniprintf.obj: libc/stdio/asniprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-asniprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo -c -o libc/stdio/libc_a-asniprintf.obj `if test -f 'libc/stdio/asniprintf.c'; then $(CYGPATH_W) 'libc/stdio/asniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/asniprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-asniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-asniprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/asniprintf.c' object='libc/stdio/libc_a-asniprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-asniprintf.obj `if test -f 'libc/stdio/asniprintf.c'; then $(CYGPATH_W) 'libc/stdio/asniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/asniprintf.c'; fi`
+
+libc/stdio/libc_a-diprintf.o: libc/stdio/diprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-diprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo -c -o libc/stdio/libc_a-diprintf.o `test -f 'libc/stdio/diprintf.c' || echo '$(srcdir)/'`libc/stdio/diprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-diprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/diprintf.c' object='libc/stdio/libc_a-diprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-diprintf.o `test -f 'libc/stdio/diprintf.c' || echo '$(srcdir)/'`libc/stdio/diprintf.c
+
+libc/stdio/libc_a-diprintf.obj: libc/stdio/diprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-diprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo -c -o libc/stdio/libc_a-diprintf.obj `if test -f 'libc/stdio/diprintf.c'; then $(CYGPATH_W) 'libc/stdio/diprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/diprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-diprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-diprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/diprintf.c' object='libc/stdio/libc_a-diprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-diprintf.obj `if test -f 'libc/stdio/diprintf.c'; then $(CYGPATH_W) 'libc/stdio/diprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/diprintf.c'; fi`
+
+libc/stdio/libc_a-vasniprintf.o: libc/stdio/vasniprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasniprintf.o -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo -c -o libc/stdio/libc_a-vasniprintf.o `test -f 'libc/stdio/vasniprintf.c' || echo '$(srcdir)/'`libc/stdio/vasniprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasniprintf.c' object='libc/stdio/libc_a-vasniprintf.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasniprintf.o `test -f 'libc/stdio/vasniprintf.c' || echo '$(srcdir)/'`libc/stdio/vasniprintf.c
+
+libc/stdio/libc_a-vasniprintf.obj: libc/stdio/vasniprintf.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio/libc_a-vasniprintf.obj -MD -MP -MF libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo -c -o libc/stdio/libc_a-vasniprintf.obj `if test -f 'libc/stdio/vasniprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasniprintf.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Tpo libc/stdio/$(DEPDIR)/libc_a-vasniprintf.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdio/vasniprintf.c' object='libc/stdio/libc_a-vasniprintf.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdio/libc_a-vasniprintf.obj `if test -f 'libc/stdio/vasniprintf.c'; then $(CYGPATH_W) 'libc/stdio/vasniprintf.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdio/vasniprintf.c'; fi`
 
 libc/stdio64/libc_a-fdopen64.o: libc/stdio64/fdopen64.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdio64/libc_a-fdopen64.o -MD -MP -MF libc/stdio64/$(DEPDIR)/libc_a-fdopen64.Tpo -c -o libc/stdio64/libc_a-fdopen64.o `test -f 'libc/stdio64/fdopen64.c' || echo '$(srcdir)/'`libc/stdio64/fdopen64.c
