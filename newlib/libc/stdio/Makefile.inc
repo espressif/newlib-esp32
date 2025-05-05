@@ -39,9 +39,7 @@ libc_a_SOURCES += \
 	%D%/sprint_r.c \
 	%D%/swprint_r.c \
 	%D%/ssputs_r.c \
-	%D%/ssputws_r.c \
-	%D%/ssprint_r.c \
-	%D%/sswprint_r.c
+	%D%/ssprint_r.c
 endif
 
 libc_a_SOURCES += \
@@ -99,6 +97,8 @@ libc_a_SOURCES += \
 	%D%/snprintf.c \
 	%D%/sprintf.c \
 	%D%/sscanf.c \
+	%D%/ssputws_r.c \
+	%D%/sswprint_r.c \
 	%D%/stdio.c \
 	%D%/svfiwprintf.c \
 	%D%/svfiwscanf.c \
