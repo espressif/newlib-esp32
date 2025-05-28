@@ -2,7 +2,9 @@ multilibtool_DATA += \
 	%D%/nano.specs \
 	%D%/sim.specs \
 	%D%/semihost.specs \
-	%D%/crt0.o
+	%D%/default.specs \
+	%D%/crt0.o \
+	%D%/crt1-sim.o
 
 multilibtool_LIBRARIES += %D%/libgloss.a
 %C%_libgloss_a_CPPFLAGS = -I$(srcdir)/%D%
@@ -22,6 +24,7 @@ multilibtool_LIBRARIES += %D%/libgloss.a
 	%D%/sys_ftime.c \
 	%D%/sys_getcwd.c \
 	%D%/sys_getpid.c \
+	%D%/sys_getreent.c \
 	%D%/sys_gettimeofday.c \
 	%D%/sys_isatty.c \
 	%D%/sys_kill.c \
@@ -55,6 +58,7 @@ multilibtool_LIBRARIES += %D%/libsemihost.a
 	%D%/sys_fork.c \
 	%D%/sys_getcwd.c \
 	%D%/sys_getpid.c \
+	%D%/sys_getreent.c \
 	%D%/sys_kill.c \
 	%D%/sys_utime.c \
 	%D%/sys_wait.c \
@@ -76,3 +80,5 @@ multilibtool_LIBRARIES += %D%/libsemihost.a
 
 includemachinetooldir = $(tooldir)/include/machine
 includemachinetool_DATA = %D%/machine/syscall.h
+
+include %D%/esp/Makefile.inc

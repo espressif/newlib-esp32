@@ -400,14 +400,39 @@ multilibtool_PROGRAMS = $(am__EXEEXT_7)
 @CONFIG_PRU_TRUE@	pru/crt0-minrt.S
 
 @CONFIG_PRU_TRUE@am__append_100 = pru/libgloss.a
-@CONFIG_RISCV_TRUE@am__append_101 = \
-@CONFIG_RISCV_TRUE@	riscv/nano.specs \
-@CONFIG_RISCV_TRUE@	riscv/sim.specs \
-@CONFIG_RISCV_TRUE@	riscv/semihost.specs \
-@CONFIG_RISCV_TRUE@	riscv/crt0.o
-
+@CONFIG_RISCV_TRUE@am__append_101 = riscv/nano.specs riscv/sim.specs \
+@CONFIG_RISCV_TRUE@	riscv/semihost.specs riscv/default.specs \
+@CONFIG_RISCV_TRUE@	riscv/crt0.o riscv/crt1-sim.o \
+@CONFIG_RISCV_TRUE@	riscv/esp/crt1-board.o riscv/esp/app.elf.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c2.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c2.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c2.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c3.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c3.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c3.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c5.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c5.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c5.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c6.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c6.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c6.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c61.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c61.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32c61.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32h2.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32h2.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32h2.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32h21.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32h21.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32h21.qemu.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32p4.memory.ld \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32p4.board.specs \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp32p4.qemu.specs
 @CONFIG_RISCV_TRUE@am__append_102 = riscv/libgloss.a riscv/libsim.a \
-@CONFIG_RISCV_TRUE@	riscv/libsemihost.a
+@CONFIG_RISCV_TRUE@	riscv/libsemihost.a \
+@CONFIG_RISCV_TRUE@	riscv/esp/libsys_board.a
 @CONFIG_RL78_TRUE@am__append_103 = rl78/rl78.ld rl78/rl78-sim.ld \
 @CONFIG_RL78_TRUE@	rl78/gcrt0.o rl78/crt0.o rl78/crtn.o
 @CONFIG_RL78_TRUE@am__append_104 = \
@@ -1467,6 +1492,12 @@ pru_libgloss_a_LIBADD =
 @CONFIG_PRU_TRUE@	pru/outbyte.$(OBJEXT) pru/sbrk.$(OBJEXT) \
 @CONFIG_PRU_TRUE@	pru/stat.$(OBJEXT) pru/syscalls.$(OBJEXT)
 pru_libgloss_a_OBJECTS = $(am_pru_libgloss_a_OBJECTS)
+riscv_esp_libsys_board_a_AR = $(AR) $(ARFLAGS)
+riscv_esp_libsys_board_a_LIBADD =
+@CONFIG_RISCV_TRUE@am_riscv_esp_libsys_board_a_OBJECTS = riscv/esp/riscv_esp_libsys_board_a-esp_board.$(OBJEXT) \
+@CONFIG_RISCV_TRUE@	riscv/esp/riscv_esp_libsys_board_a-syscalls.$(OBJEXT)
+riscv_esp_libsys_board_a_OBJECTS =  \
+	$(am_riscv_esp_libsys_board_a_OBJECTS)
 riscv_libgloss_a_AR = $(AR) $(ARFLAGS)
 riscv_libgloss_a_LIBADD =
 @CONFIG_RISCV_TRUE@am_riscv_libgloss_a_OBJECTS = riscv/riscv_libgloss_a-sys_access.$(OBJEXT) \
@@ -1484,6 +1515,7 @@ riscv_libgloss_a_LIBADD =
 @CONFIG_RISCV_TRUE@	riscv/riscv_libgloss_a-sys_ftime.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libgloss_a-sys_getcwd.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libgloss_a-sys_getpid.$(OBJEXT) \
+@CONFIG_RISCV_TRUE@	riscv/riscv_libgloss_a-sys_getreent.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libgloss_a-sys_gettimeofday.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libgloss_a-sys_isatty.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libgloss_a-sys_kill.$(OBJEXT) \
@@ -1512,6 +1544,7 @@ riscv_libsemihost_a_LIBADD =
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-sys_fork.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-sys_getcwd.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-sys_getpid.$(OBJEXT) \
+@CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-sys_getreent.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-sys_kill.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-sys_utime.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsemihost_a-sys_wait.$(OBJEXT) \
@@ -1549,6 +1582,7 @@ riscv_libsim_a_LIBADD =
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_ftime.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_getcwd.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_getpid.$(OBJEXT) \
+@CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_getreent.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_gettimeofday.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_isatty.$(OBJEXT) \
 @CONFIG_RISCV_TRUE@	riscv/riscv_libsim_a-sys_kill.$(OBJEXT) \
@@ -1962,6 +1996,7 @@ SOURCES = $(aarch64_librdimon_a_SOURCES) \
 	$(or1k_libboard_ordb2a_a_SOURCES) \
 	$(or1k_libboard_orpsocrefdesign_a_SOURCES) \
 	$(or1k_libor1k_a_SOURCES) $(pru_libgloss_a_SOURCES) \
+	$(riscv_esp_libsys_board_a_SOURCES) \
 	$(riscv_libgloss_a_SOURCES) $(riscv_libsemihost_a_SOURCES) \
 	$(riscv_libsim_a_SOURCES) $(rl78_libsim_a_SOURCES) \
 	$(rx_libsim_a_SOURCES) $(sparc_libcygmon_a_SOURCES) \
@@ -3067,6 +3102,7 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_RISCV_TRUE@	riscv/sys_ftime.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_getcwd.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_getpid.c \
+@CONFIG_RISCV_TRUE@	riscv/sys_getreent.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_gettimeofday.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_isatty.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_kill.c \
@@ -3097,6 +3133,7 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 @CONFIG_RISCV_TRUE@	riscv/sys_fork.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_getcwd.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_getpid.c \
+@CONFIG_RISCV_TRUE@	riscv/sys_getreent.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_kill.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_utime.c \
 @CONFIG_RISCV_TRUE@	riscv/sys_wait.c \
@@ -3118,6 +3155,11 @@ TEXINFO_TEX = ../texinfo/texinfo.tex
 
 @CONFIG_RISCV_TRUE@includemachinetooldir = $(tooldir)/include/machine
 @CONFIG_RISCV_TRUE@includemachinetool_DATA = riscv/machine/syscall.h
+@CONFIG_RISCV_TRUE@riscv_esp_libsys_board_a_CPPFLAGS = -I$(srcdir)/riscv/esp
+@CONFIG_RISCV_TRUE@riscv_esp_libsys_board_a_SOURCES = \
+@CONFIG_RISCV_TRUE@	riscv/esp/esp_board.c \
+@CONFIG_RISCV_TRUE@	riscv/esp/syscalls.c
+
 @CONFIG_RL78_TRUE@rl78_libsim_a_SOURCES = \
 @CONFIG_RL78_TRUE@	rl78/sbrk.c \
 @CONFIG_RL78_TRUE@	rl78/exit.S \
@@ -3449,7 +3491,7 @@ all: config.h
 .SUFFIXES: .S .c .dvi .o .obj .ps .s
 am--refresh: Makefile
 	@:
-$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am $(top_srcdir)/../multilib.am $(srcdir)/doc/Makefile.inc $(srcdir)/aarch64/Makefile.inc $(srcdir)/aarch64/cpu-init/Makefile.inc $(srcdir)/arc/Makefile.inc $(srcdir)/arc64/Makefile.inc $(srcdir)/arm/Makefile.inc $(srcdir)/arm/cpu-init/Makefile.inc $(srcdir)/bfin/Makefile.inc $(srcdir)/cr16/Makefile.inc $(srcdir)/csky/Makefile.inc $(srcdir)/d30v/Makefile.inc $(srcdir)/epiphany/Makefile.inc $(srcdir)/fr30/Makefile.inc $(srcdir)/frv/Makefile.inc $(srcdir)/ft32/Makefile.inc $(srcdir)/i386/Makefile.inc $(srcdir)/i960/Makefile.inc $(srcdir)/iq2000/Makefile.inc $(srcdir)/libnosys/Makefile.inc $(srcdir)/lm32/Makefile.inc $(srcdir)/m32r/Makefile.inc $(srcdir)/mcore/Makefile.inc $(srcdir)/microblaze/Makefile.inc $(srcdir)/mn10200/Makefile.inc $(srcdir)/mn10300/Makefile.inc $(srcdir)/moxie/Makefile.inc $(srcdir)/msp430/Makefile.inc $(srcdir)/nds32/Makefile.inc $(srcdir)/nios2/Makefile.inc $(srcdir)/or1k/Makefile.inc $(srcdir)/pru/Makefile.inc $(srcdir)/riscv/Makefile.inc $(srcdir)/rl78/Makefile.inc $(srcdir)/rx/Makefile.inc $(srcdir)/sparc/Makefile.inc $(srcdir)/sparc_leon/Makefile.inc $(srcdir)/tic6x/Makefile.inc $(srcdir)/v850/Makefile.inc $(srcdir)/visium/Makefile.inc $(srcdir)/wince/Makefile.inc $(srcdir)/xstormy16/Makefile.inc $(srcdir)/xtensa/Makefile.inc $(am__configure_deps)
+$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am $(top_srcdir)/../multilib.am $(srcdir)/doc/Makefile.inc $(srcdir)/aarch64/Makefile.inc $(srcdir)/aarch64/cpu-init/Makefile.inc $(srcdir)/arc/Makefile.inc $(srcdir)/arc64/Makefile.inc $(srcdir)/arm/Makefile.inc $(srcdir)/arm/cpu-init/Makefile.inc $(srcdir)/bfin/Makefile.inc $(srcdir)/cr16/Makefile.inc $(srcdir)/csky/Makefile.inc $(srcdir)/d30v/Makefile.inc $(srcdir)/epiphany/Makefile.inc $(srcdir)/fr30/Makefile.inc $(srcdir)/frv/Makefile.inc $(srcdir)/ft32/Makefile.inc $(srcdir)/i386/Makefile.inc $(srcdir)/i960/Makefile.inc $(srcdir)/iq2000/Makefile.inc $(srcdir)/libnosys/Makefile.inc $(srcdir)/lm32/Makefile.inc $(srcdir)/m32r/Makefile.inc $(srcdir)/mcore/Makefile.inc $(srcdir)/microblaze/Makefile.inc $(srcdir)/mn10200/Makefile.inc $(srcdir)/mn10300/Makefile.inc $(srcdir)/moxie/Makefile.inc $(srcdir)/msp430/Makefile.inc $(srcdir)/nds32/Makefile.inc $(srcdir)/nios2/Makefile.inc $(srcdir)/or1k/Makefile.inc $(srcdir)/pru/Makefile.inc $(srcdir)/riscv/Makefile.inc $(srcdir)/riscv/esp/Makefile.inc $(srcdir)/rl78/Makefile.inc $(srcdir)/rx/Makefile.inc $(srcdir)/sparc/Makefile.inc $(srcdir)/sparc_leon/Makefile.inc $(srcdir)/tic6x/Makefile.inc $(srcdir)/v850/Makefile.inc $(srcdir)/visium/Makefile.inc $(srcdir)/wince/Makefile.inc $(srcdir)/xstormy16/Makefile.inc $(srcdir)/xtensa/Makefile.inc $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -3471,7 +3513,7 @@ Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	    echo ' cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)'; \
 	    cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe);; \
 	esac;
-$(top_srcdir)/../multilib.am $(srcdir)/doc/Makefile.inc $(srcdir)/aarch64/Makefile.inc $(srcdir)/aarch64/cpu-init/Makefile.inc $(srcdir)/arc/Makefile.inc $(srcdir)/arc64/Makefile.inc $(srcdir)/arm/Makefile.inc $(srcdir)/arm/cpu-init/Makefile.inc $(srcdir)/bfin/Makefile.inc $(srcdir)/cr16/Makefile.inc $(srcdir)/csky/Makefile.inc $(srcdir)/d30v/Makefile.inc $(srcdir)/epiphany/Makefile.inc $(srcdir)/fr30/Makefile.inc $(srcdir)/frv/Makefile.inc $(srcdir)/ft32/Makefile.inc $(srcdir)/i386/Makefile.inc $(srcdir)/i960/Makefile.inc $(srcdir)/iq2000/Makefile.inc $(srcdir)/libnosys/Makefile.inc $(srcdir)/lm32/Makefile.inc $(srcdir)/m32r/Makefile.inc $(srcdir)/mcore/Makefile.inc $(srcdir)/microblaze/Makefile.inc $(srcdir)/mn10200/Makefile.inc $(srcdir)/mn10300/Makefile.inc $(srcdir)/moxie/Makefile.inc $(srcdir)/msp430/Makefile.inc $(srcdir)/nds32/Makefile.inc $(srcdir)/nios2/Makefile.inc $(srcdir)/or1k/Makefile.inc $(srcdir)/pru/Makefile.inc $(srcdir)/riscv/Makefile.inc $(srcdir)/rl78/Makefile.inc $(srcdir)/rx/Makefile.inc $(srcdir)/sparc/Makefile.inc $(srcdir)/sparc_leon/Makefile.inc $(srcdir)/tic6x/Makefile.inc $(srcdir)/v850/Makefile.inc $(srcdir)/visium/Makefile.inc $(srcdir)/wince/Makefile.inc $(srcdir)/xstormy16/Makefile.inc $(srcdir)/xtensa/Makefile.inc $(am__empty):
+$(top_srcdir)/../multilib.am $(srcdir)/doc/Makefile.inc $(srcdir)/aarch64/Makefile.inc $(srcdir)/aarch64/cpu-init/Makefile.inc $(srcdir)/arc/Makefile.inc $(srcdir)/arc64/Makefile.inc $(srcdir)/arm/Makefile.inc $(srcdir)/arm/cpu-init/Makefile.inc $(srcdir)/bfin/Makefile.inc $(srcdir)/cr16/Makefile.inc $(srcdir)/csky/Makefile.inc $(srcdir)/d30v/Makefile.inc $(srcdir)/epiphany/Makefile.inc $(srcdir)/fr30/Makefile.inc $(srcdir)/frv/Makefile.inc $(srcdir)/ft32/Makefile.inc $(srcdir)/i386/Makefile.inc $(srcdir)/i960/Makefile.inc $(srcdir)/iq2000/Makefile.inc $(srcdir)/libnosys/Makefile.inc $(srcdir)/lm32/Makefile.inc $(srcdir)/m32r/Makefile.inc $(srcdir)/mcore/Makefile.inc $(srcdir)/microblaze/Makefile.inc $(srcdir)/mn10200/Makefile.inc $(srcdir)/mn10300/Makefile.inc $(srcdir)/moxie/Makefile.inc $(srcdir)/msp430/Makefile.inc $(srcdir)/nds32/Makefile.inc $(srcdir)/nios2/Makefile.inc $(srcdir)/or1k/Makefile.inc $(srcdir)/pru/Makefile.inc $(srcdir)/riscv/Makefile.inc $(srcdir)/riscv/esp/Makefile.inc $(srcdir)/rl78/Makefile.inc $(srcdir)/rx/Makefile.inc $(srcdir)/sparc/Makefile.inc $(srcdir)/sparc_leon/Makefile.inc $(srcdir)/tic6x/Makefile.inc $(srcdir)/v850/Makefile.inc $(srcdir)/visium/Makefile.inc $(srcdir)/wince/Makefile.inc $(srcdir)/xstormy16/Makefile.inc $(srcdir)/xtensa/Makefile.inc $(am__empty):
 
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	$(SHELL) ./config.status --recheck
@@ -5359,6 +5401,21 @@ pru/libgloss.a: $(pru_libgloss_a_OBJECTS) $(pru_libgloss_a_DEPENDENCIES) $(EXTRA
 	$(AM_V_at)-rm -f pru/libgloss.a
 	$(AM_V_AR)$(pru_libgloss_a_AR) pru/libgloss.a $(pru_libgloss_a_OBJECTS) $(pru_libgloss_a_LIBADD)
 	$(AM_V_at)$(RANLIB) pru/libgloss.a
+riscv/esp/$(am__dirstamp):
+	@$(MKDIR_P) riscv/esp
+	@: > riscv/esp/$(am__dirstamp)
+riscv/esp/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) riscv/esp/$(DEPDIR)
+	@: > riscv/esp/$(DEPDIR)/$(am__dirstamp)
+riscv/esp/riscv_esp_libsys_board_a-esp_board.$(OBJEXT):  \
+	riscv/esp/$(am__dirstamp) riscv/esp/$(DEPDIR)/$(am__dirstamp)
+riscv/esp/riscv_esp_libsys_board_a-syscalls.$(OBJEXT):  \
+	riscv/esp/$(am__dirstamp) riscv/esp/$(DEPDIR)/$(am__dirstamp)
+
+riscv/esp/libsys_board.a: $(riscv_esp_libsys_board_a_OBJECTS) $(riscv_esp_libsys_board_a_DEPENDENCIES) $(EXTRA_riscv_esp_libsys_board_a_DEPENDENCIES) riscv/esp/$(am__dirstamp)
+	$(AM_V_at)-rm -f riscv/esp/libsys_board.a
+	$(AM_V_AR)$(riscv_esp_libsys_board_a_AR) riscv/esp/libsys_board.a $(riscv_esp_libsys_board_a_OBJECTS) $(riscv_esp_libsys_board_a_LIBADD)
+	$(AM_V_at)$(RANLIB) riscv/esp/libsys_board.a
 riscv/$(am__dirstamp):
 	@$(MKDIR_P) riscv
 	@: > riscv/$(am__dirstamp)
@@ -5394,6 +5451,8 @@ riscv/riscv_libgloss_a-sys_ftime.$(OBJEXT): riscv/$(am__dirstamp) \
 riscv/riscv_libgloss_a-sys_getcwd.$(OBJEXT): riscv/$(am__dirstamp) \
 	riscv/$(DEPDIR)/$(am__dirstamp)
 riscv/riscv_libgloss_a-sys_getpid.$(OBJEXT): riscv/$(am__dirstamp) \
+	riscv/$(DEPDIR)/$(am__dirstamp)
+riscv/riscv_libgloss_a-sys_getreent.$(OBJEXT): riscv/$(am__dirstamp) \
 	riscv/$(DEPDIR)/$(am__dirstamp)
 riscv/riscv_libgloss_a-sys_gettimeofday.$(OBJEXT):  \
 	riscv/$(am__dirstamp) riscv/$(DEPDIR)/$(am__dirstamp)
@@ -5450,6 +5509,8 @@ riscv/riscv_libsemihost_a-sys_getcwd.$(OBJEXT): riscv/$(am__dirstamp) \
 	riscv/$(DEPDIR)/$(am__dirstamp)
 riscv/riscv_libsemihost_a-sys_getpid.$(OBJEXT): riscv/$(am__dirstamp) \
 	riscv/$(DEPDIR)/$(am__dirstamp)
+riscv/riscv_libsemihost_a-sys_getreent.$(OBJEXT):  \
+	riscv/$(am__dirstamp) riscv/$(DEPDIR)/$(am__dirstamp)
 riscv/riscv_libsemihost_a-sys_kill.$(OBJEXT): riscv/$(am__dirstamp) \
 	riscv/$(DEPDIR)/$(am__dirstamp)
 riscv/riscv_libsemihost_a-sys_utime.$(OBJEXT): riscv/$(am__dirstamp) \
@@ -5520,6 +5581,8 @@ riscv/riscv_libsim_a-sys_ftime.$(OBJEXT): riscv/$(am__dirstamp) \
 riscv/riscv_libsim_a-sys_getcwd.$(OBJEXT): riscv/$(am__dirstamp) \
 	riscv/$(DEPDIR)/$(am__dirstamp)
 riscv/riscv_libsim_a-sys_getpid.$(OBJEXT): riscv/$(am__dirstamp) \
+	riscv/$(DEPDIR)/$(am__dirstamp)
+riscv/riscv_libsim_a-sys_getreent.$(OBJEXT): riscv/$(am__dirstamp) \
 	riscv/$(DEPDIR)/$(am__dirstamp)
 riscv/riscv_libsim_a-sys_gettimeofday.$(OBJEXT):  \
 	riscv/$(am__dirstamp) riscv/$(DEPDIR)/$(am__dirstamp)
@@ -6204,6 +6267,7 @@ mostlyclean-compile:
 	-rm -f or1k/boards/*.$(OBJEXT)
 	-rm -f pru/*.$(OBJEXT)
 	-rm -f riscv/*.$(OBJEXT)
+	-rm -f riscv/esp/*.$(OBJEXT)
 	-rm -f rl78/*.$(OBJEXT)
 	-rm -f rx/*.$(OBJEXT)
 	-rm -f sparc/*.$(OBJEXT)
@@ -6878,6 +6942,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libgloss_a-sys_ftime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libgloss_a-sys_getcwd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libgloss_a-sys_getpid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libgloss_a-sys_getreent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libgloss_a-sys_gettimeofday.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libgloss_a-sys_isatty.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libgloss_a-sys_kill.Po@am__quote@
@@ -6918,6 +6983,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_fork.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getcwd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getpid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getreent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_kill.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_utime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsemihost_a-sys_wait.Po@am__quote@
@@ -6936,6 +7002,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_ftime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_getcwd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_getpid.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_getreent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_gettimeofday.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_isatty.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_kill.Po@am__quote@
@@ -6953,6 +7020,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_utime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_wait.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@riscv/$(DEPDIR)/riscv_libsim_a-sys_write.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-esp_board.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-syscalls.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@rl78/$(DEPDIR)/abort.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@rl78/$(DEPDIR)/argv.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@rl78/$(DEPDIR)/argvlen.Po@am__quote@
@@ -8885,6 +8954,34 @@ nios2/nios2_libnios2_a-sbrk.obj: nios2/sbrk.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(nios2_libnios2_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o nios2/nios2_libnios2_a-sbrk.obj `if test -f 'nios2/sbrk.c'; then $(CYGPATH_W) 'nios2/sbrk.c'; else $(CYGPATH_W) '$(srcdir)/nios2/sbrk.c'; fi`
 
+riscv/esp/riscv_esp_libsys_board_a-esp_board.o: riscv/esp/esp_board.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/esp/riscv_esp_libsys_board_a-esp_board.o -MD -MP -MF riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-esp_board.Tpo -c -o riscv/esp/riscv_esp_libsys_board_a-esp_board.o `test -f 'riscv/esp/esp_board.c' || echo '$(srcdir)/'`riscv/esp/esp_board.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-esp_board.Tpo riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-esp_board.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/esp/esp_board.c' object='riscv/esp/riscv_esp_libsys_board_a-esp_board.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/esp/riscv_esp_libsys_board_a-esp_board.o `test -f 'riscv/esp/esp_board.c' || echo '$(srcdir)/'`riscv/esp/esp_board.c
+
+riscv/esp/riscv_esp_libsys_board_a-esp_board.obj: riscv/esp/esp_board.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/esp/riscv_esp_libsys_board_a-esp_board.obj -MD -MP -MF riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-esp_board.Tpo -c -o riscv/esp/riscv_esp_libsys_board_a-esp_board.obj `if test -f 'riscv/esp/esp_board.c'; then $(CYGPATH_W) 'riscv/esp/esp_board.c'; else $(CYGPATH_W) '$(srcdir)/riscv/esp/esp_board.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-esp_board.Tpo riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-esp_board.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/esp/esp_board.c' object='riscv/esp/riscv_esp_libsys_board_a-esp_board.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/esp/riscv_esp_libsys_board_a-esp_board.obj `if test -f 'riscv/esp/esp_board.c'; then $(CYGPATH_W) 'riscv/esp/esp_board.c'; else $(CYGPATH_W) '$(srcdir)/riscv/esp/esp_board.c'; fi`
+
+riscv/esp/riscv_esp_libsys_board_a-syscalls.o: riscv/esp/syscalls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/esp/riscv_esp_libsys_board_a-syscalls.o -MD -MP -MF riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-syscalls.Tpo -c -o riscv/esp/riscv_esp_libsys_board_a-syscalls.o `test -f 'riscv/esp/syscalls.c' || echo '$(srcdir)/'`riscv/esp/syscalls.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-syscalls.Tpo riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-syscalls.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/esp/syscalls.c' object='riscv/esp/riscv_esp_libsys_board_a-syscalls.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/esp/riscv_esp_libsys_board_a-syscalls.o `test -f 'riscv/esp/syscalls.c' || echo '$(srcdir)/'`riscv/esp/syscalls.c
+
+riscv/esp/riscv_esp_libsys_board_a-syscalls.obj: riscv/esp/syscalls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/esp/riscv_esp_libsys_board_a-syscalls.obj -MD -MP -MF riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-syscalls.Tpo -c -o riscv/esp/riscv_esp_libsys_board_a-syscalls.obj `if test -f 'riscv/esp/syscalls.c'; then $(CYGPATH_W) 'riscv/esp/syscalls.c'; else $(CYGPATH_W) '$(srcdir)/riscv/esp/syscalls.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-syscalls.Tpo riscv/esp/$(DEPDIR)/riscv_esp_libsys_board_a-syscalls.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/esp/syscalls.c' object='riscv/esp/riscv_esp_libsys_board_a-syscalls.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_esp_libsys_board_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/esp/riscv_esp_libsys_board_a-syscalls.obj `if test -f 'riscv/esp/syscalls.c'; then $(CYGPATH_W) 'riscv/esp/syscalls.c'; else $(CYGPATH_W) '$(srcdir)/riscv/esp/syscalls.c'; fi`
+
 riscv/riscv_libgloss_a-sys_access.o: riscv/sys_access.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libgloss_a-sys_access.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libgloss_a-sys_access.Tpo -c -o riscv/riscv_libgloss_a-sys_access.o `test -f 'riscv/sys_access.c' || echo '$(srcdir)/'`riscv/sys_access.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libgloss_a-sys_access.Tpo riscv/$(DEPDIR)/riscv_libgloss_a-sys_access.Po
@@ -9094,6 +9191,20 @@ riscv/riscv_libgloss_a-sys_getpid.obj: riscv/sys_getpid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getpid.c' object='riscv/riscv_libgloss_a-sys_getpid.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libgloss_a-sys_getpid.obj `if test -f 'riscv/sys_getpid.c'; then $(CYGPATH_W) 'riscv/sys_getpid.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getpid.c'; fi`
+
+riscv/riscv_libgloss_a-sys_getreent.o: riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libgloss_a-sys_getreent.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libgloss_a-sys_getreent.Tpo -c -o riscv/riscv_libgloss_a-sys_getreent.o `test -f 'riscv/sys_getreent.c' || echo '$(srcdir)/'`riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libgloss_a-sys_getreent.Tpo riscv/$(DEPDIR)/riscv_libgloss_a-sys_getreent.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getreent.c' object='riscv/riscv_libgloss_a-sys_getreent.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libgloss_a-sys_getreent.o `test -f 'riscv/sys_getreent.c' || echo '$(srcdir)/'`riscv/sys_getreent.c
+
+riscv/riscv_libgloss_a-sys_getreent.obj: riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libgloss_a-sys_getreent.obj -MD -MP -MF riscv/$(DEPDIR)/riscv_libgloss_a-sys_getreent.Tpo -c -o riscv/riscv_libgloss_a-sys_getreent.obj `if test -f 'riscv/sys_getreent.c'; then $(CYGPATH_W) 'riscv/sys_getreent.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getreent.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libgloss_a-sys_getreent.Tpo riscv/$(DEPDIR)/riscv_libgloss_a-sys_getreent.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getreent.c' object='riscv/riscv_libgloss_a-sys_getreent.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libgloss_a-sys_getreent.obj `if test -f 'riscv/sys_getreent.c'; then $(CYGPATH_W) 'riscv/sys_getreent.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getreent.c'; fi`
 
 riscv/riscv_libgloss_a-sys_gettimeofday.o: riscv/sys_gettimeofday.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libgloss_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libgloss_a-sys_gettimeofday.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libgloss_a-sys_gettimeofday.Tpo -c -o riscv/riscv_libgloss_a-sys_gettimeofday.o `test -f 'riscv/sys_gettimeofday.c' || echo '$(srcdir)/'`riscv/sys_gettimeofday.c
@@ -9444,6 +9555,20 @@ riscv/riscv_libsemihost_a-sys_getpid.obj: riscv/sys_getpid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getpid.c' object='riscv/riscv_libsemihost_a-sys_getpid.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsemihost_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsemihost_a-sys_getpid.obj `if test -f 'riscv/sys_getpid.c'; then $(CYGPATH_W) 'riscv/sys_getpid.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getpid.c'; fi`
+
+riscv/riscv_libsemihost_a-sys_getreent.o: riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsemihost_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsemihost_a-sys_getreent.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getreent.Tpo -c -o riscv/riscv_libsemihost_a-sys_getreent.o `test -f 'riscv/sys_getreent.c' || echo '$(srcdir)/'`riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getreent.Tpo riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getreent.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getreent.c' object='riscv/riscv_libsemihost_a-sys_getreent.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsemihost_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsemihost_a-sys_getreent.o `test -f 'riscv/sys_getreent.c' || echo '$(srcdir)/'`riscv/sys_getreent.c
+
+riscv/riscv_libsemihost_a-sys_getreent.obj: riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsemihost_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsemihost_a-sys_getreent.obj -MD -MP -MF riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getreent.Tpo -c -o riscv/riscv_libsemihost_a-sys_getreent.obj `if test -f 'riscv/sys_getreent.c'; then $(CYGPATH_W) 'riscv/sys_getreent.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getreent.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getreent.Tpo riscv/$(DEPDIR)/riscv_libsemihost_a-sys_getreent.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getreent.c' object='riscv/riscv_libsemihost_a-sys_getreent.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsemihost_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsemihost_a-sys_getreent.obj `if test -f 'riscv/sys_getreent.c'; then $(CYGPATH_W) 'riscv/sys_getreent.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getreent.c'; fi`
 
 riscv/riscv_libsemihost_a-sys_kill.o: riscv/sys_kill.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsemihost_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsemihost_a-sys_kill.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libsemihost_a-sys_kill.Tpo -c -o riscv/riscv_libsemihost_a-sys_kill.o `test -f 'riscv/sys_kill.c' || echo '$(srcdir)/'`riscv/sys_kill.c
@@ -9906,6 +10031,20 @@ riscv/riscv_libsim_a-sys_getpid.obj: riscv/sys_getpid.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getpid.c' object='riscv/riscv_libsim_a-sys_getpid.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsim_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsim_a-sys_getpid.obj `if test -f 'riscv/sys_getpid.c'; then $(CYGPATH_W) 'riscv/sys_getpid.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getpid.c'; fi`
+
+riscv/riscv_libsim_a-sys_getreent.o: riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsim_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsim_a-sys_getreent.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libsim_a-sys_getreent.Tpo -c -o riscv/riscv_libsim_a-sys_getreent.o `test -f 'riscv/sys_getreent.c' || echo '$(srcdir)/'`riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libsim_a-sys_getreent.Tpo riscv/$(DEPDIR)/riscv_libsim_a-sys_getreent.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getreent.c' object='riscv/riscv_libsim_a-sys_getreent.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsim_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsim_a-sys_getreent.o `test -f 'riscv/sys_getreent.c' || echo '$(srcdir)/'`riscv/sys_getreent.c
+
+riscv/riscv_libsim_a-sys_getreent.obj: riscv/sys_getreent.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsim_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsim_a-sys_getreent.obj -MD -MP -MF riscv/$(DEPDIR)/riscv_libsim_a-sys_getreent.Tpo -c -o riscv/riscv_libsim_a-sys_getreent.obj `if test -f 'riscv/sys_getreent.c'; then $(CYGPATH_W) 'riscv/sys_getreent.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getreent.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) riscv/$(DEPDIR)/riscv_libsim_a-sys_getreent.Tpo riscv/$(DEPDIR)/riscv_libsim_a-sys_getreent.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='riscv/sys_getreent.c' object='riscv/riscv_libsim_a-sys_getreent.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsim_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o riscv/riscv_libsim_a-sys_getreent.obj `if test -f 'riscv/sys_getreent.c'; then $(CYGPATH_W) 'riscv/sys_getreent.c'; else $(CYGPATH_W) '$(srcdir)/riscv/sys_getreent.c'; fi`
 
 riscv/riscv_libsim_a-sys_gettimeofday.o: riscv/sys_gettimeofday.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(riscv_libsim_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT riscv/riscv_libsim_a-sys_gettimeofday.o -MD -MP -MF riscv/$(DEPDIR)/riscv_libsim_a-sys_gettimeofday.Tpo -c -o riscv/riscv_libsim_a-sys_gettimeofday.o `test -f 'riscv/sys_gettimeofday.c' || echo '$(srcdir)/'`riscv/sys_gettimeofday.c
@@ -10762,6 +10901,8 @@ distclean-generic:
 	-rm -f pru/$(am__dirstamp)
 	-rm -f riscv/$(DEPDIR)/$(am__dirstamp)
 	-rm -f riscv/$(am__dirstamp)
+	-rm -f riscv/esp/$(DEPDIR)/$(am__dirstamp)
+	-rm -f riscv/esp/$(am__dirstamp)
 	-rm -f rl78/$(DEPDIR)/$(am__dirstamp)
 	-rm -f rl78/$(am__dirstamp)
 	-rm -f rx/$(DEPDIR)/$(am__dirstamp)
@@ -10799,7 +10940,7 @@ clean-am: clean-aminfo clean-binPROGRAMS clean-checkPROGRAMS \
 
 distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) riscv/esp/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-hdr distclean-local distclean-tags
@@ -10943,7 +11084,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) aarch64/$(DEPDIR) arc/$(DEPDIR) arc/hl/$(DEPDIR) arc64/$(DEPDIR) arm/$(DEPDIR) bfin/$(DEPDIR) cr16/$(DEPDIR) csky/$(DEPDIR) d30v/$(DEPDIR) epiphany/$(DEPDIR) fr30/$(DEPDIR) frv/$(DEPDIR) ft32/$(DEPDIR) i386/$(DEPDIR) i960/$(DEPDIR) iq2000/$(DEPDIR) libnosys/$(DEPDIR) lm32/$(DEPDIR) m32r/$(DEPDIR) mcore/$(DEPDIR) microblaze/$(DEPDIR) mn10200/$(DEPDIR) mn10300/$(DEPDIR) moxie/$(DEPDIR) msp430/$(DEPDIR) nds32/$(DEPDIR) nios2/$(DEPDIR) or1k/$(DEPDIR) or1k/boards/$(DEPDIR) pru/$(DEPDIR) riscv/$(DEPDIR) riscv/esp/$(DEPDIR) rl78/$(DEPDIR) rx/$(DEPDIR) sparc/$(DEPDIR) sparc_leon/$(DEPDIR) tic6x/$(DEPDIR) v850/$(DEPDIR) visium/$(DEPDIR) xstormy16/$(DEPDIR) xtensa/$(DEPDIR) xtensa/boards/esp32/$(DEPDIR) xtensa/boards/esp32s3/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-aminfo \
 	maintainer-clean-generic maintainer-clean-local
