@@ -1,0 +1,14 @@
+%include <esp.board.specs>
+
+%rename cc1         old_cc1
+%rename cc1plus     old_cc1plus
+%rename link        old_link
+
+*cc1:
+%(old_cc1) %{!march=rv32imafc*:%eYour build is for esp32p4 board. Please provide "-march=rv32imafc*" option explicitly}
+
+*cc1plus:
+%(old_cc1plus) %{!march=rv32imafc*:%eYour build is for esp32p4 board. Please provide "-march=rv32imafc*" option explicitly}
+
+*link:
+%(old_link) --no-warn-rwx-segments -T esp32p4.memory.ld -T app.elf.ld %{!march=rv32imafc*:%eYour build is for esp32p4 board. Please provide "-march=rv32imafc*" option explicitly}

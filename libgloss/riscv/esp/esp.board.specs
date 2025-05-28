@@ -1,0 +1,16 @@
+# This is the common esp board specs file
+# In case esp32XX.ld linker script is not specified you may pass required
+# variables using command line options:
+# -Wl,--defsym=UART0_TX_ADDR=0x60000000 -Wl,--defsym=....
+
+%rename lib     board_lib
+%rename link    board_link
+
+*lib:
+--start-group -lc -lsys_board -lpthread_stubs --end-group
+
+*link:
+%(board_link) %:replace-outfile(-lgloss -lsys_board)
+
+*startfile:
+crt1-board%O%s
