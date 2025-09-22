@@ -125,6 +125,7 @@ check_PROGRAMS =
 @HAVE_LONG_DOUBLE_TRUE@am__append_6 = \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/strtodg.c \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/strtold.c \
+@HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/strtorQ.c \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/strtorx.c \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/wcstold.c
 
@@ -1072,6 +1073,7 @@ am__dirstamp = $(am__leading_dot)dirstamp
 @HAVE_LONG_DOUBLE_TRUE@am__objects_2 =  \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/libc_a-strtodg.$(OBJEXT) \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/libc_a-strtold.$(OBJEXT) \
+@HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/libc_a-strtorQ.$(OBJEXT) \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/libc_a-strtorx.$(OBJEXT) \
 @HAVE_LONG_DOUBLE_TRUE@	libc/stdlib/libc_a-wcstold.$(OBJEXT)
 am__objects_3 = libc/stdlib/libc_a-a64l.$(OBJEXT) \
@@ -5673,6 +5675,8 @@ libc/stdlib/libc_a-wctomb_r.$(OBJEXT): libc/stdlib/$(am__dirstamp) \
 libc/stdlib/libc_a-strtodg.$(OBJEXT): libc/stdlib/$(am__dirstamp) \
 	libc/stdlib/$(DEPDIR)/$(am__dirstamp)
 libc/stdlib/libc_a-strtold.$(OBJEXT): libc/stdlib/$(am__dirstamp) \
+	libc/stdlib/$(DEPDIR)/$(am__dirstamp)
+libc/stdlib/libc_a-strtorQ.$(OBJEXT): libc/stdlib/$(am__dirstamp) \
 	libc/stdlib/$(DEPDIR)/$(am__dirstamp)
 libc/stdlib/libc_a-strtorx.$(OBJEXT): libc/stdlib/$(am__dirstamp) \
 	libc/stdlib/$(DEPDIR)/$(am__dirstamp)
@@ -13808,6 +13812,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libc/stdlib/$(DEPDIR)/libc_a-strtold.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/stdlib/$(DEPDIR)/libc_a-strtoll.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/stdlib/$(DEPDIR)/libc_a-strtoll_r.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/stdlib/$(DEPDIR)/libc_a-strtorQ.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/stdlib/$(DEPDIR)/libc_a-strtorx.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/stdlib/$(DEPDIR)/libc_a-strtoul.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/stdlib/$(DEPDIR)/libc_a-strtoull.Po@am__quote@
@@ -21852,6 +21857,20 @@ libc/stdlib/libc_a-strtold.obj: libc/stdlib/strtold.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdlib/strtold.c' object='libc/stdlib/libc_a-strtold.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdlib/libc_a-strtold.obj `if test -f 'libc/stdlib/strtold.c'; then $(CYGPATH_W) 'libc/stdlib/strtold.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdlib/strtold.c'; fi`
+
+libc/stdlib/libc_a-strtorQ.o: libc/stdlib/strtorQ.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdlib/libc_a-strtorQ.o -MD -MP -MF libc/stdlib/$(DEPDIR)/libc_a-strtorQ.Tpo -c -o libc/stdlib/libc_a-strtorQ.o `test -f 'libc/stdlib/strtorQ.c' || echo '$(srcdir)/'`libc/stdlib/strtorQ.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdlib/$(DEPDIR)/libc_a-strtorQ.Tpo libc/stdlib/$(DEPDIR)/libc_a-strtorQ.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdlib/strtorQ.c' object='libc/stdlib/libc_a-strtorQ.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdlib/libc_a-strtorQ.o `test -f 'libc/stdlib/strtorQ.c' || echo '$(srcdir)/'`libc/stdlib/strtorQ.c
+
+libc/stdlib/libc_a-strtorQ.obj: libc/stdlib/strtorQ.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdlib/libc_a-strtorQ.obj -MD -MP -MF libc/stdlib/$(DEPDIR)/libc_a-strtorQ.Tpo -c -o libc/stdlib/libc_a-strtorQ.obj `if test -f 'libc/stdlib/strtorQ.c'; then $(CYGPATH_W) 'libc/stdlib/strtorQ.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdlib/strtorQ.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/stdlib/$(DEPDIR)/libc_a-strtorQ.Tpo libc/stdlib/$(DEPDIR)/libc_a-strtorQ.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/stdlib/strtorQ.c' object='libc/stdlib/libc_a-strtorQ.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/stdlib/libc_a-strtorQ.obj `if test -f 'libc/stdlib/strtorQ.c'; then $(CYGPATH_W) 'libc/stdlib/strtorQ.c'; else $(CYGPATH_W) '$(srcdir)/libc/stdlib/strtorQ.c'; fi`
 
 libc/stdlib/libc_a-strtorx.o: libc/stdlib/strtorx.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/stdlib/libc_a-strtorx.o -MD -MP -MF libc/stdlib/$(DEPDIR)/libc_a-strtorx.Tpo -c -o libc/stdlib/libc_a-strtorx.o `test -f 'libc/stdlib/strtorx.c' || echo '$(srcdir)/'`libc/stdlib/strtorx.c
