@@ -447,7 +447,7 @@ case "${host}" in
 	sys_dir=tirtos
 	have_crt0="no"
 	;;
-  *-esp-*)
+  *-esp*-*)
 	sys_dir=esp
     have_crt0="no"
 	posix_dir=posix
