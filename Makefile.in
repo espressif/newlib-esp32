@@ -56235,6 +56235,7 @@ install-target-libobjc: maybe-install-target-libgcc
 install-target-libstdc++-v3: maybe-install-target-libgcc
 all-target-libgloss: maybe-all-target-newlib
 all-target-winsup: maybe-all-target-libtermcap
+configure-target-newlib: maybe-configure-target-libgloss
 configure-target-libgfortran: maybe-all-target-libquadmath
 configure-target-libgfortran: maybe-all-target-libbacktrace
 

@@ -597,6 +597,7 @@ lang_env_dependencies = { module=winsup; };
 
 dependencies = { module=all-target-libgloss; on=all-target-newlib; };
 dependencies = { module=all-target-winsup; on=all-target-libtermcap; };
+dependencies = { module=configure-target-newlib; on=configure-target-libgloss; };
 dependencies = { module=configure-target-newlib; on=all-binutils; };
 dependencies = { module=configure-target-newlib; on=all-ld; };
 dependencies = { module=configure-target-libgfortran; on=all-target-libquadmath; };
