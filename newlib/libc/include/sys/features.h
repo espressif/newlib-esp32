@@ -531,6 +531,13 @@ extern "C" {
 
 #endif /* __CYGWIN__ */
 
+/* Espressif-specific */
+#define _POSIX_TIMEOUTS                         1
+#define _POSIX_TIMERS                           1
+#define _POSIX_MONOTONIC_CLOCK                  200112L
+#define _POSIX_CLOCK_SELECTION                  200112L
+/* ~Espressif-specific */
+
 #ifdef __cplusplus
 }
 #endif
