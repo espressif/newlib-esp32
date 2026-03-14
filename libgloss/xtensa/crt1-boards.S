@@ -46,13 +46,13 @@
 
 .type	main, @function
 
-# if XCHAL_HAVE_WINDOWED
+# if __XCHAL_HAVE_WINDOWED
 #   define CALL	call4
 #   define CALLX	callx4
-# else  // XCHAL_HAVE_WINDOWED
+# else  // __XCHAL_HAVE_WINDOWED
 #   define CALL	call0
 #   define CALLX	callx0
-# endif  // XCHAL_HAVE_WINDOWED
+# endif  // __XCHAL_HAVE_WINDOWED
 # define ARG1	a6	/* 1st outgoing call argument */
 # define ARG2	a7	/* 2nd outgoing call argument */
 # define ARG3	a8	/* 3rd outgoing call argument */
@@ -90,7 +90,7 @@ _start:
 	wsr	a0, INTENABLE	// INTENABLE value is not defined after reset.
 				//make sure that interrupts are shut off (*before* we lower PS.INTLEVEL and PS.EXCM!)
 
-# if XCHAL_HAVE_WINDOWED
+# if __XCHAL_HAVE_WINDOWED
 	//  Windowed register init, so we can call windowed code (eg. C code).
 	movi	a1, 1
 	wsr	a1, WINDOWSTART
@@ -98,7 +98,7 @@ _start:
 	//  It resets WINDOWSTART to 1 starting with LX2.0/X7.0 (RB-2006.0).
 	//  However, assuming hard reset is not yet always practical, so do this anyway:
 	wsr	a0, WINDOWBASE
-# endif  // XCHAL_HAVE_WINDOWED
+# endif  // __XCHAL_HAVE_WINDOWED
 	rsync
 
 	// Set VECBASE to use our vectors instead vectors in ROM
