@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <time.h>
 #include <sys/stat.h>
+#include <string.h>
 #include <reent.h>
 #include "esp_board.h"
 #include "config.h"
@@ -11,6 +12,7 @@ _fstat(int file, struct stat *st)
 {
     if (file <= STDERR_FILENO)
     {
+        memset(st, 0, sizeof(*st));
         st->st_mode = S_IFCHR;
         return  0;
     }
