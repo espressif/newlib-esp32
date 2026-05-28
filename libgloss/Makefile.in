@@ -400,7 +400,7 @@ multilibtool_PROGRAMS = $(am__EXEEXT_7)
 @CONFIG_PRU_TRUE@	pru/crt0-minrt.S
 
 @CONFIG_PRU_TRUE@am__append_100 = pru/libgloss.a
-@CONFIG_RISCV_TRUE@am__append_101 = riscv/nano.specs riscv/sim.specs \
+@CONFIG_RISCV_TRUE@am__append_101 = riscv/sim.specs \
 @CONFIG_RISCV_TRUE@	riscv/semihost.specs riscv/default.specs \
 @CONFIG_RISCV_TRUE@	riscv/crt0.o riscv/crt1-sim.o \
 @CONFIG_RISCV_TRUE@	riscv/esp/crt1-board.o riscv/esp/app.elf.ld \
@@ -526,7 +526,6 @@ multilibtool_PROGRAMS = $(am__EXEEXT_7)
 @CONFIG_XTENSA_TRUE@am__append_140 = -D_LIBGLOSS -I$(srcdir)/xtensa/include
 @CONFIG_XTENSA_TRUE@am__append_141 = \
 @CONFIG_XTENSA_TRUE@	xtensa/default.specs \
-@CONFIG_XTENSA_TRUE@	xtensa/nano.specs \
 @CONFIG_XTENSA_TRUE@	xtensa/sim.elf.specs \
 @CONFIG_XTENSA_TRUE@	xtensa/board.elf.specs \
 @CONFIG_XTENSA_TRUE@	xtensa/sys.qemu.specs \

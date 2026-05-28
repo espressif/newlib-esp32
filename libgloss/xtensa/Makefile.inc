@@ -2,7 +2,6 @@ CPPFLAGS += -D_LIBGLOSS -I$(srcdir)/%D%/include
 
 multilibtool_DATA += \
 	%D%/default.specs \
-	%D%/nano.specs \
 	%D%/sim.elf.specs \
 	%D%/board.elf.specs \
 	%D%/sys.qemu.specs \

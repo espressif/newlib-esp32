@@ -1,5 +1,4 @@
 multilibtool_DATA += \
-	%D%/nano.specs \
 	%D%/sim.specs \
 	%D%/semihost.specs \
 	%D%/default.specs \
