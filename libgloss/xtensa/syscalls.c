@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <syscalls.h>
 #include <sys/stat.h>
+#include <string.h>
 #include <soc/uart.h>
 
 #if defined (OPENOCD_SEMIHOSTING) || (QEMU_SEMIHOSTING)
@@ -140,6 +141,7 @@ _fstat (int fd, struct stat *pstat)
 
     if (fd < STDERR_FILENO)
     {
+        memset(pstat, 0, sizeof(*pstat));
         pstat->st_mode = S_IFCHR;
         return  0;
     }
